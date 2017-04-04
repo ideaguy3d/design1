@@ -1,0 +1,53 @@
+A.sidenav2:link {
+	color: #fff;
+	font-size: 13px;
+	font-family: Arial;
+	font-weight: normal;
+	text-decoration: none;
+}
+A.sidenav2:active  {
+	color: #fff;
+	font-size: 13px;
+	font-family: Arial;
+	font-weight: normal;
+	text-decoration: none;
+}
+A.sidenav2:visited   {
+	color: #fff;
+	font-size: 13px;
+	font-family: Arial;
+	font-weight: normal;
+	text-decoration: none;
+}
+A.sidenav2:hover   {
+	color: #fff;
+	font-size: 13px;
+	font-family: Arial;
+	font-weight: normal;
+	text-decoration: underline;
+	color: #FF0000;
+}
+.sidenavTxt {
+	color: #cc0000;
+	font-size: 13px;
+	font-family: Arial;
+	font-weight: bold;
+	background-color: #8CAEFF;
+	text-transform: none;
+}
+.sidenavbg {
+	background-color: #e9eaeb;
+}
+.SideNavbordercolor{
+	border-width :1px;
+	border-style:solid;
+	border-color: #8CAEFF;
+}
+.SideNavborderBlkcolor{
+	border-width :1px;
+	border-style:solid;
+	border-color: #000000;
+}
+
+
+
