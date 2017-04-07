@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- Generated 07/16/07 by Microsoft SOAP Toolkit WSDL File Generator, Version 3.00.1325.0 --> 
+<definitions
+	name='SiteLINKTransfer'
+	targetNamespace='https://sl6test.mailordercentral.com/test1/SiteLINKTransfer/wsdl/'
+	xmlns:wsdlns='https://sl6test.mailordercentral.com/test1/SiteLINKTransfer/wsdl/'
+	xmlns:typens='https://sl6test.mailordercentral.com/test1/SiteLINKTransfer/type/'
+	xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/'
+	xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+	xmlns:stk='http://schemas.microsoft.com/soap-toolkit/wsdl-extension'
+	xmlns:dime='http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/'
+	xmlns:ref='http://schemas.xmlsoap.org/ws/2002/04/reference/'
+	xmlns:content='http://schemas.xmlsoap.org/ws/2002/04/content-type/'
+	xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'
+	xmlns='http://schemas.xmlsoap.org/wsdl/'>
+
+	<types>
+		<schema
+			targetNamespace='https://sl6test.mailordercentral.com/test1/SiteLINKTransfer/type/'
+			xmlns='http://www.w3.org/2001/XMLSchema'
+			xmlns:SOAP-ENC='http://schemas.xmlsoap.org/soap/encoding/'
+			xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'
+			elementFormDefault='qualified'>
+
+			<import namespace='http://schemas.xmlsoap.org/soap/encoding/'/>
+			<import namespace='http://schemas.xmlsoap.org/wsdl/'/>
+			<import namespace='http://schemas.xmlsoap.org/ws/2002/04/reference/'/>
+			<import namespace='http://schemas.xmlsoap.org/ws/2002/04/content-type/'/>
+
+		</schema>
+	</types>
+
+	<message name='SiteLINKTransfer.momtransfer'>
+		<part name='THISXML' type='xsd:string'/>
+		<part name='thisfolder' type='xsd:string'/>
+	</message>
+
+	<message name='SiteLINKTransfer.momtransferResponse'>
+		<part name='Result' type='xsd:int'/>
+	</message>
+
+	<message name='SiteLINKTransfer.LOGERROR'>
+	</message>
+
+	<message name='SiteLINKTransfer.LOGERRORResponse'>
+		<part name='Result' type='xsd:anyType'/>
+	</message>
+
+	<portType name='SiteLINKTransferSoapPort'>
+
+		<operation name='momtransfer' parameterOrder='THISXML thisfolder'>
+			<input message='wsdlns:SiteLINKTransfer.momtransfer'/>
+			<output message='wsdlns:SiteLINKTransfer.momtransferResponse'/>
+		</operation>
+
+		<operation name='LOGERROR' parameterOrder=''>
+			<input message='wsdlns:SiteLINKTransfer.LOGERROR'/>
+			<output message='wsdlns:SiteLINKTransfer.LOGERRORResponse'/>
+		</operation>
+
+	</portType>
+
+	<binding name='SiteLINKTransferSoapBinding' type='wsdlns:SiteLINKTransferSoapPort' >
+
+		<stk:binding preferredEncoding='UTF-8'/>
+		<soap:binding style='rpc' transport='http://schemas.xmlsoap.org/soap/http'/>
+
+		<operation name='momtransfer'>
+			<soap:operation soapAction='https://sl6test.mailordercentral.com/test1/SiteLINKTransfer/action/SiteLINKTransfer.momtransfer'/>
+			<input>
+				<soap:body
+					use='encoded'
+					namespace='https://sl6test.mailordercentral.com/test1/SiteLINKTransfer/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='THISXML thisfolder'/>
+			</input>
+			<output>
+				<soap:body
+					use='encoded'
+					namespace='https://sl6test.mailordercentral.com/test1/SiteLINKTransfer/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='Result'/>
+			</output>
+		</operation>
+
+		<operation name='LOGERROR'>
+			<soap:operation soapAction='https://sl6test.mailordercentral.com/test1/SiteLINKTransfer/action/SiteLINKTransfer.LOGERROR'/>
+			<input>
+				<soap:body
+					use='encoded'
+					namespace='https://sl6test.mailordercentral.com/test1/SiteLINKTransfer/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>
+			</input>
+			<output>
+				<soap:body
+					use='encoded'
+					namespace='https://sl6test.mailordercentral.com/test1/SiteLINKTransfer/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='Result'/>
+			</output>
+		</operation>
+
+	</binding>
+
+	<service name='SiteLINKTransfer' >
+		<port name='SiteLINKTransferSoapPort' binding='wsdlns:SiteLINKTransferSoapBinding' >
+			<soap:address location='https://sl6test.mailordercentral.com/test1/SiteLINKTransfer.WSDL'/>
+		</port>
+	</service>
+
+</definitions>

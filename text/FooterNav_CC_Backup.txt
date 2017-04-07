@@ -1,0 +1,17 @@
+#002a7e
+
+repeat
+#ffffff
+13
+1
+Arial, Helvetica, sans-serif
+0
+none
+#ffffff
+13
+1
+Arial, Helvetica, sans-serif
+0
+0
+1
+#FF0000

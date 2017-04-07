@@ -1,0 +1,53 @@
+<r_csp>CSI</r_csp>
+<r_time>Thu Jan 15 11:52:00 2009</r_time>
+<r_ref>0005480887</r_ref>
+<r_error></r_error>
+<r_ordernum>7361=1000</r_ordernum>
+<r_message>APPROVED</r_message>
+<r_code>1234560005480887:NNNN:100021095457:</r_code>
+<r_tdate>1232045520</r_tdate>
+<r_score></r_score>
+<r_authresponse></r_authresponse>
+<r_approved>APPROVED</r_approved>
+<r_avs>NNNN</r_avs>
+
+
+<r_csp></r_csp>
+<r_time>Thu Jan 15 11:57:29 2009</r_time>
+<r_ref></r_ref>
+<r_error>SGS-005003: The order already exists in the database.</r_error>
+<r_ordernum>7361=1000</r_ordernum>
+<r_message></r_message>
+<r_code></r_code>
+<r_tdate></r_tdate>
+<r_score></r_score>
+<r_authresponse></r_authresponse>
+<r_approved>DUPLICATE</r_approved>
+<r_avs></r_avs>
+<br>
+
+ <r_csp></r_csp>
+ <r_time>Thu Jan 15 11:59:55 2009</r_time>
+ <r_ref></r_ref>
+ <r_error>SGS-005003: The order already exists in the database.</r_error>
+ <r_ordernum>7361=1000</r_ordernum>
+ <r_message></r_message>
+ <r_code></r_code>
+ <r_tdate></r_tdate>
+ <r_score></r_score>
+ <r_authresponse></r_authresponse>
+ <r_approved>DUPLICATE</r_approved>
+ <r_avs></r_avs>
+
+  <r_csp></r_csp>
+  <r_time>Thu Jan 15 13:34:13 2009</r_time>
+  <r_ref></r_ref>
+  <r_error>SGS-005005: Duplicate transaction.</r_error>
+  <r_ordernum>7364=5022</r_ordernum>
+  <r_message></r_message>
+  <r_code></r_code>
+  <r_tdate></r_tdate>
+  <r_score></r_score>
+  <r_authresponse></r_authresponse>
+  <r_approved>FRAUD</r_approved>
+  <r_avs></r_avs>

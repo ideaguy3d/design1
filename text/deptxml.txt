@@ -1,0 +1,530 @@
+<?xml version = "1.0" encoding="UTF-8" standalone="yes"?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="thesedepts" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="name">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="50"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="deptcode">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:decimal">
+											<xsd:totalDigits value="10"/>
+											<xsd:fractionDigits value="0"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="level">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:decimal">
+											<xsd:totalDigits value="5"/>
+											<xsd:fractionDigits value="0"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="deptimage">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="50"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="disp_seq">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:decimal">
+											<xsd:totalDigits value="10"/>
+											<xsd:fractionDigits value="0"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="under">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:decimal">
+											<xsd:totalDigits value="10"/>
+											<xsd:fractionDigits value="0"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax"/>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<thesedepts>
+		<name>Everything else</name>
+		<deptcode>8</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>4</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Forced Induction</name>
+		<deptcode>15</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>11</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Engine</name>
+		<deptcode>6934</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>17</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Accessories</name>
+		<deptcode>6928</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>21</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Gift Certificates</name>
+		<deptcode>6936</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>26</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>UPS Dim Weight</name>
+		<deptcode>6925</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>27</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Price Build</name>
+		<deptcode>6926</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>28</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Virtual Console</name>
+		<deptcode>6930</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>29</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Turbos</name>
+		<deptcode>9</deptcode>
+		<level>2</level>
+		<deptimage>turbo.gif</deptimage>
+		<disp_seq>12</disp_seq>
+		<under>15</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Turbo Kits</name>
+		<deptcode>10</deptcode>
+		<level>2</level>
+		<deptimage>edelbrock-turbo-kit.jpg</deptimage>
+		<disp_seq>13</disp_seq>
+		<under>15</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Blow Off Valves</name>
+		<deptcode>6933</deptcode>
+		<level>2</level>
+		<deptimage>greddy_bov_rs_purple.jpg</deptimage>
+		<disp_seq>14</disp_seq>
+		<under>15</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Charge Pipes</name>
+		<deptcode>1</deptcode>
+		<level>2</level>
+		<deptimage>G_19639G_SW_1.gif</deptimage>
+		<disp_seq>16</disp_seq>
+		<under>15</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Fuel System / Ignition / Combustion</name>
+		<deptcode>6935</deptcode>
+		<level>2</level>
+		<deptimage/>
+		<disp_seq>18</disp_seq>
+		<under>6934</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Management</name>
+		<deptcode>12</deptcode>
+		<level>2</level>
+		<deptimage/>
+		<disp_seq>19</disp_seq>
+		<under>6934</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Exhaust</name>
+		<deptcode>6937</deptcode>
+		<level>2</level>
+		<deptimage/>
+		<disp_seq>20</disp_seq>
+		<under>6934</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Exterior</name>
+		<deptcode>6929</deptcode>
+		<level>2</level>
+		<deptimage/>
+		<disp_seq>22</disp_seq>
+		<under>6928</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Interior</name>
+		<deptcode>6931</deptcode>
+		<level>2</level>
+		<deptimage/>
+		<disp_seq>23</disp_seq>
+		<under>6928</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Apparel</name>
+		<deptcode>6932</deptcode>
+		<level>2</level>
+		<deptimage/>
+		<disp_seq>24</disp_seq>
+		<under>6928</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Sound Tracks</name>
+		<deptcode>6927</deptcode>
+		<level>2</level>
+		<deptimage/>
+		<disp_seq>25</disp_seq>
+		<under>6928</under>
+	</thesedepts>
+	<thesedepts>
+		<name>NES</name>
+		<deptcode>6938</deptcode>
+		<level>2</level>
+		<deptimage>NES_controller.jpg</deptimage>
+		<disp_seq>30</disp_seq>
+		<under>6930</under>
+	</thesedepts>
+	<thesedepts>
+		<name>SNES</name>
+		<deptcode>6939</deptcode>
+		<level>2</level>
+		<deptimage>34_10.JPG</deptimage>
+		<disp_seq>31</disp_seq>
+		<under>6930</under>
+	</thesedepts>
+	<thesedepts>
+		<name>SEGA</name>
+		<deptcode>6940</deptcode>
+		<level>2</level>
+		<deptimage>sega.jpg</deptimage>
+		<disp_seq>32</disp_seq>
+		<under>6930</under>
+	</thesedepts>
+	<thesedepts>
+		<name>3DO</name>
+		<deptcode>6941</deptcode>
+		<level>2</level>
+		<deptimage>3do-goldstar-controller-loose.jpg</deptimage>
+		<disp_seq>33</disp_seq>
+		<under>6930</under>
+	</thesedepts>
+	<thesedepts>
+		<name>N64</name>
+		<deptcode>6942</deptcode>
+		<level>2</level>
+		<deptimage>n64-controller.jpg</deptimage>
+		<disp_seq>34</disp_seq>
+		<under>6930</under>
+	</thesedepts>
+	<thesedepts>
+		<name>NEO-GEO</name>
+		<deptcode>6943</deptcode>
+		<level>2</level>
+		<deptimage>neo_geo_stick_2.jpg</deptimage>
+		<disp_seq>35</disp_seq>
+		<under>6930</under>
+	</thesedepts>
+</VFPData>
+
+<?xml version = "1.0" encoding="UTF-8" standalone="yes"?>
+<VFPData>
+	<xsd:schema id="VFPData" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="VFPData" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="thesedepts" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="name">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="50"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="deptcode">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:decimal">
+											<xsd:totalDigits value="10"/>
+											<xsd:fractionDigits value="0"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="level">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:decimal">
+											<xsd:totalDigits value="5"/>
+											<xsd:fractionDigits value="0"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="deptimage">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:maxLength value="50"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="disp_seq">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:decimal">
+											<xsd:totalDigits value="10"/>
+											<xsd:fractionDigits value="0"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+								<xsd:element name="under">
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:decimal">
+											<xsd:totalDigits value="10"/>
+											<xsd:fractionDigits value="0"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax"/>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<thesedepts>
+		<name>Everything else</name>
+		<deptcode>8</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>4</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Forced Induction</name>
+		<deptcode>15</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>11</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Engine</name>
+		<deptcode>6934</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>17</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Accessories</name>
+		<deptcode>6928</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>21</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Gift Certificates</name>
+		<deptcode>6936</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>26</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>UPS Dim Weight</name>
+		<deptcode>6925</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>27</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Price Build</name>
+		<deptcode>6926</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>28</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Virtual Console</name>
+		<deptcode>6930</deptcode>
+		<level>1</level>
+		<deptimage/>
+		<disp_seq>29</disp_seq>
+		<under>0</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Turbos</name>
+		<deptcode>9</deptcode>
+		<level>2</level>
+		<deptimage>turbo.gif</deptimage>
+		<disp_seq>12</disp_seq>
+		<under>15</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Turbo Kits</name>
+		<deptcode>10</deptcode>
+		<level>2</level>
+		<deptimage>edelbrock-turbo-kit.jpg</deptimage>
+		<disp_seq>13</disp_seq>
+		<under>15</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Blow Off Valves</name>
+		<deptcode>6933</deptcode>
+		<level>2</level>
+		<deptimage>greddy_bov_rs_purple.jpg</deptimage>
+		<disp_seq>14</disp_seq>
+		<under>15</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Charge Pipes</name>
+		<deptcode>1</deptcode>
+		<level>2</level>
+		<deptimage>G_19639G_SW_1.gif</deptimage>
+		<disp_seq>16</disp_seq>
+		<under>15</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Fuel System / Ignition / Combustion</name>
+		<deptcode>6935</deptcode>
+		<level>2</level>
+		<deptimage/>
+		<disp_seq>18</disp_seq>
+		<under>6934</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Management</name>
+		<deptcode>12</deptcode>
+		<level>2</level>
+		<deptimage/>
+		<disp_seq>19</disp_seq>
+		<under>6934</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Exhaust</name>
+		<deptcode>6937</deptcode>
+		<level>2</level>
+		<deptimage/>
+		<disp_seq>20</disp_seq>
+		<under>6934</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Exterior</name>
+		<deptcode>6929</deptcode>
+		<level>2</level>
+		<deptimage/>
+		<disp_seq>22</disp_seq>
+		<under>6928</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Interior</name>
+		<deptcode>6931</deptcode>
+		<level>2</level>
+		<deptimage/>
+		<disp_seq>23</disp_seq>
+		<under>6928</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Apparel</name>
+		<deptcode>6932</deptcode>
+		<level>2</level>
+		<deptimage/>
+		<disp_seq>24</disp_seq>
+		<under>6928</under>
+	</thesedepts>
+	<thesedepts>
+		<name>Sound Tracks</name>
+		<deptcode>6927</deptcode>
+		<level>2</level>
+		<deptimage/>
+		<disp_seq>25</disp_seq>
+		<under>6928</under>
+	</thesedepts>
+	<thesedepts>
+		<name>NES</name>
+		<deptcode>6938</deptcode>
+		<level>2</level>
+		<deptimage>NES_controller.jpg</deptimage>
+		<disp_seq>30</disp_seq>
+		<under>6930</under>
+	</thesedepts>
+	<thesedepts>
+		<name>SNES</name>
+		<deptcode>6939</deptcode>
+		<level>2</level>
+		<deptimage>34_10.JPG</deptimage>
+		<disp_seq>31</disp_seq>
+		<under>6930</under>
+	</thesedepts>
+	<thesedepts>
+		<name>SEGA</name>
+		<deptcode>6940</deptcode>
+		<level>2</level>
+		<deptimage>sega.jpg</deptimage>
+		<disp_seq>32</disp_seq>
+		<under>6930</under>
+	</thesedepts>
+	<thesedepts>
+		<name>3DO</name>
+		<deptcode>6941</deptcode>
+		<level>2</level>
+		<deptimage>3do-goldstar-controller-loose.jpg</deptimage>
+		<disp_seq>33</disp_seq>
+		<under>6930</under>
+	</thesedepts>
+	<thesedepts>
+		<name>N64</name>
+		<deptcode>6942</deptcode>
+		<level>2</level>
+		<deptimage>n64-controller.jpg</deptimage>
+		<disp_seq>34</disp_seq>
+		<under>6930</under>
+	</thesedepts>
+	<thesedepts>
+		<name>NEO-GEO</name>
+		<deptcode>6943</deptcode>
+		<level>2</level>
+		<deptimage>neo_geo_stick_2.jpg</deptimage>
+		<disp_seq>35</disp_seq>
+		<under>6930</under>
+	</thesedepts>
+</VFPData>
+

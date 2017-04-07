@@ -1,0 +1,13 @@
+<WSDLGenConfig WSDLGenVersion="3.0" serviceName="SiteLINKTransfer" COMObjectPath="e:\sl50\webservice\sitelinkwebservice.dll" listenerURI="https://sl6test.mailordercentral.com/test1/" listenerType="ISAPI" XSDSchemaNS="2001" definitionsTNS="https://sl6test.mailordercentral.com/test1/SiteLINKTransfer/wsdl/" schemaTNS="https://sl6test.mailordercentral.com/test1/SiteLINKTransfer/type/" soapBodyNS="https://sl6test.mailordercentral.com/test1/SiteLINKTransfer/message/" soapActionURI="https://sl6test.mailordercentral.com/test1/SiteLINKTransfer/action/" characterSet="UTF-8" outputPath="e:\wwwroot\moc\test1" >
+   <selectedInterfaces>
+      <interface name="SiteLINKTransfer">
+         <selectedMethods>
+            <method name="LOGERROR">
+            </method>
+            <method name="momtransfer">
+            </method>
+         </selectedMethods>
+      </interface>
+   </selectedInterfaces>
+</WSDLGenConfig>
+

@@ -1,0 +1,3 @@
+<%
+SHOW_BUYSAFE =0
+%>

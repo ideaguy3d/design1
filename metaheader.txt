@@ -1,0 +1,22 @@
+<TITLE>Australian Products Co - Bringing Australia To You!</TITLE>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="revisit-after" content="5">
+<meta name="classification" content="Gifts">
+<meta name="description" content="">
+<meta name="MSSmartTagsPreventParsing" content="TRUE">
+<meta name="keywords" content="vegemite, tim tams, australian store, food, drizabone">
+<meta name="robots" content="ALL">
+<meta name="distribution" content="Global">
+<meta name="rating" content="Safe For Kids">
+<meta name="copyright" content="Australian Products Co. 2005">
+<meta name="author" content="Christyne Napier">
+<meta http-equiv="reply-to" content="aussieproducts@sbcglobal.net">
+<meta name="language" content="">
+<meta name="doc-type" content=" ">
+<meta name="doc-class" content="Completed">
+<meta name="doc-rights" content="Copywritten Work">
+
+<link rel="stylesheet" href="text/topnav.css" type="text/css">
+<link rel="stylesheet" href="text/sidenav.css" type="text/css">
+<link rel="stylesheet" href="text/storestyle.css" type="text/css">

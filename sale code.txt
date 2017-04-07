@@ -1,0 +1,38 @@
+		 SL_Sale = SL_prod.item(x).selectSingleNode("discount").text
+		 SL_Qty = SL_prod.item(x).selectSingleNode("qty").text
+
+	<%
+							   	z =0 
+									for each SLgsp in SL_gsp
+									'SL_SP_Number  = SLgsp.selectSingleNode("number").text
+									SL_Qty 	  = SL_prod.item(x).selectSingleNode("qty").text		
+									SL_Sale   = SL_prod.item(x).selectSingleNode("price1").text
+									SL_Disc   = SL_prod.item(x).selectSingleNode("discount").text
+
+									unitprice = LOSTOCK.price1
+									unitprice2 = SL_Sale
+									if unitprice2>0 then
+										unitprice = unitprice2
+									end if
+									percentoff = (SL_Disc/100.0)
+									discountedUnitPrice = cdbl(unitprice * (1- percentoff))
+							
+									MyArray = Split(SL_Qty, ".", -1, 1)
+									numeric_part = MyArray(0)
+									decimal_part = MyArray(1)
+				
+									if decimal_part > 0 then
+										SL_Qty = numeric_part +"." + decimal_part
+									else
+										SL_Qty = numeric_part				
+									end if
+							
+									if (z mod 2) = 0 then
+										   class_to_use = "tdRow1Color"
+									else
+										class_to_use = "tdRow2Color"
+									end if 
+
+									z=z+1
+													
+								%>

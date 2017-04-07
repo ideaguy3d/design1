@@ -33,7 +33,7 @@ session("department")=0
 	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
 	<meta name="description" content="Australian Products Co. Bringing Australia to You. Australian Products include food, books, home decor, souvenirs, clothing, Australian food, Akubra Hats, Driza-Bone coats, Educational Material, Australian Meat Pies and Sausage Rolls" />
 	<meta name="keywords" content="Aussie Products, Australian, Aussie, Australian Products, Australian Food, Aussie Foods, Australian Desserts, tim tams, vegemite, violet crumble, cherry ripe, koala, kangaroo, down under, Australian Groceries, foods, lollies, candy, gourmet food" />
-	<meta name="robots" content="index, follow" />
+	<meta name="robots" content="index, follow"/>
     <meta name="robots" content="ALL">
   
 <html itemscope itemtype="http://schema.org/LocalBusiness">
@@ -49,7 +49,7 @@ session("department")=0
 	<meta name="distribution" content="Global">
 	<meta name="revisit-after" content="5">
 	<meta name="classification" content="Food">
-    <meta name="google-site-verification" content="K2A2-bw3DiKf9q0_Ul-o-hJLTo3YkFNb_JHtsYJ0LJ0"
+    <meta name="google-site-verification" content="K2A2-bw3DiKf9q0_Ul-o-hJLTo3YkFNb_JHtsYJ0LJ0">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="canonical" href="<%=insecureurl%>">
 <link rel="stylesheet" href="text/topnav.css" type="text/css">
@@ -58,6 +58,8 @@ session("department")=0
 <link rel="stylesheet" href="text/footernav.css" type="text/css">
 <link rel="stylesheet" href="text/sidenav.css" type="text/css">
 <link rel="stylesheet" href="text/design.css" type="text/css">
+
+<link rel="stylesheet" href="design/jstyles.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <!--#INCLUDE FILE = "text/Background5.asp" -->
@@ -67,12 +69,13 @@ session("department")=0
     <div id="main">
         <%
             session("destpage")=""
-            session("viewpage")=session("destpage")
+            session("viewpage") = session("destpage")
         %>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
+                <!-- Side Navigation: -->
                  <td width="210" class="sidenavbg" valign="top">
-                 <!--#INCLUDE FILE = "include/side_nav.asp" -->
+                    <!--#INCLUDE FILE = "include/side_nav.asp" -->
                  </td>
                  <td valign="top" class="pagenavbg">
                  <!-- sl code goes here -->

@@ -1,0 +1,40 @@
+td.pagenavbg {
+	border-left:1px solid #000000;
+	border-right: 1px solid #000000;
+	width: 804px;
+
+}
+table.topnavtable {
+	border-left:1px solid #000000;
+	border-right: 1px solid #000000;
+}
+table.topnav2bgcolor {
+border-left:1px solid #000000;
+	border-right: 1px solid #000000;
+
+}
+td.topnav2bgcolor {
+border-left:1px solid #000000;
+	border-right: 1px solid #000000;
+
+}
+table.topnav3bgcolor {
+border-left:1px solid #000000;
+	border-right: 1px solid #000000;
+border-bottom: 1px solid #000000;
+border-top: 1px solid #000000;
+}
+
+#top {
+	
+
+}
+.toptext {
+
+	color: #0000CC;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: italic;
+	font-size: 18px;
+	padding-bottom: 20px;
+	}
+	

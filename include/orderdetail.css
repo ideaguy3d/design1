@@ -1,0 +1,22 @@
+.General_btns
+{
+    BORDER-RIGHT: #FFFFFF 0px outset;
+    PADDING-RIGHT: 0pt;
+    BORDER-TOP: #FFFFFF 0px outset;
+    PADDING-LEFT: 0pt;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10pt;
+    PADDING-BOTTOM: 0pt;
+    MARGIN: 0pt;
+    BORDER-LEFT: #FFFFFF 0px outset;
+    COLOR: #456b93;
+    PADDING-TOP: 0pt;
+    BORDER-BOTTOM: #FFFFFF 0px outset;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #FFFFFF;
+    TEXT-DECORATION: underline;
+    FONT-VARIANT: normal;
+    cursor: hand
+}
+

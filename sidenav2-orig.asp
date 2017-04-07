@@ -19,7 +19,8 @@
 
 </script>
 
-<span class="THHeader"><span class="sidenavTxt">
+<span class="THHeader">
+<span class="sidenavTxt">
  <table width="100%" cellpadding="0" cellspacing="0" border="0">
 	<tr></tr>
 
@@ -64,12 +65,6 @@
 <table width="190" height"200">
 <tr>
 <td width="190" height="11">
-
-
-
-
-
-
 
 <tr>
 <td>

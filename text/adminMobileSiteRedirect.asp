@@ -1,0 +1,3 @@
+<%
+MobileStoreRedirect=1
+%>

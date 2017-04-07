@@ -1,0 +1,4 @@
+<%
+GA_ACCTNUM="UA-7869807-1"
+COMPANY_NAME="Aussie Products"
+%>

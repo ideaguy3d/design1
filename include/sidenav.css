@@ -1,0 +1,39 @@
+A.sidenav2:link {
+
+	 color :#FFFFFF;
+	 FONT-SIZE  :11px;
+	 FONT-FAMILY : Tahoma,Verdana,Arial ;
+	 TEXT-DECORATION  : none ;
+}
+A.sidenav2:active  {
+
+	 color :#FFFFFF;
+	 FONT-SIZE  :11px;
+	 FONT-FAMILY : Tahoma,Verdana,Arial ;
+	 TEXT-DECORATION  : none ;
+}
+A.sidenav2:visited   {
+
+	 color :#FFFFFF;
+	 FONT-SIZE  :11px;
+	 FONT-FAMILY : Tahoma,Verdana,Arial ;
+	 TEXT-DECORATION  : none ;
+}
+A.sidenav2:hover   {
+
+	 color :#FFFFFF;
+	 FONT-SIZE  :11px;
+	 FONT-FAMILY : Tahoma,Verdana,Arial ;
+	 TEXT-DECORATION  : underline ;
+}
+.sidenavTxt {
+
+	 color :#FFFFFF;
+	 FONT-SIZE  :12px;
+	 FONT-FAMILY : Tahoma,Verdana,Arial ;
+	 FONT-WEIGHT  : bold ;
+}
+.sidenavbg {
+
+	 background-color :#D4DDEE;
+}

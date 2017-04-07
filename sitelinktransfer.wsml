@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+ <!-- Generated 07/16/07 by Microsoft SOAP Toolkit WSDL File Generator, Version 3.00.1325.0 --> 
+  <servicemapping name='SiteLINKTransfer' xmlns:dime='http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/'>
+  <service name='SiteLINKTransfer'>
+    <using PROGID='sitelinkwebservice.SiteLINKTransfer' cachable='0' ID='SiteLINKTransferObject' />
+    <port name='SiteLINKTransferSoapPort'>
+      <operation name='momtransfer'>
+        <execute uses='SiteLINKTransferObject' method='momtransfer' dispID='0'>
+          <parameter callIndex='-1' name='retval' elementName='Result' />
+          <parameter callIndex='1' name='THISXML' elementName='THISXML' />
+          <parameter callIndex='2' name='thisfolder' elementName='thisfolder' />
+        </execute>
+      </operation>
+      <operation name='LOGERROR'>
+        <execute uses='SiteLINKTransferObject' method='LOGERROR' dispID='1'>
+          <parameter callIndex='-1' name='retval' elementName='Result' />
+        </execute>
+      </operation>
+    </port>
+  </service>
+</servicemapping>
+ 

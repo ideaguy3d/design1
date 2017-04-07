@@ -1,0 +1,45 @@
+<%on error resume next%>
+<%
+ current_stocknumber =  REQUEST.form("ADDITEM")
+ 
+ qtyin =cstr(REQUEST.FORM("TXTQUANTO"))
+ selected_variant = cstr(REQUEST.FORM("TXTVARIANT"))
+
+ if isnumeric(qtyin)=false then
+     qtyin=0   
+ end if
+ 
+ if len(trim(current_stocknumber)) = 0 then
+ 	response.redirect("default.asp") 	
+ end if
+ 
+%>
+<!--#INCLUDE FILE = "include/momapp.asp" -->
+
+
+<%
+ 		
+		retval = sitelink.validstocknumber2(cstr(current_stocknumber))
+		'response.Write(retval)
+		'retval = 0  valid and non size
+		'retval = 1  valid and size
+		'retval = -1 invalid
+		
+		'response.write(nonskuoptcode)
+		
+		'Now check for upsells and substitute items.
+		extrafield=""
+		custominfofield=""
+		custominfofield = REQUEST.FORM("TXTcustominfo")
+		custominfofield=fix_xss_Chars(custominfofield)
+		
+		if retval <> -1 then
+			   CALL sitelink.ITEMADD(cstr(current_stocknumber),cstr(qtyin),cstr(selected_variant),session("shopperid"),session("ordernumber"),cstr(custominfofield),cint(0),cint(0),cstr(""),cstr("0"))			
+        end if
+
+		set sitelink=nothing 
+		
+		response.redirect("basket.asp")
+		
+%>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book SYSTEM "http://megazine.mightypirates.de/megazine2.dtd">
+<book plugins="anchors, navigationbar, backgroundsound, batchpages, gallery, keyboardnavigation, links, titles, swfaddress"
+bgcolor="0xbba978" pageheight="774" pagewidth="441" lang="de,en" reflection="false" zoominit="0">
+    <chapter>
+        <page foldfx="0" stiff="true">
+            <img src="images/cover.jpg" height="774" width="441"/>
+        </page>              
+       <page>
+	   		<img src="images/Page1.swf" height="774" width="441"/>
+            </page>   
+    </chapter>
+</book>
