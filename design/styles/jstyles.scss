@@ -1,4 +1,4 @@
-// headers
+//-- headers:
 .j-h1 {
   font-weight: 300;
   text-transform: uppercase;
@@ -6,32 +6,38 @@
 }
 
 //-- video style rules:
-.jbtn-group {
-  padding-left: 7px;
-
-  .jbutton {
-    background-color: mediumpurple; /* Green */
-    border: 1px solid yellow;
-    color: white;
-    padding: 12px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    float: left;
+#j-video-section1 {
+  #j-video1 {
+    width: 100%;
+    height: auto;
   }
 
-  .jbutton:not(:last-child) {
-    border-right: none; /* Prevent double borders */
-  }
+  .jbtn-group {
+    padding-left: 7px;
 
-  .jbutton:hover {
-    background-color: whitesmoke;
-    color: mediumpurple;
+    .jbutton {
+      background-color: mediumpurple; /* Green */
+      border: 1px solid yellow;
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      float: left;
+    }
+
+    .jbutton:not(:last-child) {
+      border-right: none; /* Prevent double borders */
+    }
+
+    .jbutton:hover {
+      background-color: whitesmoke;
+      color: mediumpurple;
+    }
   }
 }
-
 
 //-- jcard rules:
 .jcard {
@@ -40,9 +46,41 @@
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
   padding: 8px;
   color: #515151;
+  min-height: 312px;
+  max-height: 312px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 
   a {
     text-decoration: none;
     color: inherit;
   }
+
+  img {
+    width: 150px;
+    height: 184px;
+  }
+}
+
+.j-img-header {
+  width: 100%;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.j-div {
+  overflow-x: scroll;
+}
+
+
+//----------------------------------------
+//-- overwriting bootstrap styles section:
+//-----------------------------------------
+.table>tbody>tr>th {
+  border-top: none;
+}
+
+.table>tbody>tr>td {
+  border-top: none;
 }

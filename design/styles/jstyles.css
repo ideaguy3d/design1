@@ -3,9 +3,13 @@
   text-transform: uppercase;
   color: mediumpurple; }
 
-.jbtn-group {
+#j-video-section1 #j-video1 {
+  width: 100%;
+  height: auto; }
+
+#j-video-section1 .jbtn-group {
   padding-left: 7px; }
-  .jbtn-group .jbutton {
+  #j-video-section1 .jbtn-group .jbutton {
     background-color: mediumpurple;
     /* Green */
     border: 1px solid yellow;
@@ -17,10 +21,10 @@
     font-size: 16px;
     cursor: pointer;
     float: left; }
-  .jbtn-group .jbutton:not(:last-child) {
+  #j-video-section1 .jbtn-group .jbutton:not(:last-child) {
     border-right: none;
     /* Prevent double borders */ }
-  .jbtn-group .jbutton:hover {
+  #j-video-section1 .jbtn-group .jbutton:hover {
     background-color: whitesmoke;
     color: mediumpurple; }
 
@@ -29,7 +33,27 @@
   background-color: #fff;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
   padding: 8px;
-  color: #515151; }
+  color: #515151;
+  min-height: 312px;
+  max-height: 312px; }
+  .jcard:hover {
+    background-color: rgba(0, 0, 0, 0.1); }
   .jcard a {
     text-decoration: none;
     color: inherit; }
+  .jcard img {
+    width: 150px;
+    height: 184px; }
+
+.j-img-header {
+  width: 100%;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5); }
+
+.j-div {
+  overflow-x: scroll; }
+
+.table > tbody > tr > th {
+  border-top: none; }
+
+.table > tbody > tr > td {
+  border-top: none; }
