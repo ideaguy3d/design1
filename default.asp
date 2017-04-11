@@ -35,7 +35,7 @@ session("department")=0
 	<meta name="keywords" content="Aussie Products, Australian, Aussie, Australian Products, Australian Food, Aussie Foods, Australian Desserts, tim tams, vegemite, violet crumble, cherry ripe, koala, kangaroo, down under, Australian Groceries, foods, lollies, candy, gourmet food" />
 	<meta name="robots" content="index, follow"/>
     <meta name="robots" content="ALL">
-  
+
 <html itemscope itemtype="http://schema.org/LocalBusiness">
 
 
@@ -75,54 +75,54 @@ session("department")=0
             session("destpage")=""
             session("viewpage") = session("destpage")
         %>
-        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <table border="0" cellpadding="0" cellspacing="0">
             <tr>
-                <!-- Side Navigation: -->
+                <!-- Side Navigation Area: -->
                  <td width="210" class="sidenavbg" valign="top">
                     <!--#INCLUDE FILE = "include/side_nav.asp" -->
                  </td>
+                 <!-- Product Listing Area: -->
                  <td valign="top" class="pagenavbg">
-                 <!-- sl code goes here -->
-                 <div id="page-content" class="plaintext">
-                 <br>
-                 <!--#INCLUDE FILE = "text/HomePage5.htm" -->
-                 <%
-                 if FEATURED_DPT > 0 then
+                     <!-- sl code goes here -->
+                     <div id="page-content" class="plaintext">
+                        <!--#INCLUDE FILE = "text/HomePage5.htm" -->
+                     <%
+                     if FEATURED_DPT > 0 then
 
-                  'response.write(sortorderby)
-                     extrafield=""
-                     set SLProdObj = New cProductObj
-                     SLProdObj.ldeptcode    		= cstr(FEATURED_DPT)
-                     SLProdObj.lSORTBY		 	= cstr("")
-                     SLProdObj.lProd_Per_Page 	= TOTAL_PRODUCTS
-                     SLProdObj.llnpage		 	= 1
-                     SLProdObj.lsortorder	 	= cstr("")
-                     SLProdObj.llextrafield	 	= extrafield
-                     xmlstring =sitelink.PRODUCTSINDEPT(SLProdObj)
-                     pcount=SLProdObj.lpcount
-                     set SLProdObj = nothing
-
-                     objDoc.loadxml(xmlstring)
-                     set SL_prod = objDoc.selectNodes("//prodindept")
-
-                     if SL_prod.length > 0 then
-                         TotalProds = SL_prod.length
-                         if TOTAL_PRODUCTS > 0 and TOTAL_PRODUCTS <= 50 and TotalProds > TOTAL_PRODUCTS then
-                             TotalProds = TOTAL_PRODUCTS
-                         end if
-
-                         'get special pricing.
-                         all_prods=""
-                         for x=0 to TotalProds-1
-                             SLProdNumber = SL_prod.item(x).selectSingleNode("number").text
-                             all_prods =all_prods+","+cstr(SLProdNumber)
-                         next
-                         all_prods =all_prods+","
-
-                         xmlstring = sitelink.GET_ALL_SPECIALPRICES(cstr(all_prods),session("ordernumber"),session("shopperid"),cstr(""))
+                      'response.write(sortorderby)
+                         extrafield=""
+                         set SLProdObj = New cProductObj
+                         SLProdObj.ldeptcode    		= cstr(FEATURED_DPT)
+                         SLProdObj.lSORTBY		 	= cstr("")
+                         SLProdObj.lProd_Per_Page 	= TOTAL_PRODUCTS
+                         SLProdObj.llnpage		 	= 1
+                         SLProdObj.lsortorder	 	= cstr("")
+                         SLProdObj.llextrafield	 	= extrafield
+                         xmlstring =sitelink.PRODUCTSINDEPT(SLProdObj)
+                         pcount=SLProdObj.lpcount
+                         set SLProdObj = nothing
 
                          objDoc.loadxml(xmlstring)
-                 %>
+                         set SL_prod = objDoc.selectNodes("//prodindept")
+
+                         if SL_prod.length > 0 then
+                             TotalProds = SL_prod.length
+                             if TOTAL_PRODUCTS > 0 and TOTAL_PRODUCTS <= 50 and TotalProds > TOTAL_PRODUCTS then
+                                 TotalProds = TOTAL_PRODUCTS
+                             end if
+
+                             'get special pricing.
+                             all_prods=""
+                             for x=0 to TotalProds-1
+                                 SLProdNumber = SL_prod.item(x).selectSingleNode("number").text
+                                 all_prods =all_prods+","+cstr(SLProdNumber)
+                             next
+                             all_prods =all_prods+","
+
+                             xmlstring = sitelink.GET_ALL_SPECIALPRICES(cstr(all_prods),session("ordernumber"),session("shopperid"),cstr(""))
+
+                             objDoc.loadxml(xmlstring)
+                     %>
 
                      <br /><br /><h1>Featured Products</h1>
 

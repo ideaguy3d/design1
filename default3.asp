@@ -75,17 +75,17 @@ session("department")=0
             session("destpage")=""
             session("viewpage") = session("destpage")
         %>
-        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <table border="0" cellpadding="0" cellspacing="0">
             <tr>
-                <!-- Side Navigation: -->
+                <!-- Side Navigation Area: -->
                  <td width="210" class="sidenavbg" valign="top">
                     <!--#INCLUDE FILE = "include/side_nav.asp" -->
                  </td>
+                 <!-- Product Listing Area: -->
                  <td valign="top" class="pagenavbg">
-                 <!-- sl code goes here -->
-                 <div id="page-content" class="plaintext">
-                 <br>
-                 <!--#INCLUDE FILE = "text/HomePage5-copy.htm" -->
+                     <!-- sl code goes here -->
+                     <div id="page-content" class="plaintext">
+                        <!--#INCLUDE FILE = "text/HomePage5-copy.htm" -->
                  <%
                  if FEATURED_DPT > 0 then
 

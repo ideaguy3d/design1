@@ -1,341 +1,234 @@
-<style type="text/css">
-    .jbtn-group {
-        padding-left: 7px;
-    }
+<!-- START: img at top of home page section -->
+<!--<img src="http://i.imgur.com/k3NFfpo.jpg" alt="easter egg" class="img-responsive center-block j-img-header">-->
+<!-- START: img at top of home page section -->
 
-    .jbtn-group .jbutton {
-        background-color: mediumpurple; /* Green */
-        border: 1px solid yellow;
-        color: white;
-        padding: 12px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        cursor: pointer;
-        float: left;
-    }
+<!-- START: video section -->
+<section id="j-video-section1" class="j-contain-vid">
+    <div style="text-align:center">
+        <!-- Buttons above the video:
+        <div class="jbtn-group">
+            <div>
+                <a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=BFE040">
+                    Medium Mini Eggs
+                </a>
+                <a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=CCCR20">
+                    CherryRipe Casket
+                </a>
+                <a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=BFX061">
+                    Roses Easter Egg
+                </a>
+            </div>
+        </div>
+        -->
+        <!-- The embedded video: -->
+        <video controls="" id="j-video1" width="700">
+            <source src="vids/product-vid1.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+            </source>
+        </video>
+    </div>
+    <script>
+        var myVideo = document.getElementById("j-video1");
+        document.getElementsByTagName('video')[0].volume = 0;
+        myVideo.play();
 
-    .jbtn-group .jbutton:not(:last-child) {
-        border-right: none; /* Prevent double borders */
-    }
+        function playPause() {
+            if (myVideo.paused) myVideo.play();
+            else myVideo.pause();
+        }
+    </script>
+</section>
+<!-- END: video section -->
 
-    .jbtn-group .jbutton:hover {
-        background-color: whitesmoke;
-        color: mediumpurple;
-    }
-</style>
-<div id="j-div ">
-    <!-- START: img at top of home page section -->
-    <img src="http://i.imgur.com/k3NFfpo.jpg" alt="easter egg" class="img-responsive center-block j-img-header">
-    <!-- START: img at top of home page section -->
+<!-- START: Top row for Aussie Easter products -->
+<section class="j-contain">
+    <h1 class="text-center">AUSTRALIAN EASTER</h1>
+    <h5 class="text-center">
+        As a special Treat We have flown in Australian easter eggs for our customer. <i>Limited stock</i>.
+    </h5>
 
+    <div class="row">
+        <!-- A Product Card -->
+        <div class="col-sm-4 col-md-4">
+            <div class="jcard">
+                <a href="http://www.aussieproducts.com/prodinfo.asp?number=CCFC19">
+                    <img src="http://www.aussieproducts.com/images/CCFC19_t.png" alt="chocolate">
+                    <h4>Cadbury Favourites Casket 190g.</h4>
+                    <h6>Item #: CCFC19</h6>
+                    <h4>$24.95</h4>
+                </a>
+            </div>
+        </div>
+        <!-- A Product Card -->
+        <div class="col-sm-4 col-md-4">
+            <div class="jcard">
+                <a href="http://www.aussieproducts.com/prodinfo.asp?number=CCCR20">
+                    <img src="http://www.aussieproducts.com/images/CCCR20_t.png" alt="chocolate">
+                    <h4>Cadbury Cherry Ripe Casket 205g.</h4>
+                    <h6>Item #: CCCR20</h6>
+                    <h4>$24.95</h4>
+                </a>
+            </div>
+        </div>
+        <!-- A Product Card -->
+        <div class="col-sm-4 col-md-4">
+            <div class="jcard">
+                <a href="http://www.aussieproducts.com/prodinfo.asp?number=CCRC19">
+                    <img src="http://www.aussieproducts.com/images/CCRC19_t.png" alt="chocolate">
+                    <h4>Cadbury Roses Casket 190g.</h4>
+                    <h6>Item #: CCFC19</h6>
+                    <h4>$24.95</h4>
+                </a>
+            </div>
+        </div>
+    </div>
     <br>
-
-    <!-- START: Top row for Aussie Easter products -->
-    <section class="container-fluid">
-        <h1 class="text-center">AUSTRALIAN EASTER</h1>
-        <h5 class="text-center">
-            As a special Treat We have flown in Australian easter eggs for our customer. <i>Limited stock</i>.
-        </h5>
-
-        <div class="row">
-            <!-- A Product Card -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=CCFC19">
-                        <img src="http://www.aussieproducts.com/images/CCFC19_t.png" alt="chocolate">
-                        <h4>Cadbury Favourites Casket 190g.</h4>
-                        <h6>Item #: CCFC19</h6>
-                        <h4>$24.95</h4>
-                    </a>
-                </div>
-            </div>
-            <!-- A Product Card -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=CCCR20">
-                        <img src="http://www.aussieproducts.com/images/CCCR20_t.png" alt="chocolate">
-                        <h4>Cadbury Cherry Ripe Casket 205g.</h4>
-                        <h6>Item #: CCCR20</h6>
-                        <h4>$24.95</h4>
-                    </a>
-                </div>
-            </div>
-            <!-- A Product Card -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=CCRC19">
-                        <img src="http://www.aussieproducts.com/images/CCRC19_t.png" alt="chocolate">
-                        <h4>Cadbury Roses Casket 190g.</h4>
-                        <h6>Item #: CCFC19</h6>
-                        <h4>$24.95</h4>
-                    </a>
-                </div>
+    <div class="row">
+        <!-- A Product Card -->
+        <div class="col-sm-4 col-md-4">
+            <div class="jcard">
+                <a href="http://www.aussieproducts.com/prodinfo.asp?number=DDCFAV">
+                    <img src="http://www.aussieproducts.com/images/DDCFAV_t.png" alt="chocolate">
+                    <h4>Cadbury Favourites Boxed Chocolates 320g</h4>
+                    <h6>Item #: DDCFAV</h6>
+                    <h4>$25.95</h4>
+                </a>
             </div>
         </div>
-        <br>
-        <div class="row">
-            <!-- A Product Card -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=DDCFAV">
-                        <img src="http://www.aussieproducts.com/images/DDCFAV_t.png" alt="chocolate">
-                        <h4>Cadbury Favourites Boxed Chocolates 320g</h4>
-                        <h6>Item #: DDCFAV</h6>
-                        <h4>$25.95</h4>
-                    </a>
-                </div>
-            </div>
-            <!-- A Product Card -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=DDROSE%20%20%20%20ROSES%20150G">
-                        <img src="http://www.aussieproducts.com/images/DDROSE_t.png" alt="chocolate">
-                        <h4>Cadbury Roses Chocolate Selection Box 150g.</h4>
-                        <h6>Item #: DDROSE ROSES 150G</h6>
-                        <h4>$13.95</h4>
-                    </a>
-                </div>
-            </div>
-            <!-- A Product Card -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=APSGBS">
-                        <img src="http://www.aussieproducts.com/images/APSGBS_t.jpg" alt="chocolate">
-                        <h4>Cadbury Favourites Casket 190g.</h4>
-                        <h6>Item #: APSGBS</h6>
-                        <h4>$79.95</h4>
-                    </a>
-                </div>
+        <!-- A Product Card -->
+        <div class="col-sm-4 col-md-4">
+            <div class="jcard">
+                <a href="http://www.aussieproducts.com/prodinfo.asp?number=DDROSE%20%20%20%20ROSES%20150G">
+                    <img src="http://www.aussieproducts.com/images/DDROSE_t.png" alt="chocolate">
+                    <h4>Cadbury Roses Chocolate Selection Box 150g.</h4>
+                    <h6>Item #: DDROSE ROSES 150G</h6>
+                    <h4>$13.95</h4>
+                </a>
             </div>
         </div>
-    </section>
-    <!-- END: Top row for Aussie Easter products -->
+        <!-- A Product Card -->
+        <div class="col-sm-4 col-md-4">
+            <div class="jcard">
+                <a href="http://www.aussieproducts.com/prodinfo.asp?number=APSGBS">
+                    <img src="http://www.aussieproducts.com/images/APSGBS_t.jpg" alt="chocolate">
+                    <h4>Cadbury Favourites Casket 190g.</h4>
+                    <h6>Item #: APSGBS</h6>
+                    <h4>$79.95</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END: Top row for Aussie Easter products -->
 
+<!-- START: British Easter Products -->
+<section class="j-contain">
+    <h1 class="text-center">BRITISH EASTER</h1>
+    <h5 class="text-center">
+        Order your British Easter stock now! <i>Limited Stock.</i>
+    </h5>
+
+    <!-- 1st row: -->
+    <div class="row">
+        <!-- 1) A Product Card -->
+        <div class="col-sm-4 col-md-4">
+            <div class="jcard">
+                <a href="http://www.aussieproducts.com/searchprods.asp">
+                    <img src="http://www.aussieproducts.com/images/BFCAGE_t.png" alt="chocolate">
+                    <h4>Cadbury Dairy Milk Giant Easter Egg 515g.</h4>
+                    <h6>Item #: BFCAGE</h6>
+                    <h4>$34.95</h4>
+                </a>
+            </div>
+        </div>
+        <!-- 2) A Product Card -->
+        <div class="col-sm-4 col-md-4">
+            <div class="jcard">
+                <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX037">
+                    <img src="http://www.aussieproducts.com/images/BFX037_t.jpg" alt="chocolate">
+                    <h4>Cadbury Milk Tray 180g.</h4>
+                    <h6>Item #: BFX037</h6>
+                    <h4>$19.95</h4>
+                </a>
+            </div>
+        </div>
+        <!-- 3) A Product Card -->
+        <div class="col-sm-4 col-md-4">
+            <div class="jcard">
+                <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFSGBS">
+                    <img src="http://www.aussieproducts.com/images/BFSGBSn_t.png" alt="chocolate">
+                    <h4>British All-Seasons Gift Box</h4>
+                    <h6>Item #: BFSGBS</h6>
+                    <h4>$54.95</h4>
+                </a>
+            </div>
+        </div>
+    </div>
     <br>
-
-    <!-- START: video section -->
-    <section id="j-video-section1" class="container-fluid">
-        <div style="text-align:center">
-            <!-- Buttons above the video: -->
-            <div class="jbtn-group">
-                <div>
-                    <a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=BFE040">
-                        Medium Mini Eggs
-                    </a>
-                    <a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=CCCR20">
-                        CherryRipe Casket
-                    </a>
-                    <a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=BFX061">
-                        Roses Easter Egg
-                    </a>
-                </div>
-            </div>
-            <br/>
-            <br/>
-            <br/>
-            <!-- The embedded video: -->
-            <video controls="" id="j-video1" width="700">
-                <source src="vids/product-vid1.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-                </source>
-            </video>
-        </div>
-        <script>
-            var myVideo = document.getElementById("j-video1");
-            document.getElementsByTagName('video')[0].volume = 0;
-            myVideo.play();
-
-            function playPause() {
-                if (myVideo.paused) myVideo.play();
-                else myVideo.pause();
-            }
-        </script>
-    </section>
-    <!-- END: video section -->
-
-    <!-- START: New store hours -->
-    <section class="table-responsive container">
-        <table class="table">
-            <tr>
-                <th><h1 class="page-header"><strong>New Store Hours</strong></h1></th>
-            </tr>
-            <tr>
-                <td><h2>Mon-Fri: 10am-6pm</h2></td>
-            </tr>
-            <tr>
-                <td><h2>Saturday: 10am-5pm</h2></td>
-            </tr>
-            <tr>
-                <td><h2>Sunday: Closed</h2></td>
-            </tr>
-        </table>
-    </section>
-    <!-- END: New store hours -->
-
-    <!-- START: British Easter Products -->
-    <section class="container-fluid">
-        <h1 class="text-center">BRITISH EASTER</h1>
-        <h5 class="text-center">
-            Order your British Easter stock now! <i>Limited Stock.</i>
-        </h5>
-
-        <!-- 1st row: -->
-        <div class="row">
-            <!-- 1) A Product Card -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/searchprods.asp">
-                        <img src="http://www.aussieproducts.com/images/BFCAGE_t.png" alt="chocolate">
-                        <h4>Cadbury Dairy Milk Giant Easter Egg 515g.</h4>
-                        <h6>Item #: BFCAGE</h6>
-                        <h4>$34.95</h4>
-                    </a>
-                </div>
-            </div>
-            <!-- 2) A Product Card -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX037">
-                        <img src="http://www.aussieproducts.com/images/BFX037_t.jpg" alt="chocolate">
-                        <h4>Cadbury Milk Tray 180g.</h4>
-                        <h6>Item #: BFX037</h6>
-                        <h4>$19.95</h4>
-                    </a>
-                </div>
-            </div>
-            <!-- 3) A Product Card, SOLD OUT -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=CCRC19">
-                        <!--<img src="http://www.aussieproducts.com/images/CCRC19_t.png" alt="chocolate">-->
-                        <h4>Cadbury Roses Casket 190g.</h4>
-                        <h6>Item #: CCFC19</h6>
-                        <h1>SOLD OUT</h1>
-                    </a>
-                </div>
+    <!-- 2nd row: -->
+    <div class="row">
+        <!-- 1) A Product Card -->
+        <div class="col-sm-4 col-md-4">
+            <div class="jcard">
+                <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX2183">
+                    <img src="http://www.aussieproducts.com/images/BFX2183_t.gif" alt="chocolate">
+                    <h4>Walker's Nonsuch Assorted Toffees and Chocolate Eclairs Jar 450g.</h4>
+                    <h6>Item #: BFX21839</h6>
+                    <h4>$19.95</h4>
+                </a>
             </div>
         </div>
-        <br>
-        <!-- 2nd row: -->
-        <div class="row">
-            <!-- 1) A Product Card, SOLD OUT -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=DDCFAV">
-                        <!--<img src="http://www.aussieproducts.com/images/DDCFAV_t.png" alt="chocolate">-->
-                        <h4>Cadbury Dairy Milk Thoughtful Gestures Egg 331g.</h4>
-                        <h6>Item #: BFX060</h6>
-                        <h1>SOLD OUT</h1>
-                    </a>
-                </div>
-            </div>
-            <!-- 2) A Product Card -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX061">
-                        <img src="http://www.aussieproducts.com/images/BFX061_t.png" alt="chocolate">
-                        <h4>Cadbury Roses Thoughtful Gestures Egg 300g.</h4>
-                        <h6>Item #: BFX061</h6>
-                        <h4>$24.95</h4>
-                    </a>
-                </div>
-            </div>
-            <!-- 3) A Product Card -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX0370">
-                        <img src="http://www.aussieproducts.com/images/BFX0370_t.png" alt="chocolate">
-                        <h4>Kinnterton Small Pokemon Egg & Bar 65g.</h4>
-                        <h6>Item #: BFX0370</h6>
-                        <h4>$9.95</h4>
-                    </a>
-                </div>
+        <!-- 2) A Product Card -->
+        <div class="col-sm-4 col-md-4">
+            <div class="jcard">
+                <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX061">
+                    <img src="http://www.aussieproducts.com/images/BFX061_t.png" alt="chocolate">
+                    <h4>Cadbury Roses Thoughtful Gestures Egg 300g.</h4>
+                    <h6>Item #: BFX061</h6>
+                    <h4>$24.95</h4>
+                </a>
             </div>
         </div>
-        <br>
-        <!-- 3rd row: -->
-        <div class="row">
-            <!-- 1) A Product Card -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX2183">
-                        <img src="http://www.aussieproducts.com/images/BFX2183_t.gif" alt="chocolate">
-                        <h4>Walker's Nonsuch Assorted Toffees and Chocolate Eclairs Jar 450g.</h4>
-                        <h6>Item #: BFX21839</h6>
-                        <h4>$19.95</h4>
-                    </a>
-                </div>
-            </div>
-            <!-- 2) A Product Card -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFSGBS">
-                        <img src="http://www.aussieproducts.com/images/BFSGBSn_t.png" alt="chocolate">
-                        <h4>British All-Seasons Gift Box</h4>
-                        <h6>Item #: BFSGBS</h6>
-                        <h4>$54.95</h4>
-                    </a>
-                </div>
-            </div>
-            <!-- 3) A Product Card, SOLD OUT -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=CCRC19">
-                        <!--<img src="http://www.aussieproducts.com/images/CCRC19_t.png" alt="chocolate">-->
-                        <h4>Cadbury Roses Casket 190g.</h4>
-                        <h6>Item #: CCFC19</h6>
-                        <h1>SOLD OLD</h1>
-                    </a>
-                </div>
+        <!-- 3) A Product Card -->
+        <div class="col-sm-4 col-md-4">
+            <div class="jcard">
+                <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX0370">
+                    <img src="http://www.aussieproducts.com/images/BFX0370_t.png" alt="chocolate">
+                    <h4>Kinnterton Small Pokemon Egg & Bar 65g.</h4>
+                    <h6>Item #: BFX0370</h6>
+                    <h4>$9.95</h4>
+                </a>
             </div>
         </div>
-        <br>
-        <!-- 4th row -->
-        <div class="row">
-            <!-- 1) A Product Card, SOLD OUT -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="">
-                        <!--<img src="http://www.aussieproducts.com/images/DDCFAV_t.png" alt="chocolate">-->
-                        <h4>Cadbury Favourites Boxed Chocolates 320g</h4>
-                        <h6>Item #: DDCFAV</h6>
-                        <h1>SOLD OUT</h1>
-                    </a>
-                </div>
-            </div>
-            <!-- 2) A Product Card -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=DDROSE%20%20%20%20ROSES%20150G">
-                        <!--<img src="" alt="chocolate">-->
-                        <h4>Cadbury Roses Tub 729g.</h4>
-                        <h6>Item #: BFX024</h6>
-                        <h1>SOLD OUT</h1>
-                    </a>
-                </div>
-            </div>
-            <!-- 3) A Product Card -->
-            <div class="col-sm-4 col-md-4">
-                <div class="jcard">
-                    <a href="http://www.aussieproducts.com/prodinfo.asp?number=THBUNS">
-                        <img src="http://www.aussieproducts.com/images/hotcrossbuns_t.jpg" alt="chocolate">
-                        <h4>Hot Cross Buns EASTER 6 pack - Available March 15th</h4>
-                        <h6>Item #: THBUNS</h6>
-                        <h4>$12.95</h4>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END:  British Easter Products-->
-</div>
+    </div>
+</section>
+<!-- END:  British Easter Products-->
 
+<!-- START: New store hours -->
+<section>
+    <h1 class="page-header j-table-header-blue text-center">
+        <strong>New Store Hours</strong>
+    </h1>
+    <table class="table">
+        <tr class="success">
+            <td><h2>Mon-Fri:</h2></td>
+            <td><h2>10am-6pm</h2></td>
+        </tr>
+        <tr class="info">
+            <td><h2>Saturday: </h2></td>
+            <td><h2>10am-5pm</h2></td>
+        </tr>
+        <tr class="warning">
+            <td><h2>Sunday: </h2></td>
+            <td><h2>Closed</h2></td>
+        </tr>
+    </table>
+</section>
+<!-- END: New store hours -->
 
-<!------------------------------->
-<!-- SiteLink generated table: -->
-<!------------------------------->
+<!------------------------------------------------------------->
+<!----------------- SiteLink generated table: ----------------->
+<!------------------------------------------------------------->
 <div style="text-align: center;">
     <table align="center" border="0" cellpadding="1" cellspacing="1" style="width:700px;">
         <tbody>

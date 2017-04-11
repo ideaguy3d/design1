@@ -6,6 +6,10 @@
 }
 
 //-- video style rules:
+.j-contain-vid {
+  padding: 0;
+}
+
 #j-video-section1 {
   #j-video1 {
     width: 100%;
@@ -13,7 +17,6 @@
   }
 
   .jbtn-group {
-    padding-left: 7px;
 
     .jbutton {
       background-color: mediumpurple; /* Green */
@@ -26,6 +29,7 @@
       font-size: 16px;
       cursor: pointer;
       float: left;
+      margin: 0 4px;
     }
 
     .jbutton:not(:last-child) {
@@ -73,14 +77,29 @@
   overflow-x: scroll;
 }
 
+.j-contain {
+  padding: 2px 12px;
+}
+
+.j-soldout {
+  color: darkred;
+}
+
+.j-table-header-blue {
+  color: #002a7e;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+//------------------------------------------------------------------------------------
 
 //----------------------------------------
 //-- overwriting bootstrap styles section:
 //-----------------------------------------
-.table>tbody>tr>th {
+.table > tbody > tr > th {
   border-top: none;
 }
 
-.table>tbody>tr>td {
+.table > tbody > tr > td {
   border-top: none;
 }
