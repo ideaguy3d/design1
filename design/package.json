@@ -1,0 +1,30 @@
+{
+  "name": "aussie-products-redesign1",
+  "version": "1.0.0",
+  "description": "rebuilding the homepage with this project",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ideaguy3d/design1.git"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "sass",
+    "css",
+    "jquery"
+  ],
+  "author": "Julius Alvarado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ideaguy3d/design1/issues"
+  },
+  "homepage": "https://github.com/ideaguy3d/design1#readme"
+}
