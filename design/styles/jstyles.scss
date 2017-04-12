@@ -1,94 +1,102 @@
 //-- headers:
 .j-h1 {
-  font-weight: 300;
-  text-transform: uppercase;
-  color: mediumpurple;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: mediumpurple;
 }
 
 //-- video style rules:
 .j-contain-vid {
-  padding: 0;
+    padding: 0;
 }
 
 #j-video-section1 {
-  #j-video1 {
-    width: 100%;
-    height: auto;
-  }
-
-  .jbtn-group {
-
-    .jbutton {
-      background-color: mediumpurple; /* Green */
-      border: 1px solid yellow;
-      color: white;
-      padding: 12px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      cursor: pointer;
-      float: left;
-      margin: 0 4px;
+    #j-video1 {
+        width: 100%;
+        height: auto;
     }
 
-    .jbutton:not(:last-child) {
-      border-right: none; /* Prevent double borders */
-    }
+    .jbtn-group {
 
-    .jbutton:hover {
-      background-color: whitesmoke;
-      color: mediumpurple;
+        .jbutton {
+            background-color: mediumpurple; /* Green */
+            border: 1px solid yellow;
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+            margin: 0 4px;
+        }
+
+        .jbutton:not(:last-child) {
+            border-right: none; /* Prevent double borders */
+        }
+
+        .jbutton:hover {
+            background-color: whitesmoke;
+            color: mediumpurple;
+        }
     }
-  }
+}
+
+//-- store hours:
+#j-store-hours {
+    h1, h2, h4 {
+        padding: 8px;
+        border: 1px solid #0D2A81;
+    }
 }
 
 //-- jcard rules:
 .jcard {
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
-  padding: 8px;
-  color: #515151;
-  min-height: 312px;
-  max-height: 312px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    color: #515151;
+    min-height: 312px;
+    max-height: 312px;
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 
-  img {
-    width: 150px;
-    height: 184px;
-  }
+    img {
+        width: 150px;
+        height: 184px;
+    }
 }
 
 .j-img-header {
-  width: 100%;
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .j-div {
-  overflow-x: scroll;
+    overflow-x: scroll;
 }
 
 .j-contain {
-  padding: 2px 12px;
+    padding: 2px 12px;
 }
 
 .j-soldout {
-  color: darkred;
+    color: darkred;
 }
 
 .j-table-header-blue {
-  color: #002a7e;
-  font-weight: 400;
-  text-transform: uppercase;
+    color: #002a7e;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 //------------------------------------------------------------------------------------
@@ -97,9 +105,9 @@
 //-- overwriting bootstrap styles section:
 //-----------------------------------------
 .table > tbody > tr > th {
-  border-top: none;
+    border-top: none;
 }
 
 .table > tbody > tr > td {
-  border-top: none;
+    border-top: none;
 }

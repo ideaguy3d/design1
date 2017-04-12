@@ -32,6 +32,10 @@
   background-color: whitesmoke;
   color: mediumpurple; }
 
+#j-store-hours h1, #j-store-hours h2, #j-store-hours h4 {
+  padding: 8px;
+  border: 1px solid #0D2A81; }
+
 .jcard {
   text-align: center;
   background-color: #fff;

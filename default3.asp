@@ -69,7 +69,7 @@ session("department")=0
 <!--#INCLUDE FILE = "text/Background5.asp" -->
 
 <div id="container">
-    <!--#INCLUDE FILE = "include/top_nav.asp" -->
+    <!--#INCLUDE FILE = "include/top_nav-copy.asp" -->
     <div id="main">
         <%
             session("destpage")=""
