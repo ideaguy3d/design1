@@ -1,3 +1,7 @@
+//-- variables:
+$aussie-blue: #0D2A81;
+$aussie-red: #ba0000;
+
 //-- headers:
 .j-h1 {
     font-weight: 300;
@@ -43,11 +47,19 @@
     }
 }
 
+.j-red {
+    color: $aussie-red;
+}
+
 //-- store hours:
 #j-store-hours {
     h1, h2, h4 {
         padding: 8px;
         border: 1px solid #0D2A81;
+    }
+
+    h1 {
+        background-color: #0D2A81;
     }
 }
 
@@ -89,6 +101,10 @@
     padding: 2px 12px;
 }
 
+.j-cart {
+    padding-top: 8px;
+}
+
 .j-soldout {
     color: darkred;
 }
@@ -99,15 +115,46 @@
     text-transform: uppercase;
 }
 
+.j-brand-btn {
+    border: 1px solid $aussie-blue;
+}
+
 //------------------------------------------------------------------------------------
 
 //----------------------------------------
 //-- overwriting bootstrap styles section:
 //-----------------------------------------
+
+#j-nav {
+
+}
+
+.search-wrap {
+    li {
+        display: inline-block;
+    }
+}
+
+.nav>li>a {
+    text-decoration: none;
+}
+
 .table > tbody > tr > th {
     border-top: none;
 }
 
 .table > tbody > tr > td {
     border-top: none;
+}
+
+.navbar {
+    border: none;
+    margin-bottom: 0;
+    position: initial;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;
+    }
 }

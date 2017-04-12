@@ -32,9 +32,15 @@
   background-color: whitesmoke;
   color: mediumpurple; }
 
+.j-red {
+  color: #ba0000; }
+
 #j-store-hours h1, #j-store-hours h2, #j-store-hours h4 {
   padding: 8px;
   border: 1px solid #0D2A81; }
+
+#j-store-hours h1 {
+  background-color: #0D2A81; }
 
 .jcard {
   text-align: center;
@@ -63,6 +69,9 @@
 .j-contain {
   padding: 2px 12px; }
 
+.j-cart {
+  padding-top: 8px; }
+
 .j-soldout {
   color: darkred; }
 
@@ -71,8 +80,26 @@
   font-weight: 400;
   text-transform: uppercase; }
 
+.j-brand-btn {
+  border: 1px solid #0D2A81; }
+
+.search-wrap li {
+  display: inline-block; }
+
+.nav > li > a {
+  text-decoration: none; }
+
 .table > tbody > tr > th {
   border-top: none; }
 
 .table > tbody > tr > td {
   border-top: none; }
+
+.navbar {
+  border: none;
+  margin-bottom: 0;
+  position: initial; }
+
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 0; } }
