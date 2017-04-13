@@ -645,6 +645,7 @@
      <strong>Companies that we work with past/present:</strong><br />
      <img src="/nav_spacer.gif" width="200" height="20" /><p>
 			  Tourism Australia<br />
+			  Seven Network Australia <br>
 			  AusTrade<br />
 			  MCI<br />
 			  Avon America<br />
@@ -661,6 +662,7 @@
               Somnamed<br />
 		    VISA <br />
             The Ellen DeGeneres Show<br/>
+
             	  
 		    <img src="/nav_spacer.gif" width="200" height="30" /><p></td>
 				</tr>

@@ -29,7 +29,7 @@ session("department")=0
 
 
 <html>
-<title>Aussie Products.com | Australian Products Co. Bringing Australia to You - Aussie Foods</title>
+<title>UI TEST</title>
 	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
 	<meta name="description" content="Australian Products Co. Bringing Australia to You. Australian Products include food, books, home decor, souvenirs, clothing, Australian food, Akubra Hats, Driza-Bone coats, Educational Material, Australian Meat Pies and Sausage Rolls" />
 	<meta name="keywords" content="Aussie Products, Australian, Aussie, Australian Products, Australian Food, Aussie Foods, Australian Desserts, tim tams, vegemite, violet crumble, cherry ripe, koala, kangaroo, down under, Australian Groceries, foods, lollies, candy, gourmet food" />
@@ -59,11 +59,11 @@ session("department")=0
 <link rel="stylesheet" href="text/sidenav.css" type="text/css">
 <link rel="stylesheet" href="text/design.css" type="text/css">
 
-<!-- Latest compiled and minified CSS -->
+<!-- Bootstrap Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="design/jstyles.css">
 <link rel="stylesheet" href="design/styles/jstyles.css">
-
+<link rel="stylesheet" href="design/bower_components/font-awesome/css/font-awesome.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <!--#INCLUDE FILE = "text/Background5.asp" -->
@@ -702,5 +702,9 @@ session("department")=0
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
   })();
 </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </body>
 </html>

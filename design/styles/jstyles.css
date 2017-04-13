@@ -83,6 +83,9 @@
 .j-brand-btn {
   border: 1px solid #0D2A81; }
 
+.j-stretch {
+  width: 80%; }
+
 .search-wrap li {
   display: inline-block; }
 

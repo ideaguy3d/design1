@@ -101,7 +101,7 @@ end if
 
 	<form method="POST" id="searchprodform" action="searchprods.asp">
 		<input name="ProductSearchBy" value="2" type="hidden">
-		<!-- Aussie search area:
+		<!-- aussie search area: -->
 		<div class="divsearch">
 			<ul class="search-wrap">
 				<li class="searchbox">
@@ -114,7 +114,7 @@ end if
 				</li>
 			</ul>
 		</div>
-        -->
+
 	</form>
 </div>
 
@@ -122,7 +122,7 @@ end if
 <!-- START: top horizontal navigation -->
 <nav id="j-nav1" class="navbar navbar-default">
 	<div class="container-fluid">
-		<!-- Brand and toggle get grouped for better mobile display -->
+		<!-- Brand and toggle get grouped for better mobile display
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 				<span class="sr-only">Toggle navigation</span>
@@ -130,11 +130,11 @@ end if
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="http://www.aussieproducts.com">
-				<img alt="Brand" src="images/kangaroo.png" height="24px">
+			<a class="navbar-brand" href="#">
+				<img alt="Brand" src="images/menu-btn.png" height="24px">
 			 </a>
 		</div>
-
+		-->
 
 		<!-- Bootstrap nav links, forms, and other content for toggling -->
 		<div id="j-top-nav-1st" class="collapse navbar-collapse">
@@ -158,10 +158,7 @@ end if
 			<form method="POST" id="searchprodform" action="searchprods.asp" class="navbar-form navbar-right">
 				<input name="ProductSearchBy" value="2" type="hidden">
 				<div class="form-group search">
-					<input class="form-control" type="text" size="18" maxlength="256" name="txtsearch"
-					value="Product Search" onfocus="if (this.value=='Product Search') this.value='';"
-					onblur="if (this.value=='') this.value='Product Search';"
-					>
+					<input type="text" class="form-control" placeholder="Search">
 				</div>
 
 				<button type="submit" class="btn btn-default btn-go">Search</button>
