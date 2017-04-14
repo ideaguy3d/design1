@@ -15,17 +15,16 @@ A.topnav1:active {
 A.topnav1:visited  {
 	color: #FFFFFF;
 	font-size: 12px;
-	font-family: Arial;
+	font-family: Arial, sans-serif;
 	font-weight: bold;
 	text-decoration: none;
 }
 A.topnav1:hover  {
 	color: #FFFFFF;
 	font-size: 12px;
-	font-family: Arial;
+	font-family: Arial, sans-serif;
 	font-weight: bold;
 	text-decoration: underline;
-	color: #FFFFFF;
 }
 .TopNav1Text{
 	color: #FFFFFF;
@@ -34,6 +33,7 @@ A.topnav1:hover  {
 	font-weight: normal;
 	text-decoration: none;
 	text-transform: none;
+	display: inline-block;
 }
 .topnav1bgcolor {
 	background-color: #002a7e;
@@ -117,4 +117,9 @@ A.topnav3:hover  {
 	font-weight: normal;
 	text-decoration: none;
 	text-transform: none;
+}
+
+.j-log-btn {
+	padding: 2px 6px;
+	border: 1px solid #ffffff;
 }

@@ -1,33 +1,58 @@
-<!-- START: img at top of home page section -->
-<!--<img src="http://i.imgur.com/k3NFfpo.jpg" alt="easter egg" class="img-responsive center-block j-img-header">-->
-<!-- START: img at top of home page section -->
+<style>
+	[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+		display: none !important;
+	}
+</style>
+
+<!-- FirebaseDB -->
+<script src="https://www.gstatic.com/firebasejs/3.7.7/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBq6mpowidyq3CR5CEJgZO7-vWfx7WXE8w",
+        authDomain: "product-slider.firebaseapp.com",
+        databaseURL: "https://product-slider.firebaseio.com",
+        projectId: "product-slider",
+        storageBucket: "product-slider.appspot.com",
+        messagingSenderId: "707544519915"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<script type="text/javascript">
+
+</script>
+
+<section id="ng-app1" ng-cloak ng-app>
+	<h1>{{2+2}} = 4</h1>
+</section>
 
 <!-- START: video section -->
 <section id="j-video-section1" class="j-contain-vid">
-    <div style="text-align:center">
-        <!-- Buttons above the video:
-        <div class="jbtn-group">
-            <div>
-                <a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=BFE040">
-                    Medium Mini Eggs
-                </a>
-                <a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=CCCR20">
-                    CherryRipe Casket
-                </a>
-                <a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=BFX061">
-                    Roses Easter Egg
-                </a>
-            </div>
-        </div>
-        -->
-        <!-- The embedded video: -->
-        <video controls loop id="j-video1" width="700">
-            <source src="vids/product-vid1.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-            </source>
-        </video>
-    </div>
-    <script>
+	<div style="text-align:center">
+		<!-- Buttons above the video:
+		<div class="jbtn-group">
+			<div>
+				<a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=BFE040">
+					Medium Mini Eggs
+				</a>
+				<a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=CCCR20">
+					CherryRipe Casket
+				</a>
+				<a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=BFX061">
+					Roses Easter Egg
+				</a>
+			</div>
+		</div>
+		-->
+		<!-- The embedded video: -->
+		<video controls loop id="j-video1" width="700">
+			<source src="vids/product-vid1.mp4" type="video/mp4">
+			Your browser does not support HTML5 video.
+			</source>
+		</video>
+	</div>
+	<script>
         var myVideo = document.getElementById("j-video1");
         document.getElementsByTagName('video')[0].volume = 0;
         myVideo.play();
@@ -36,700 +61,190 @@
             if (myVideo.paused) myVideo.play();
             else myVideo.pause();
         }
-    </script>
+	</script>
 </section>
 <!-- END: video section -->
 
 <!-- START: Top row for Aussie Easter products -->
 <section class="j-contain">
-    <h1 class="text-center">AUSTRALIAN EASTER</h1>
-    <h5 class="text-center">
-        As a special Treat We have flown in Australian easter eggs for our customer. <i>Limited stock</i>.
-    </h5>
+	<h1 class="text-center">AUSTRALIAN EASTER</h1>
+	<h5 class="text-center">
+		As a special Treat We have flown in Australian easter eggs for our customer. <i>Limited stock</i>.
+	</h5>
 
-    <div class="row">
-        <!-- A Product Card -->
-        <div class="col-sm-4 col-md-4">
-            <div class="jcard">
-                <a href="http://www.aussieproducts.com/prodinfo.asp?number=CCFC19">
-                    <img src="http://www.aussieproducts.com/images/CCFC19_t.png" alt="chocolate">
-                    <h4>Cadbury Favourites Casket 190g.</h4>
-                    <h6>Item #: CCFC19</h6>
-                    <h4>$24.95</h4>
-                </a>
-            </div>
-        </div>
-        <!-- A Product Card -->
-        <div class="col-sm-4 col-md-4">
-            <div class="jcard">
-                <a href="http://www.aussieproducts.com/prodinfo.asp?number=CCCR20">
-                    <img src="http://www.aussieproducts.com/images/CCCR20_t.png" alt="chocolate">
-                    <h4>Cadbury Cherry Ripe Casket 205g.</h4>
-                    <h6>Item #: CCCR20</h6>
-                    <h4>$24.95</h4>
-                </a>
-            </div>
-        </div>
-        <!-- A Product Card -->
-        <div class="col-sm-4 col-md-4">
-            <div class="jcard">
-                <a href="http://www.aussieproducts.com/prodinfo.asp?number=CCRC19">
-                    <img src="http://www.aussieproducts.com/images/CCRC19_t.png" alt="chocolate">
-                    <h4>Cadbury Roses Casket 190g.</h4>
-                    <h6>Item #: CCFC19</h6>
-                    <h4>$24.95</h4>
-                </a>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <!-- A Product Card -->
-        <div class="col-sm-4 col-md-4">
-            <div class="jcard">
-                <a href="http://www.aussieproducts.com/prodinfo.asp?number=DDCFAV">
-                    <img src="http://www.aussieproducts.com/images/DDCFAV_t.png" alt="chocolate">
-                    <h4>Cadbury Favourites Boxed Chocolates 320g</h4>
-                    <h6>Item #: DDCFAV</h6>
-                    <h4>$25.95</h4>
-                </a>
-            </div>
-        </div>
-        <!-- A Product Card -->
-        <div class="col-sm-4 col-md-4">
-            <div class="jcard">
-                <a href="http://www.aussieproducts.com/prodinfo.asp?number=DDROSE%20%20%20%20ROSES%20150G">
-                    <img src="http://www.aussieproducts.com/images/DDROSE_t.png" alt="chocolate">
-                    <h4>Cadbury Roses Chocolate Selection Box 150g.</h4>
-                    <h6>Item #: DDROSE ROSES 150G</h6>
-                    <h4>$13.95</h4>
-                </a>
-            </div>
-        </div>
-        <!-- A Product Card -->
-        <div class="col-sm-4 col-md-4">
-            <div class="jcard">
-                <a href="http://www.aussieproducts.com/prodinfo.asp?number=APSGBS">
-                    <img src="http://www.aussieproducts.com/images/APSGBS_t.jpg" alt="chocolate">
-                    <h4>Cadbury Favourites Casket 190g.</h4>
-                    <h6>Item #: APSGBS</h6>
-                    <h4>$79.95</h4>
-                </a>
-            </div>
-        </div>
-    </div>
+	<div class="row">
+		<!-- A Product Card -->
+		<div class="col-sm-4 col-md-4">
+			<div class="jcard">
+				<a href="http://www.aussieproducts.com/prodinfo.asp?number=CCFC19">
+					<img src="http://www.aussieproducts.com/images/CCFC19_t.png" alt="chocolate">
+					<h4>Cadbury Favourites Casket 190g.</h4>
+					<h6>Item #: CCFC19</h6>
+					<h4>$24.95</h4>
+				</a>
+			</div>
+		</div>
+		<!-- A Product Card -->
+		<div class="col-sm-4 col-md-4">
+			<div class="jcard">
+				<a href="http://www.aussieproducts.com/prodinfo.asp?number=CCCR20">
+					<img src="http://www.aussieproducts.com/images/CCCR20_t.png" alt="chocolate">
+					<h4>Cadbury Cherry Ripe Casket 205g.</h4>
+					<h6>Item #: CCCR20</h6>
+					<h4>$24.95</h4>
+				</a>
+			</div>
+		</div>
+		<!-- A Product Card -->
+		<div class="col-sm-4 col-md-4">
+			<div class="jcard">
+				<a href="http://www.aussieproducts.com/prodinfo.asp?number=CCRC19">
+					<img src="http://www.aussieproducts.com/images/CCRC19_t.png" alt="chocolate">
+					<h4>Cadbury Roses Casket 190g.</h4>
+					<h6>Item #: CCFC19</h6>
+					<h4>$24.95</h4>
+				</a>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<!-- A Product Card -->
+		<div class="col-sm-4 col-md-4">
+			<div class="jcard">
+				<a href="http://www.aussieproducts.com/prodinfo.asp?number=DDCFAV">
+					<img src="http://www.aussieproducts.com/images/DDCFAV_t.png" alt="chocolate">
+					<h4>Cadbury Favourites Boxed Chocolates 320g</h4>
+					<h6>Item #: DDCFAV</h6>
+					<h4>$25.95</h4>
+				</a>
+			</div>
+		</div>
+		<!-- A Product Card -->
+		<div class="col-sm-4 col-md-4">
+			<div class="jcard">
+				<a href="http://www.aussieproducts.com/prodinfo.asp?number=DDROSE%20%20%20%20ROSES%20150G">
+					<img src="http://www.aussieproducts.com/images/DDROSE_t.png" alt="chocolate">
+					<h4>Cadbury Roses Chocolate Selection Box 150g.</h4>
+					<h6>Item #: DDROSE ROSES 150G</h6>
+					<h4>$13.95</h4>
+				</a>
+			</div>
+		</div>
+		<!-- A Product Card -->
+		<div class="col-sm-4 col-md-4">
+			<div class="jcard">
+				<a href="http://www.aussieproducts.com/prodinfo.asp?number=APSGBS">
+					<img src="http://www.aussieproducts.com/images/APSGBS_t.jpg" alt="chocolate">
+					<h4>Cadbury Favourites Casket 190g.</h4>
+					<h6>Item #: APSGBS</h6>
+					<h4>$79.95</h4>
+				</a>
+			</div>
+		</div>
+	</div>
 </section>
 <!-- END: Top row for Aussie Easter products -->
 
 <!-- START: British Easter Products -->
 <section class="j-contain">
-    <h1 class="text-center">BRITISH EASTER</h1>
-    <h5 class="text-center">
-        Order your British Easter stock now! <i>Limited Stock.</i>
-    </h5>
+	<h1 class="text-center">BRITISH EASTER</h1>
+	<h5 class="text-center">
+		Order your British Easter stock now! <i>Limited Stock.</i>
+	</h5>
 
-    <!-- 1st row: -->
-    <div class="row">
-        <!-- 1) A Product Card -->
-        <div class="col-sm-4 col-md-4">
-            <div class="jcard">
-                <a href="http://www.aussieproducts.com/searchprods.asp">
-                    <img src="http://www.aussieproducts.com/images/BFCAGE_t.png" alt="chocolate">
-                    <h4>Cadbury Dairy Milk Giant Easter Egg 515g.</h4>
-                    <h6>Item #: BFCAGE</h6>
-                    <h4>$34.95</h4>
-                </a>
-            </div>
-        </div>
-        <!-- 2) A Product Card -->
-        <div class="col-sm-4 col-md-4">
-            <div class="jcard">
-                <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX037">
-                    <img src="http://www.aussieproducts.com/images/BFX037_t.jpg" alt="chocolate">
-                    <h4>Cadbury Milk Tray 180g.</h4>
-                    <h6>Item #: BFX037</h6>
-                    <h4>$19.95</h4>
-                </a>
-            </div>
-        </div>
-        <!-- 3) A Product Card -->
-        <div class="col-sm-4 col-md-4">
-            <div class="jcard">
-                <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFSGBS">
-                    <img src="http://www.aussieproducts.com/images/BFSGBSn_t.png" alt="chocolate">
-                    <h4>British All-Seasons Gift Box</h4>
-                    <h6>Item #: BFSGBS</h6>
-                    <h4>$54.95</h4>
-                </a>
-            </div>
-        </div>
-    </div>
-    <br>
-    <!-- 2nd row: -->
-    <div class="row">
-        <!-- 1) A Product Card -->
-        <div class="col-sm-4 col-md-4">
-            <div class="jcard">
-                <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX2183">
-                    <img src="http://www.aussieproducts.com/images/BFX2183_t.gif" alt="chocolate">
-                    <h4>Walker's Nonsuch Assorted Toffees and Chocolate Eclairs Jar 450g.</h4>
-                    <h6>Item #: BFX21839</h6>
-                    <h4>$19.95</h4>
-                </a>
-            </div>
-        </div>
-        <!-- 2) A Product Card -->
-        <div class="col-sm-4 col-md-4">
-            <div class="jcard">
-                <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX061">
-                    <img src="http://www.aussieproducts.com/images/BFX061_t.png" alt="chocolate">
-                    <h4>Cadbury Roses Thoughtful Gestures Egg 300g.</h4>
-                    <h6>Item #: BFX061</h6>
-                    <h4>$24.95</h4>
-                </a>
-            </div>
-        </div>
-        <!-- 3) A Product Card -->
-        <div class="col-sm-4 col-md-4">
-            <div class="jcard">
-                <a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX0370">
-                    <img src="http://www.aussieproducts.com/images/BFX0370_t.png" alt="chocolate">
-                    <h4>Kinnterton Small Pokemon Egg & Bar 65g.</h4>
-                    <h6>Item #: BFX0370</h6>
-                    <h4>$9.95</h4>
-                </a>
-            </div>
-        </div>
-    </div>
+	<!-- 1st row: -->
+	<div class="row">
+		<!-- 1) A Product Card -->
+		<div class="col-sm-4 col-md-4">
+			<div class="jcard">
+				<a href="http://www.aussieproducts.com/searchprods.asp">
+					<img src="http://www.aussieproducts.com/images/BFCAGE_t.png" alt="chocolate">
+					<h4>Cadbury Dairy Milk Giant Easter Egg 515g.</h4>
+					<h6>Item #: BFCAGE</h6>
+					<h4>$34.95</h4>
+				</a>
+			</div>
+		</div>
+		<!-- 2) A Product Card -->
+		<div class="col-sm-4 col-md-4">
+			<div class="jcard">
+				<a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX037">
+					<img src="http://www.aussieproducts.com/images/BFX037_t.jpg" alt="chocolate">
+					<h4>Cadbury Milk Tray 180g.</h4>
+					<h6>Item #: BFX037</h6>
+					<h4>$19.95</h4>
+				</a>
+			</div>
+		</div>
+		<!-- 3) A Product Card -->
+		<div class="col-sm-4 col-md-4">
+			<div class="jcard">
+				<a href="http://www.aussieproducts.com/prodinfo.asp?number=BFSGBS">
+					<img src="http://www.aussieproducts.com/images/BFSGBSn_t.png" alt="chocolate">
+					<h4>British All-Seasons Gift Box</h4>
+					<h6>Item #: BFSGBS</h6>
+					<h4>$54.95</h4>
+				</a>
+			</div>
+		</div>
+	</div>
+	<br>
+	<!-- 2nd row: -->
+	<div class="row">
+		<!-- 1) A Product Card -->
+		<div class="col-sm-4 col-md-4">
+			<div class="jcard">
+				<a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX2183">
+					<img src="http://www.aussieproducts.com/images/BFX2183_t.gif" alt="chocolate">
+					<h4>Walker's Nonsuch Assorted Toffees and Chocolate Eclairs Jar 450g.</h4>
+					<h6>Item #: BFX21839</h6>
+					<h4>$19.95</h4>
+				</a>
+			</div>
+		</div>
+		<!-- 2) A Product Card -->
+		<div class="col-sm-4 col-md-4">
+			<div class="jcard">
+				<a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX061">
+					<img src="http://www.aussieproducts.com/images/BFX061_t.png" alt="chocolate">
+					<h4>Cadbury Roses Thoughtful Gestures Egg 300g.</h4>
+					<h6>Item #: BFX061</h6>
+					<h4>$24.95</h4>
+				</a>
+			</div>
+		</div>
+		<!-- 3) A Product Card -->
+		<div class="col-sm-4 col-md-4">
+			<div class="jcard">
+				<a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX0370">
+					<img src="http://www.aussieproducts.com/images/BFX0370_t.png" alt="chocolate">
+					<h4>Kinnterton Small Pokemon Egg & Bar 65g.</h4>
+					<h6>Item #: BFX0370</h6>
+					<h4>$9.95</h4>
+				</a>
+			</div>
+		</div>
+	</div>
 </section>
 <!-- END:  British Easter Products-->
 
 <!-- START: New store hours -->
 <section id="j-store-hours" class="container">
-    <div class="row">
-        <div class="col-sm-6">
-            <h1 class="bg-primary text-center">
-                <strong>New Store Hours</strong>
-            </h1>
-            <h4 class="text-center j-red"><strong>Mon-Fri: 10am-6pm</strong></h4>
-            <h4 class="text-center j-red"><strong>Saturday: 10am-5pm</strong></h4>
-            <h4 class="text-center j-red"><strong>Sunday: Closed</strong></h4>
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-sm-6">
+			<h1 class="bg-primary text-center">
+				<strong>New Store Hours</strong>
+			</h1>
+			<h4 class="text-center j-red"><strong>Mon-Fri: 10am-6pm</strong></h4>
+			<h4 class="text-center j-red"><strong>Saturday: 10am-5pm</strong></h4>
+			<h4 class="text-center j-red"><strong>Sunday: Closed</strong></h4>
+		</div>
+	</div>
 </section>
 <!-- END: New store hours -->
 
 
 
-<!------------------------------------------------------------->
-<!----------------- SiteLink generated table: ----------------->
-<!------------------------------------------------------------->
-<div style="text-align: center;">
-    <table align="center" border="0" cellpadding="1" cellspacing="1" style="width:700px;">
-        <tbody>
-        <tr>
-            <td>
-                &nbsp;
-            </td>
-            <td>
-                &nbsp;
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    <br/>
-    <br/>
-    <table align="center" border="0" cellpadding="1" cellspacing="1" font-size:=""
-           style="color: rgb(51, 51, 51); font-family: sans-serif, Arial, Verdana, " trebuchet="" width:="">
-        <tbody>
-        <tr>
-            <td>
-                <table align="center" border="0" cellpadding="1" cellspacing="1"
-                       style="border-collapse: collapse; border-spacing: 0px; color: rgb(0, 0, 0); font-family: Arial; width: 750px;">
-                    <tbody>
-                    <tr>
-                        <td>
-                            <table border="0" cellpadding="1" cellspacing="1"
-                                   style="border-collapse: collapse; border-spacing: 0px; width: 750px;">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <img align="" alt="" border="0" height="366"
-                                             src="http://i.imgur.com/YEHsifg.png" style="width: 750px; height: 366px;"
-                                             width="750"/></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <br/>
-                                        <span style="font-family: arial, helvetica, sans-serif;"><span
-                                                style="font-size: 16px;"><b><span style="font-size: 26px;">Anzac Day is on the 25th of April. Let Australian Products Co. help you prepare your own Anzac biscuits.</span></b></span></span><br/>
-                                        &nbsp;
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <table align="left" border="0" cellpadding="1" cellspacing="1"
-                                   style="border-collapse: collapse; border-spacing: 0px; width: 200px;">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <table border="0" cellpadding="2" cellspacing="0" class="table-layout-fixed"
-                                               style="border-collapse: collapse; border-spacing: 0px; table-layout: fixed; font-family: Arial, Helvetica, sans-serif; font-size: medium; height: 130px;"
-                                               width="100%">
-                                            <tbody>
-                                            <tr>
-                                                <td style="padding: 0px;" valign="top">
-                                                    <br/>
-                                                    <a href="https://web.archive.org/web/20160422073627/http://www.aussieproducts.com/prodinfo.asp?number=DDGS85"
-                                                       style="color: rgb(0, 0, 0); font-size: 14px; font-family: Arial;"><img
-                                                            align="" alt="CSR Golden Syrup Tub 850g." border="1"
-                                                            class="prodlistimg"
-                                                            src="https://web.archive.org/web/20160422073627im_/http://www.aussieproducts.com/images/DDGS85_t.gif"
-                                                            style="border: 1px solid rgb(235, 235, 235); margin: 3px 0px; max-width: 125px;"
-                                                            title="CSR Golden Syrup Tub 850g."/></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 0px;">
-                                                    <img align="" border="0"
-                                                         src="https://web.archive.org/web/20160422073627im_/http://www.aussieproducts.com/images/clear.gif"
-                                                         style="border: 0px;"/></td>
-                                            </tr>
-                                            <tr valign="top">
-                                                <td style="padding: 0px;" valign="top">
-                                                    <a class="producttitlelink"
-                                                       href="https://web.archive.org/web/20160422073627/http://www.aussieproducts.com/prodinfo.asp?number=DDGS85"
-                                                       style="color: rgb(0, 0, 0); font-size: 13px; font-family: Arial;"
-                                                       title="CSR Golden Syrup Tub 850g.">CSR Golden Syrup Tub 850g.</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="plaintext"
-                                                    style="font-size: 13px; font-family: Arial; padding: 0px;"
-                                                    valign="middle">
-                                                    Item #: DDGS85
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="ProductPrice"
-                                                    style="color: rgb(204, 0, 0); font-size: 14px; font-family: Arial; font-weight: bold; padding: 0px;"
-                                                    valign="middle">
-                                                    $13.95<br/>
-                                                    &nbsp;
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <table border="0" cellpadding="2" cellspacing="0" class="table-layout-fixed"
-                                               style="border-collapse: collapse; border-spacing: 0px; table-layout: fixed; font-family: Arial, Helvetica, sans-serif; font-size: medium; height: 130px;"
-                                               width="100%">
-                                            <tbody>
-                                            <tr>
-                                                <td style="padding: 0px;" valign="top">
-                                                    <a href="https://web.archive.org/web/20160422073627/http://www.aussieproducts.com/prodinfo.asp?number=DDMC50"
-                                                       style="color: rgb(0, 0, 0); font-size: 14px; font-family: Arial;"><img
-                                                            align="" alt="McKenzie's Fine Desiccated Coconut 500g"
-                                                            border="1" class="prodlistimg"
-                                                            src="https://web.archive.org/web/20160422073627im_/http://www.aussieproducts.com/images/DDMC25_t.gif"
-                                                            style="border: 1px solid rgb(235, 235, 235); margin: 3px 0px; max-width: 125px;"
-                                                            title="McKenzie's Fine Desiccated Coconut 500g"/></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 0px;">
-                                                    <img align="" border="0"
-                                                         src="https://web.archive.org/web/20160422073627im_/http://www.aussieproducts.com/images/clear.gif"
-                                                         style="border: 0px;"/></td>
-                                            </tr>
-                                            <tr valign="top">
-                                                <td style="padding: 0px;" valign="top">
-                                                    <a class="producttitlelink"
-                                                       href="https://web.archive.org/web/20160422073627/http://www.aussieproducts.com/prodinfo.asp?number=DDMC50"
-                                                       style="color: rgb(0, 0, 0); font-size: 13px; font-family: Arial;"
-                                                       title="McKenzie's Fine Desiccated Coconut 500g">McKenzie&#39;s
-                                                        Fine Desiccated Coconut 500g</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="plaintext"
-                                                    style="font-size: 13px; font-family: Arial; padding: 0px;"
-                                                    valign="middle">
-                                                    Item #: DDMC50
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="ProductPrice"
-                                                    style="color: rgb(204, 0, 0); font-size: 14px; font-family: Arial; font-weight: bold; padding: 0px;"
-                                                    valign="middle">
-                                                    $9.95<br/>
-                                                    &nbsp;
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <table border="0" cellpadding="0" cellspacing="0"
-                                               style="border-collapse: collapse; border-spacing: 0px; font-family: Arial, Helvetica, sans-serif; font-size: medium;"
-                                               width="100%">
-                                            <tbody>
-                                            <tr valign="top">
-                                                <td align="center" style="padding: 0px 0px 0px 15px; width: 140px;"
-                                                    valign="top">
-                                                    <table border="0" cellpadding="2" cellspacing="0"
-                                                           class="table-layout-fixed"
-                                                           style="border-collapse: collapse; border-spacing: 0px; table-layout: fixed; height: 130px;"
-                                                           width="100%">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td style="padding: 0px; text-align: center;" valign="top">
-                                                                <a href="https://web.archive.org/web/20160422073627/http://www.aussieproducts.com/prodinfo.asp?number=AUKB6%20KOALA%20BOOM"
-                                                                   style="color: rgb(0, 0, 0); font-size: 14px; font-family: Arial;"><img
-                                                                        align="" alt="Koala with Boomerang 6in"
-                                                                        border="1" class="prodlistimg"
-                                                                        src="https://web.archive.org/web/20160422073627im_/http://www.aussieproducts.com/images/AUKB6_KOALA_BOOM_t.gif"
-                                                                        style="border: 1px solid rgb(235, 235, 235); margin: 3px 0px; max-width: 125px;"
-                                                                        title="Koala with Boomerang 6in"/></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="padding: 0px; text-align: center;">
-                                                                <img align="" border="0"
-                                                                     src="https://web.archive.org/web/20160422073627im_/http://www.aussieproducts.com/images/clear.gif"
-                                                                     style="border: 0px;"/></td>
-                                                        </tr>
-                                                        <tr valign="top">
-                                                            <td style="padding: 0px; text-align: center;" valign="top">
-                                                                <a class="producttitlelink"
-                                                                   href="https://web.archive.org/web/20160422073627/http://www.aussieproducts.com/prodinfo.asp?number=AUKB6%20KOALA%20BOOM"
-                                                                   style="color: rgb(0, 0, 0); font-size: 13px; font-family: Arial;"
-                                                                   title="Koala with Boomerang 6in">Koala with Boomerang
-                                                                    6in</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="plaintext"
-                                                                style="font-size: 13px; font-family: Arial; padding: 0px; text-align: center;"
-                                                                valign="middle">
-                                                                Item #: AUKB6 KOALA BOOM
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="ProductPrice"
-                                                                style="color: rgb(204, 0, 0); font-size: 14px; font-family: Arial; font-weight: bold; padding: 0px; text-align: center;"
-                                                                valign="middle">
-                                                                $11.95<br/>
-                                                                &nbsp;
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <table border="0" cellpadding="2" cellspacing="0" class="table-layout-fixed"
-                                               style="border-collapse: collapse; border-spacing: 0px; table-layout: fixed; font-family: Arial, Helvetica, sans-serif; font-size: medium; height: 130px;"
-                                               width="100%">
-                                            <tbody>
-                                            <tr>
-                                                <td style="padding: 0px;" valign="top">
-                                                    <a href="https://web.archive.org/web/20160422073627/http://www.aussieproducts.com/prodinfo.asp?number=DDBT50"
-                                                       style="color: rgb(0, 0, 0); font-size: 14px; font-family: Arial;"><img
-                                                            align="" alt="Billy Tea Campfire Brew - 50 Bags" border="1"
-                                                            class="prodlistimg"
-                                                            src="https://web.archive.org/web/20160422073627im_/http://www.aussieproducts.com/images/DDBT50_50.jpg"
-                                                            style="border: 1px solid rgb(235, 235, 235); margin: 3px 0px; max-width: 125px;"
-                                                            title="Billy Tea Campfire Brew - 50 Bags"/></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 0px;">
-                                                    <img align="" border="0"
-                                                         src="https://web.archive.org/web/20160422073627im_/http://www.aussieproducts.com/images/clear.gif"
-                                                         style="border: 0px;"/></td>
-                                            </tr>
-                                            <tr valign="top">
-                                                <td style="padding: 0px;" valign="top">
-                                                    <a class="producttitlelink"
-                                                       href="https://web.archive.org/web/20160422073627/http://www.aussieproducts.com/prodinfo.asp?number=DDBT50"
-                                                       style="color: rgb(0, 0, 0); font-size: 13px; font-family: Arial;"
-                                                       title="Billy Tea Campfire Brew - 50 Bags">Billy Tea Campfire Brew
-                                                        - 50 Bags</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="plaintext"
-                                                    style="font-size: 13px; font-family: Arial; padding: 0px;"
-                                                    valign="middle">
-                                                    Item #: DDBT50
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="ProductPrice"
-                                                    style="color: rgb(204, 0, 0); font-size: 14px; font-family: Arial; font-weight: bold; padding: 0px;"
-                                                    valign="middle">
-                                                    $9.95
-                                                    <div style="text-align: left;">
-                                                        &nbsp;
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <table align="center" border="0" cellpadding="1" cellspacing="1"
-                                   style="border-collapse: collapse; border-spacing: 0px; width: 550px;">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <u><span style="font-size: 24px;"><b>Anzac Biscuit Recipe</b></span></u></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <table align="center" border="0" cellpadding="1" cellspacing="10"
-                                   style="border-collapse: collapse; border-spacing: 0px; width: 550px;">
-                                <tbody>
-                                <tr>
-                                    <td style="width: 261px; vertical-align: top;">
-                                        <br/>
-                                        <span style="font-size: 16px;"><b><span
-                                                style="font-size: 18px;">Instructions</span></b></span><br/>
-                                        <br/>
-                                        <div style="margin: 0px; padding: 0px; text-align: left;">
-															<span style="font-size: 18px;">Preheat the oven to 350 degrees. Line baking sheets with parchment paper, and set aside. In a large bowl, combine flour, oats, sugar, and coconut. Set aside.<br/>
-															<br/>
-															In a small saucepan over medium heat, melt butter with syrup. Dissolve baking soda in boiling water, and add to butter mixture.<br/>
-															<br/>
-															Stir to combine. (Be careful; if the butter is hot, it will bubble up considerably)<br/>
-															<br/>
-															Add butter mixture to dry ingredients, and stir to combine. Using a 1 1/2-inch ice-cream scoop, drop onto prepared baking sheets, about 2 inches apart (be sure to pack the scoop tightly so the mixture doesn&#39;t crumble). Flatten biscuits slightly with the heel of your hand.<br/>
-															<br/>
-															Bake until golden brown and firm but not hard, about 15 minutes. Transfer to wire racks to cool and then enjoy!</span><br/>
-                                            <br/>
-                                            &nbsp;
-                                        </div>
-                                    </td>
-                                    <td style="width: 247px; vertical-align: top;">
-                                        <br/>
-                                        <span style="font-size: 14px;"><b><span
-                                                style="font-size: 18px;">Ingredients</span></b></span>
-                                        <ul style="padding-right: 0px; padding-left: 0px; margin: 0px; list-style: none;">
-                                            <li style="margin: 0px; padding: 0px; text-align: left;">
-                                                <span style="font-size: 18px;">2 cups all-purpose flour</span></li>
-                                            <li style="margin: 0px; padding: 0px; text-align: left;">
-                                                <span style="font-size: 18px;">2 cups rolled oats</span></li>
-                                            <li style="margin: 0px; padding: 0px; text-align: left;">
-                                                <span style="font-size: 18px;">2 cups sugar</span></li>
-                                            <li style="margin: 0px; padding: 0px; text-align: left;">
-                                                <span style="font-size: 18px;">1 cup&nbsp;<a
-                                                        href="https://web.archive.org/web/20160422073627/http://www.aussieproducts.com/prodinfo.asp?number=DDMC50"
-                                                        style="color: rgb(0, 0, 0); font-size: 14px;">McKenzies Desiccated Coconut</a></span>
-                                            </li>
-                                            <li style="margin: 0px; padding: 0px; text-align: left;">
-                                                <span style="font-size: 18px;">1 cup (2 sticks) unsalted butter</span>
-                                            </li>
-                                            <li style="margin: 0px; padding: 0px; text-align: left;">
-                                                <span style="font-size: 18px;">2 tablespoons&nbsp;<a
-                                                        href="https://web.archive.org/web/20160422073627/http://www.aussieproducts.com/prodinfo.asp?number=DDGS85"
-                                                        style="color: rgb(0, 0, 0); font-size: 14px;">CSR Golden Syrup</a></span>
-                                            </li>
-                                            <li style="margin: 0px; padding: 0px; text-align: left;">
-                                                <span style="font-size: 18px;">3/4 teaspoon baking soda</span></li>
-                                            <li style="margin: 0px; padding: 0px; text-align: left;">
-                                                <span style="font-size: 18px;">1/4 cup boiling water</span><span
-                                                    style="font-size: 16px;"><b>&nbsp;</b></span></li>
-                                        </ul>
-                                        <div style="margin: 0px; padding: 0px;">
-                                            <br/>
-                                            <br/>
-                                            <img align="" border="0"
-                                                 src="https://web.archive.org/web/20160422073627im_/http://i.imgur.com/BI9SZ1q.jpg"
-                                                 style="border: 0px;"/></div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <table align="right" border="0" cellpadding="1" cellspacing="1"
-                                   style="border-collapse: collapse; border-spacing: 0px; width: 550px;">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <img align="" alt="" border="0" height="140"
-                                             src="https://web.archive.org/web/20160422073627im_/http://i.imgur.com/IO3ERaL.jpg"
-                                             style="border: 0px; height: 140px; width: 550px;" width="550"/><br/>
-                                        &nbsp;
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    <p>
-        &nbsp;</p>
-</div>
 
-<div style="text-align: center;">
-    <strong font-size:="" lucida="" sans="" style="font-size: 48px; color: rgb(4, 3, 133);">Function Room For
-        Rent</strong></div>
-<div style="text-align: center;">
-    <p style="text-align: center;">
-        <img align="" border="0" height="169" src="http://i.imgur.com/0kRu7pS.jpg" style="height: 169px; width: 715px;"
-             width="715"/></p>
-    <p align="center">
-        <span style="color:#040385;"><span style="font-family:lucida sans unicode,lucida grande,sans-serif;"><span
-                style="font-size:24px;">&#8203;<strong>3500sq ft. - 300-350 capacity</strong></span></span></span></p>
-    <div>
-        <div style="float: left; width: 200px;margin-bottom:10px;">
-            <ul style="font-size:16px;">
-                <li>
-                    Weddings
-                </li>
-                <li>
-                    Corporate Events
-                </li>
-                <li>
-                    Birthday Parties
-                </li>
-                <li>
-                    Graduation Parties
-                </li>
-                <li>
-                    Retirement Ceremonies
-                </li>
-            </ul>
-        </div>
-        <div style="float: left; width: 200px;margin-bottom:10px;">
-            <ul style="font-size:16px;">
-                <li>
-                    Family Reunions
-                </li>
-                <li>
-                    Bridal/Baby Showers
-                </li>
-                <li>
-                    Quincea&ntilde;eras
-                </li>
-                <li>
-                    Seminars/Lectures
-                </li>
-            </ul>
-        </div>
-        <div style="float: left; width: 300px;margin-bottom:10px;">
-            <p align="justify" style="font-size:16px;">
-                <b>Reserve Your Event</b><br/>
-                Daytime - (408) 748-9999<br/>
-                After Hours - (408) 658-5832<br/>
-                Email - <a href="mailto:aussieproducts@aussieproducts.com?subject=Room Rental">aussieproducts@aussieproducts.com</a>
-            </p>
-        </div>
-        <p>
-            <br/>
-            &nbsp;</p>
-        <p style="text-align: center;">
-            <img align="" alt="" border="0" height="295" src="http://i.imgur.com/KGAsezF.jpg"
-                 style="width: 715px; height: 295px;" width="715"/></p>
-        <p style="text-align: center;">
-            &nbsp;</p>
-        <p style="text-align: center;">
-            <img align="" alt="" border="0" height="207" src="http://i.imgur.com/H1o7fjR.jpg"
-                 style="width: 715px; height: 207px;" width="715"/></p>
-        <p style="text-align: center;">
-            &nbsp;</p>
-        <p style="text-align: center;">
-            <strong><span style="font-size:16px;"><span bitstream="" font-size:="" new="" times="" vera="">Minimum 3 hours - $100 per hour</span></span></strong>
-        </p>
-        <p style="text-align: center;">
-            <strong><span style="font-size:16px;"><span bitstream="" font-size:="" new="" times="" vera="">Friday &amp; Saturday - Call for Rates</span><br/>
-				<br/>
-				3500sq ft. - 300-350 capacity<br bitstream="" font-size:="" new="" style="font-family: " times=""
-                                                 vera=""/>
-				<br bitstream="" font-size:="" new="" style="font-family: " times="" vera=""/>
-				<span bitstream="" font-size:="" new="" times="" vera="">Cell: Chris (408) 658-5832 - Please leave a message if I am not available and I will call you at my earliest convenience.</span></span></strong>
-        </p>
-    </div>
-    <p>
-        &nbsp;</p>
-    <table border="0" cellpadding="3" cellspacing="1" class="grid"
-           style="border-collapse: collapse; border-spacing: 0px;" width="100%">
-        <tbody>
-        <tr>
-            <td style="padding: 0px;" valign="top" width="140">
-                <table border="0" cellpadding="0" cellspacing="0"
-                       style="border-collapse: collapse; border-spacing: 0px;" width="100%">
-                    <tbody>
-                    <tr style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: medium;">
-                    </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    <p>
-        &nbsp;</p>
-    <table border="0" cellpadding="0" cellspacing="0"
-           style="border-collapse: collapse; border-spacing: 0px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: medium;"
-           width="100%">
-        <tbody>
-        <tr valign="top">
-            <td align="center" style="padding: 0px 0px 0px 15px; width: 140px;" valign="top">
-                &nbsp;
-            </td>
-        </tr>
-        <tr>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-<p>
-    &nbsp;</p>
-</source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></source></p>
+

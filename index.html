@@ -11,7 +11,64 @@
 
 <body>
 
-<!-- Bootstrap Navigation -->
+<style>
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+    }
+</style>
+
+<!-- AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<!-- FirebaseDB -->
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBq6mpowidyq3CR5CEJgZO7-vWfx7WXE8w",
+        authDomain: "product-slider.firebaseapp.com",
+        databaseURL: "https://product-slider.firebaseio.com",
+        projectId: "product-slider",
+        storageBucket: "product-slider.appspot.com",
+        messagingSenderId: "707544519915"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="design/js/product-slider.js"></script>
+
+<!-- START: AngularJS app section: -->
+<section id="ng-app1" ng-cloak ng-app="ap-slider" class="container-fluid">
+    <br>
+    <!-- apSliderCtrl Controller -->
+    <div ng-controller="apSliderCtrl">
+        <input type="text" ng-model="data.productDescription">
+        <h4>Product Description: {{data.productDescription}}</h4>
+        <h1>{{2+2}} = 2+2</h1>
+        <h2>{{data.key1}}</h2>
+        <hr>
+        <!-- messages test1 -->
+        <ul>
+            <li ng-repeat="message in messages">
+                <!-- edit message -->
+                <label for="ap-message">Edit Message</label>
+                <input id="ap-message" type="text" ng-model="message.text" ng-change="messages.$save(message)">
+                <!-- delete message -->
+                <button ng-click="messages.$remove(message)">Delete Message</button>
+                <br>[ Message: {{ message.text }} ]
+            </li>
+        </ul>
+        <!-- create a new message -->
+        <form ng-submit="addMessage()">
+            <label for="new-message">Add a Message Now.</label>
+            <input id="new-message" type="text" ng-model="newMessageText">
+            <button type="submit">Add Message</button>
+        </form>
+    </div>
+</section>
+<!-- END: AngularJS app section: -->
+
+<!-- START: Bootstrap Navigation: -->
 <nav id="j-nav1" class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display
@@ -67,99 +124,7 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<hr>
-<!-- START: top horizontal navigation -->
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Brand</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div id="header" class="collapse navbar-collapse">
-            <!-- web page site nav -->
-            <ul class="nav navbar-nav">
-                <!-- home link -->
-                <li class="active">
-                    <a href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <!-- about us link -->
-                <li>
-                    <a href="#">About Us</a>
-                </li>
-                <!-- shipping link -->
-                <li>
-                    <a href="#">Shipping</a>
-                </li>
-            </ul>
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Link</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
-<!-- END: top horizontal navigation -->
-
-<!-- START: video section -->
-<section id="j-video-section1" class="j-contain-vid">
-    <div style="text-align:center">
-        <!-- Buttons above the video:
-        <div class="jbtn-group">
-            <div>
-                <a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=BFE040">
-                    Medium Mini Eggs
-                </a>
-                <a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=CCCR20">
-                    CherryRipe Casket
-                </a>
-                <a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=BFX061">
-                    Roses Easter Egg
-                </a>
-            </div>
-        </div>
-        -->
-        <!-- The embedded video: -->
-        <video controls="" id="j-video1" width="700">
-            <source src="vids/product-vid1.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-            </source>
-        </video>
-    </div>
-    <script>
-        var myVideo = document.getElementById("j-video1");
-        document.getElementsByTagName('video')[0].volume = 0;
-        myVideo.play();
-
-        function playPause() {
-            if (myVideo.paused) myVideo.play();
-            else myVideo.pause();
-        }
-    </script>
-</section>
-<!-- END: video section -->
+<!-- END: Bootstrap Navigation: -->
 
 <!-- START: Top row for Aussie Easter products -->
 <section class="j-contain">

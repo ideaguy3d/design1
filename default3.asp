@@ -42,6 +42,8 @@ session("department")=0
 
 <meta itemprop="name" content="Australian Products Co.">
 <meta itemprop="image" content="http://www.aussieproducts.com/images/Green_Gold_Banner.jpg">
+<!-- for Bootstrap -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 <meta itemprop="name" content="Aussie Products.com | Australian Products Co. Bringing Australia to You - Aussie Foods">
 <meta itemprop="description" content="Australian Products Co. Bringing Australia to You. Australian Products include food, books, home decor, souvenirs, clothing, Australian food, Akubra Hats, Driza-Bone coats, Educational Material, Australian Meat Pies and Sausage Rolls">
