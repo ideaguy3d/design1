@@ -150,7 +150,7 @@ end if
 
 
 <html>
-<head>
+
 <head>
 <title>Aussie Products.com | Australian Products - <%=session("althomepage")%> <%=dept_title%> | Aussie Foods</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -175,6 +175,13 @@ end if
 <link rel="stylesheet" href="text/footernav.css" type="text/css">
 <link rel="stylesheet" href="text/sidenav.css" type="text/css">
 <link rel="stylesheet" href="text/design.css" type="text/css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="design/jstyles.css">
+<link rel="stylesheet" href="design/styles/jstyles.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
 <script type="text/javascript" language="javascript">
 <!-- hide from JavaScript-challenged browsers
 
@@ -195,7 +202,7 @@ function RedirectToAddADDress (page)
 
 
 <div id="container">
-    <!--#INCLUDE FILE = "include/top_nav.asp" -->
+    <!--#INCLUDE FILE = "include/top_nav-modern.asp" -->
     <div id="main">
 
 

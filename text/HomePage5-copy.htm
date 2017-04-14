@@ -4,8 +4,12 @@
 	}
 </style>
 
+<!-- AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
 <!-- FirebaseDB -->
-<script src="https://www.gstatic.com/firebasejs/3.7.7/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 <script>
     // Initialize Firebase
     var config = {
@@ -18,14 +22,64 @@
     };
     firebase.initializeApp(config);
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-<script type="text/javascript">
+<script>
+    (function () {
+        var app = angular.module('ap-slider', ['firebase']);
 
+        app.controller('apSliderCtrl', ['$scope', '$firebaseObject', '$firebaseArray',
+            function ($scope, $firebaseObject, $firebaseArray) {
+                var ref_productData = firebase.database().ref().child('productData');
+                var ref_messages = firebase.database().ref().child('messages');
+                var syncObject = $firebaseObject(ref_productData);
+
+                $scope.message = "Ello World ^_^/";
+                $scope.messages = $firebaseArray(ref_messages);
+                $scope.addMessage = function(){
+                    $scope.messages.$add({
+                        text: $scope.newMessageText,
+                        zdate: Date.now()
+                    });
+                    $scope.newMessageText = '';
+                };
+
+                //-- 3 way data binding:
+                syncObject.$bindTo($scope, 'data');
+
+            }
+        ]);
+    })();
 </script>
 
-<section id="ng-app1" ng-cloak ng-app>
-	<h1>{{2+2}} = 4</h1>
+<!-- START: AngularJS app section: -->
+<section id="ng-app1" ng-cloak ng-app="ap-slider" class="container-fluid">
+	<br>
+	<!-- apSliderCtrl Controller -->
+	<div ng-controller="apSliderCtrl">
+		<input type="text" ng-model="data.productDescription">
+		<h4>Product Description: {{data.productDescription}}</h4>
+		<h1>{{2+2}} = 2+2</h1>
+		<h2>{{data.key1}}</h2>
+		<hr>
+		<!-- messages test1 -->
+		<ul>
+			<li ng-repeat="message in messages">
+				<!-- edit message -->
+				<label for="ap-message">Edit Message</label>
+				<input id="ap-message" type="text" ng-model="message.text" ng-change="messages.$save(message)">
+				<!-- delete message -->
+				<button ng-click="messages.$remove(message)">Delete Message</button>
+				<br>[ Message: {{ message.text }} ]
+			</li>
+		</ul>
+		<!-- create a new message -->
+		<form ng-submit="addMessage()">
+			<label for="new-message">Add a Message Now.</label>
+			<input id="new-message" type="text" ng-model="newMessageText">
+			<button type="submit">Add Message</button>
+		</form>
+	</div>
 </section>
+<!-- END: AngularJS app section: -->
 
 <!-- START: video section -->
 <section id="j-video-section1" class="j-contain-vid">

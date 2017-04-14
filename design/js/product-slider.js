@@ -18,7 +18,7 @@
                     text: $scope.newMessageText,
                     zdate: Date.now()
                 });
-                $scope.newMessageText = ''; 
+                $scope.newMessageText = '';
             };
 
             //-- 3 way data binding:

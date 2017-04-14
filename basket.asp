@@ -126,6 +126,13 @@ Response.ExpiresAbsolute = #Feb 18,1998 13:26:26#
 <link rel="stylesheet" href="text/storestyle.css" type="text/css">
 <link rel="stylesheet" href="text/footernav.css" type="text/css">
 <link rel="stylesheet" href="text/design.css" type="text/css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="design/jstyles.css">
+<link rel="stylesheet" href="design/styles/jstyles.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
 <script type="text/javascript">
 function MM_openBrWindow(theURL,winName,features) { //v2.0
   window.open(theURL,winName,features);
@@ -169,7 +176,7 @@ function dosubmit()
 
 
 <div id="container">
-    <!--#INCLUDE FILE = "include/top_nav.asp" -->
+    <!--#INCLUDE FILE = "include/top_nav-modern.asp" -->
     <div id="main">
 
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
