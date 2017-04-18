@@ -166,3 +166,24 @@ $aussie-red: #ba0000;
         width: 400px;
     }
 }
+
+//-- ANZAC Day styles:
+#j-anzac {
+   .anzac-header {
+       background-image: url(https://web.archive.org/web/20170311204314im_/http://i.imgur.com/IO3ERaL.jpg);
+       background-repeat: no-repeat;
+       background-position: right center;
+       background-size: contain;
+       width: 100%;
+       min-height: 140px;
+
+       h1, h2, h3, h4, p {
+           color: whitesmoke;
+       }
+
+       .j-header-left {
+           background-color: rgba(0,0,0,0.5);
+           padding-bottom: 12px;
+       }
+   }
+}

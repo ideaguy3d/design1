@@ -108,3 +108,16 @@
     border-radius: 0; }
   .navbar-form .form-control {
     width: 400px; } }
+
+#j-anzac .anzac-header {
+  background-image: url(https://web.archive.org/web/20170311204314im_/http://i.imgur.com/IO3ERaL.jpg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  width: 100%;
+  min-height: 140px; }
+  #j-anzac .anzac-header h1, #j-anzac .anzac-header h2, #j-anzac .anzac-header h3, #j-anzac .anzac-header h4, #j-anzac .anzac-header p {
+    color: whitesmoke; }
+  #j-anzac .anzac-header .j-header-left {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 12px; }
