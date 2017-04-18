@@ -311,6 +311,9 @@ div.landing.heading-block .heading-secondary {
     transition: all 0.2s ease-in;
 }
 
+
+
+/*
 .nav li a {
     padding: 28px 10px 32px 10px;
     display: block;
@@ -327,6 +330,8 @@ div.landing.heading-block .heading-secondary {
 .nav li:hover {
     border-top: 4px solid rgba(255, 255, 255, 1.0);
 }
+*/
+
 
 .logo-block {
     padding-top: 5px;

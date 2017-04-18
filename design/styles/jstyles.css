@@ -86,6 +86,60 @@
 .j-stretch {
   width: 80%; }
 
+#j-top-nav-1st .j-pad-top-12 {
+  padding-top: 12px; }
+
+#j-top-nav-1st .nav li:hover {
+  background-color: #0D2A81; }
+  #j-top-nav-1st .nav li:hover a {
+    color: #ba0000; }
+
+#j-top-right-nav {
+  padding: 16px; }
+  #j-top-right-nav .j-search-form {
+    width: 80%;
+    padding: 14px 22px;
+    box-sizing: border-box;
+    border: 2px solid #ba0000;
+    color: #434343;
+    border-bottom-left-radius: 16px;
+    border-top-left-radius: 16px; }
+  #j-top-right-nav .j-search-form:focus {
+    color: #434343;
+    background-color: #e4e4e4;
+    outline: none; }
+  #j-top-right-nav #j-search-btn {
+    position: absolute;
+    background-color: #8B0000;
+    /* border-color: #fff; */
+    border-width: 0;
+    height: 52px;
+    width: 8%;
+    font-weight: bolder;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px; }
+  #j-top-right-nav .j-login-btn {
+    border-radius: 16px !important;
+    width: 120px !important;
+    color: #0D2A81 !important; }
+  #j-top-right-nav .grid-child p {
+    padding-top: 10px; }
+  #j-top-right-nav .grid-child a {
+    text-decoration: none; }
+
+#j-anzac .anzac-header {
+  background-image: url(https://web.archive.org/web/20170311204314im_/http://i.imgur.com/IO3ERaL.jpg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  width: 100%;
+  min-height: 140px; }
+  #j-anzac .anzac-header h1, #j-anzac .anzac-header h2, #j-anzac .anzac-header h3, #j-anzac .anzac-header h4, #j-anzac .anzac-header p {
+    color: whitesmoke; }
+  #j-anzac .anzac-header .j-header-left {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 12px; }
+
 .search-wrap li {
   display: inline-block; }
 
@@ -109,15 +163,15 @@
   .navbar-form .form-control {
     width: 400px; } }
 
-#j-anzac .anzac-header {
-  background-image: url(https://web.archive.org/web/20170311204314im_/http://i.imgur.com/IO3ERaL.jpg);
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: contain;
-  width: 100%;
-  min-height: 140px; }
-  #j-anzac .anzac-header h1, #j-anzac .anzac-header h2, #j-anzac .anzac-header h3, #j-anzac .anzac-header h4, #j-anzac .anzac-header p {
-    color: whitesmoke; }
-  #j-anzac .anzac-header .j-header-left {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding-bottom: 12px; }
+.btn-group-lg > .btn, .btn-lg {
+  border-radius: 0; }
+
+.btn {
+  border-radius: 0; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #0D2A81;
+  font-weight: bold; }
+
+a:hover {
+  color: #ba0000; }

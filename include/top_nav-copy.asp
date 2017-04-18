@@ -57,7 +57,6 @@ end if
 
 <!-- START: SiteLink generated horizontal navigation -->
 <div id="header" class="topnav1bgcolor">
-
 	<!-- aussie logo area -->
 	<div class="divlogo">
 		<div class="logo-wrap">
@@ -73,33 +72,45 @@ end if
 		</div>
 	</div>
 
-	<div id="j-top-right-links" class="container-sm-inline">
-	    <!-- 1st row -->
-	    <ul class="role-block grid-parent ul-base">
-            <li class="role-each-inline-60 grid-child">
-                <h3>
-                    Cart &nbsp;
-                    <i class="fa fa-shopping-cart"></i> &nbsp;
-                    0 items &nbsp; $0.00
-                </h3>
-            </li>
-            <li class="role-each-inline-30 grid-child">
-                <button href="#" class="btn btn-lg btn-info">Login</button>
-            </li>
-        </ul>
+	<div id="j-top-right-nav" class="container-sm-inline">
+    		<!-- shopping cart, basket, items row -->
+    		<ul class="role-block grid-parent ul-base">
+    			<li class="role-each-inline-30 grid-child">
+    				<h4>
+    					<a title="Shopping Cart" href="basket.asp">
+    					    Cart  &nbsp; <i class="fa fa-shopping-cart"></i>
+    					</a>
+    				</h4>
+    			</li>
+    			<li class="TopNav1Text role-each-inline-30 grid-child">
+    			    <h4>
+    			        <%=session("SL_BasketCount")%>&nbsp;Items
+    			        <%=formatcurrency(session("SL_BasketSubTotal"))%>
+                    </h4>
+                </li>
+                <!-- Login / Logout button -->
+    			<li class="TopNav1Text role-each-inline-30 grid-child">
+    			    <% if session("registeredshopper")="NO" then %>
+                        <a href="<%=secureurl%>login.asp" title="Login" class="btn btn-lg btn-default j-login-btn">Login</a>
+                    <% else %> Hello, <%= session("firstname") %>
+                        <a href="<%=secureurl%>logout.asp" title="Logout" class="btn btn-lg btn-default j-login-btn">Logout</a>
+                    <%end if%>
+    				<!--<button href="#" class="btn btn-lg btn-default j-login-btn">Login</button>-->
+    			</li>
+    		</ul>
+            <br>
+    		<!-- search form row -->
+    		<form method="POST" id="searchprodform" action="searchprods.asp">
+    			<input name="ProductSearchBy" value="2" type="hidden">
 
-		<!-- search form area: -->
-        <form method="POST" id="searchprodform" action="searchprods.asp" class="navbar-form navbar-right">
-            <input name="ProductSearchBy" value="2" type="hidden">
-            <div class="form-group search">
-                <input class="form-control" type="text" size="18" maxlength="256" name="txtsearch"
-                value="Product Search" onfocus="if (this.value=='Product Search') this.value='';"
-                onblur="if (this.value=='') this.value='Product Search';">
-            </div>
+    			<!-- search form input -->
+    			<input class="j-search-form" type="text" size="18" maxlength="256" name="txtsearch"
+    			       value="Product Search" onfocus="if (this.value=='Product Search') this.value='';"
+    			       onblur="if (this.value=='') this.value='Product Search';">
 
-            <button type="submit" class="btn btn-warning btn-go">Search</button>
-        </form>
-	</div>
+    			<button id="j-search-btn" type="submit" class="btn btn-warning btn-go">Search</button>
+    		</form>
+    	</div>
 </div>
 <!-- END: SiteLink generated horizontal navigation -->
 
@@ -108,21 +119,22 @@ end if
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+			        data-target="#j-top-nav-1st" aria-expanded="false">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand" href="http://www.aussieproducts.com">
-				<img alt="Brand" src="images/kangaroo.png" height="24px">
+				<img alt="Brand" src="images/kangaroo.png" height="40px">
 			 </a>
 		</div>
 
 		<!-- Bootstrap nav links, forms, and other content for toggling -->
 		<div id="j-top-nav-1st" class="collapse navbar-collapse">
 			<!-- website page links: -->
-			<ul class="nav navbar-nav navbar-left">
+			<ul class="nav navbar-nav navbar-left j-pad-top-12">
 				<li><a href="<%=insecureurl%>" title="<%=ALT_HOME_TXT%>">HOME</a></li>
 				<%if DISP_ABOUT_PAGE = true then %>
 				<li><a href="<%=insecureurl%>Aboutus.asp" title="<%=ALT_ABOUT_TXT%>">ABOUT US</a></li>
@@ -145,20 +157,27 @@ end if
 					 <i class="fa fa-shopping-cart fa-2x j-cart"></i>
 				</li>
 				<li>
-					<a href="basket.asp"><%=session("SL_BasketCount")%>&nbsp;Items</a>
+					<a href="basket.asp"><=session("SL_BasketCount")%>&nbsp;Items</a>
 				</li>
 				<li>
-					<a href="basket.asp"><%=formatcurrency(session("SL_BasketSubTotal"))%></a>
+					<a href="basket.asp"><=formatcurrency(session("SL_BasketSubTotal"))%></a>
 				</li>
 			</ul>
 			-->
+
+			<ul class="nav navbar-nav navbar-right">
+			    <li><a href="https://www.facebook.com/aussieproducts#"><img src="http://www.niftybuttons.com/webicons2/facebook.png" alt="facebook"></a></li>
+			    <li><a href="https://twitter.com/aussieproducts"><img src="http://www.niftybuttons.com/webicons2/twitter.png" alt="twitter"></a></li>
+			    <li><a href="http://www.reddit.com/user/AussieProducts/"><img src="http://www.niftybuttons.com/webicons2/reddit.png" alt="reddit"></a></li>
+			    <li><a href="http://pinterest.com/aussieproducts/"><img src="http://i.imgur.com/sxwB0TO.png" alt="pinterest"></a></li>
+			    <li><a href="http://pinterest.com/aussieproducts/"><img src="http://www.niftybuttons.com/webicons2/stumbleupon.png" alt="stumble upon"></a></li>
+            </ul>
 		</div>
 
 		<!-- social link buttons -->
-          <img src="http://www.niftybuttons.com/webicons2/facebook.png" alt="facebook">
-         <img src="http://www.niftybuttons.com/webicons2/twitter.png" alt="twitter">
-         <img src="http://www.niftybuttons.com/webicons2/reddit.png" alt="reddit">
-         <img src="http://i.imgur.com/sxwB0TO.png" alt="pinterest">
+
+
+
 	</div>
 </nav>
 <!-- END: top horizontal navigation -->

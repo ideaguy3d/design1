@@ -123,15 +123,94 @@ $aussie-red: #ba0000;
     width: 80%;
 }
 
+#j-top-nav-1st {
+    .j-pad-top-12 {
+        padding-top: 12px;
+    }
+
+    .nav li:hover {
+        background-color: $aussie-blue;
+        a {
+            color: $aussie-red
+        }
+    }
+}
+
+//-- Search Bar styles:
+#j-top-right-nav {
+    padding: 16px;
+
+    .j-search-form {
+        width: 80%;
+        padding: 14px 22px;
+        box-sizing: border-box;
+        border: 2px solid $aussie-red;
+        color: #434343;
+        border-bottom-left-radius: 16px;
+        border-top-left-radius: 16px;
+    }
+
+    .j-search-form:focus {
+        color: #434343;
+        background-color: #e4e4e4;
+        outline: none;
+    }
+
+    #j-search-btn {
+        position: absolute;
+        background-color: #8B0000;
+        /* border-color: #fff; */
+        border-width: 0;
+        height: 52px;
+        width: 8%;
+        font-weight: bolder;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+
+    .j-login-btn {
+        border-radius: 16px !important;
+        width: 120px !important;
+        color: $aussie-blue !important;
+    }
+
+    .grid-child {
+        p {
+            padding-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+//-- ANZAC Day styles:
+#j-anzac {
+    .anzac-header {
+        background-image: url(https://web.archive.org/web/20170311204314im_/http://i.imgur.com/IO3ERaL.jpg);
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: contain;
+        width: 100%;
+        min-height: 140px;
+
+        h1, h2, h3, h4, p {
+            color: whitesmoke;
+        }
+
+        .j-header-left {
+            background-color: rgba(0,0,0,0.5);
+            padding-bottom: 12px;
+        }
+    }
+}
+
 //------------------------------------------------------------------------------------
 
 //----------------------------------------
 //-- overwriting bootstrap styles section:
 //-----------------------------------------
-
-#j-nav {
-
-}
 
 .search-wrap {
     li {
@@ -167,23 +246,28 @@ $aussie-red: #ba0000;
     }
 }
 
-//-- ANZAC Day styles:
-#j-anzac {
-   .anzac-header {
-       background-image: url(https://web.archive.org/web/20170311204314im_/http://i.imgur.com/IO3ERaL.jpg);
-       background-repeat: no-repeat;
-       background-position: right center;
-       background-size: contain;
-       width: 100%;
-       min-height: 140px;
-
-       h1, h2, h3, h4, p {
-           color: whitesmoke;
-       }
-
-       .j-header-left {
-           background-color: rgba(0,0,0,0.5);
-           padding-bottom: 12px;
-       }
-   }
+.btn-group-lg>.btn, .btn-lg {
+    border-radius: 0;
 }
+
+.btn {
+    border-radius: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: $aussie-blue;
+    font-weight: bold;
+}
+
+a:hover {
+    color: $aussie-red;
+}
+
+
+
+
+
+
+
+
+
