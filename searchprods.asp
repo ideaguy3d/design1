@@ -196,6 +196,15 @@ Response.ExpiresAbsolute = Now() - 1
 <link rel="stylesheet" href="text/footernav.css" type="text/css">
 <link rel="stylesheet" href="text/design.css" type="text/css">
 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="design/styles/julius-css.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="design/jstyles.css">
+<link rel="stylesheet" href="design/styles/jstyles.css">
+<link rel="stylesheet" href="design/bower_components/font-awesome/css/font-awesome.css">
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
 <script language="JavaScript">
 <!-- hide from JavaScript-challenged browsers
 
@@ -212,7 +221,7 @@ function RedirectToAddADDress (page)
 <!--#INCLUDE FILE = "text/Background5.asp" -->
 
 <div id="container">
-    <!--#INCLUDE FILE = "include/top_nav.asp" -->
+    <!--#INCLUDE FILE = "include/top_nav-copy.asp" -->
     <div id="main">
 
 <% session("destpage")="" 

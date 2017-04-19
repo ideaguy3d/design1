@@ -55,9 +55,9 @@ end if
 %>
 
 
-<!-- SiteLink generated horizontal navigation -->
+<!-- START: SiteLink generated horizontal navigation -->
 <div id="header" class="topnav1bgcolor">
-	<!-- aussie logo area: -->
+	<!-- aussie logo area -->
 	<div class="divlogo">
 		<div class="logo-wrap">
 			<div class="logo-img">
@@ -71,75 +71,70 @@ end if
 			</div>
 		</div>
 	</div>
-	<!-- shopping cart nav: -->
-	<ul class="cartnav">
-		<!-- shopping cart link -->
-		<li class="TopNav1Text">
-			<a title="Shopping Cart" href="basket.asp" class="topnav1">Shopping Cart</a>
-		</li>
-		<!-- shopping cart img -->
-		<li class="shopcart">
-			<a title="Shopping Cart" href="basket.asp">
-				<img src="images/cart-icon.png" alt="Shopping Cart">
-			</a>
-		</li>
-		<li class="TopNav1Text"><%=session("SL_BasketCount")%>&nbsp;Items</li>
-		<li class="TopNav1Text"><%=formatcurrency(session("SL_BasketSubTotal"))%></li>
-	</ul>
 
-	<ul class="welcome">
-		<li class="TopNav1Text">
-			<% if session("registeredshopper")="NO" then %>
-			<a href="<%=secureurl%>login.asp" title="Login" class="topnav1 j-log-btn">Login</a>
-			<% else %> Hello, <%= session("firstname") %>
-		</li>
-		<li class="TopNav1Text">
-			<a href="<%=secureurl%>logout.asp" title="Logout" class="topnav1 j-log-btn">Logout</a>
-			<%end if%>
-		</li>
-	</ul>
+	<div id="j-top-right-nav" class="container-sm-inline">
+    		<!-- shopping cart, basket, items row -->
+    		<ul class="role-block grid-parent ul-base">
+    			<li class="role-each-inline-30 grid-child">
+    				<h4>
+    					<a title="Shopping Cart" href="basket.asp">
+    					    Cart  &nbsp; <i class="fa fa-shopping-cart"></i>
+    					</a>
+    				</h4>
+    			</li>
+    			<li class="TopNav1Text role-each-inline-30 grid-child">
+    			    <h4>
+    			        <%=session("SL_BasketCount")%>&nbsp;Items
+    			        <%=formatcurrency(session("SL_BasketSubTotal"))%>
+                    </h4>
+                </li>
+                <!-- Login / Logout button -->
+    			<li class="TopNav1Text role-each-inline-30 grid-child">
+    			    <% if session("registeredshopper")="NO" then %>
+                        <a href="<%=secureurl%>login.asp" title="Login" class="btn btn-lg btn-default j-login-btn">Login</a>
+                    <% else %> Hello, <%= session("firstname") %>
+                        <a href="<%=secureurl%>logout.asp" title="Logout" class="btn btn-lg btn-default j-login-btn">Logout</a>
+                    <%end if%>
+    				<!--<button href="#" class="btn btn-lg btn-default j-login-btn">Login</button>-->
+    			</li>
+    		</ul>
+            <br>
+    		<!-- search form row -->
+    		<form method="POST" id="searchprodform" action="searchprods.asp">
+    			<input name="ProductSearchBy" value="2" type="hidden">
 
-	<form method="POST" id="searchprodform" action="searchprods.asp">
-		<input name="ProductSearchBy" value="2" type="hidden">
-		<!-- Aussie search area:
-		<div class="divsearch">
-			<ul class="search-wrap">
-				<li class="searchbox">
-					<input class="plaintext" type="text" size="18" maxlength="256" name="txtsearch"
-					       value="Product Search" onfocus="if (this.value=='Product Search') this.value='';"
-					       onblur="if (this.value=='') this.value='Product Search';">
-				</li>
-				<li class="btn-go">
-					<input type="image" src="images/btn_go.gif" style="height:24px;width:24px;border:0">
-				</li>
-			</ul>
-		</div>
-        -->
-	</form>
+    			<!-- search form input -->
+    			<input class="j-search-form" type="text" size="18" maxlength="256" name="txtsearch"
+    			       value="Product Search" onfocus="if (this.value=='Product Search') this.value='';"
+    			       onblur="if (this.value=='') this.value='Product Search';">
+
+    			<button id="j-search-btn" type="submit" class="btn btn-warning btn-go">Search</button>
+    		</form>
+    	</div>
 </div>
-
+<!-- END: SiteLink generated horizontal navigation -->
 
 <!-- START: top horizontal navigation -->
 <nav id="j-nav1" class="navbar navbar-default">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+			        data-target="#j-top-nav-1st" aria-expanded="false">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand" href="http://www.aussieproducts.com">
-				<img alt="Brand" src="images/kangaroo.png" height="24px">
+				<img alt="Brand" src="images/kangaroo.png" height="40px">
 			 </a>
 		</div>
-
 
 		<!-- Bootstrap nav links, forms, and other content for toggling -->
 		<div id="j-top-nav-1st" class="collapse navbar-collapse">
 			<!-- website page links: -->
-			<ul class="nav navbar-nav navbar-left">
+			<ul class="nav navbar-nav navbar-left j-pad-top-12">
 				<li><a href="<%=insecureurl%>" title="<%=ALT_HOME_TXT%>">HOME</a></li>
 				<%if DISP_ABOUT_PAGE = true then %>
 				<li><a href="<%=insecureurl%>Aboutus.asp" title="<%=ALT_ABOUT_TXT%>">ABOUT US</a></li>
@@ -153,19 +148,6 @@ end if
 
 				<li><a href="<%=insecureurl%>basket.asp">VIEW CART</a></li>
 			</ul>
-
-			<!-- search form area: -->
-			<form method="POST" id="searchprodform" action="searchprods.asp" class="navbar-form navbar-right">
-				<input name="ProductSearchBy" value="2" type="hidden">
-				<div class="form-group search">
-					<input class="form-control" type="text" size="18" maxlength="256" name="txtsearch"
-					value="Product Search" onfocus="if (this.value=='Product Search') this.value='';"
-					onblur="if (this.value=='') this.value='Product Search';"
-					>
-				</div>
-
-				<button type="submit" class="btn btn-default btn-go">Search</button>
-			</form>
 			<!-- shopping cart nav:
 			<ul class="nav navbar-nav">
 				<li>
@@ -175,14 +157,27 @@ end if
 					 <i class="fa fa-shopping-cart fa-2x j-cart"></i>
 				</li>
 				<li>
-					<a href="basket.asp"><%=session("SL_BasketCount")%>&nbsp;Items</a>
+					<a href="basket.asp"><=session("SL_BasketCount")%>&nbsp;Items</a>
 				</li>
 				<li>
-					<a href="basket.asp"><%=formatcurrency(session("SL_BasketSubTotal"))%></a>
+					<a href="basket.asp"><=formatcurrency(session("SL_BasketSubTotal"))%></a>
 				</li>
 			</ul>
 			-->
-		</div><!-- /.navbar-collapse -->
-	</div><!-- /.container-fluid -->
+
+			<ul class="nav navbar-nav navbar-right">
+			    <li><a href="https://www.facebook.com/aussieproducts#"><img src="http://www.niftybuttons.com/webicons2/facebook.png" alt="facebook"></a></li>
+			    <li><a href="https://twitter.com/aussieproducts"><img src="http://www.niftybuttons.com/webicons2/twitter.png" alt="twitter"></a></li>
+			    <li><a href="http://www.reddit.com/user/AussieProducts/"><img src="http://www.niftybuttons.com/webicons2/reddit.png" alt="reddit"></a></li>
+			    <li><a href="http://pinterest.com/aussieproducts/"><img src="http://i.imgur.com/sxwB0TO.png" alt="pinterest"></a></li>
+			    <li><a href="http://pinterest.com/aussieproducts/"><img src="http://www.niftybuttons.com/webicons2/stumbleupon.png" alt="stumble upon"></a></li>
+            </ul>
+		</div>
+
+		<!-- social link buttons -->
+
+
+
+	</div>
 </nav>
 <!-- END: top horizontal navigation -->

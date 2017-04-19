@@ -128,9 +128,12 @@ Response.ExpiresAbsolute = #Feb 18,1998 13:26:26#
 <link rel="stylesheet" href="text/design.css" type="text/css">
 
 <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="design/styles/julius-css.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="design/jstyles.css">
 <link rel="stylesheet" href="design/styles/jstyles.css">
+<link rel="stylesheet" href="design/bower_components/font-awesome/css/font-awesome.css">
+
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
 <script type="text/javascript">
