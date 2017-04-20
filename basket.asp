@@ -330,8 +330,7 @@ function dosubmit()
 		<tr>
 		<td>
 		<% if session("user_want_multiship")= false then %>
-		&nbsp;&nbsp;&nbsp;<a href="#" class="allpage" onClick="MM_openBrWindow('PreviewShipping.asp','','width=450,height=400')">click here to estimate shipping cost </a><br>
-		&nbsp;
+		&nbsp;&nbsp;&nbsp;<a href="#" class="allpage btn btn-sm btn-info" onClick="MM_openBrWindow('PreviewShipping.asp','','width=450,height=400')">click here to estimate shipping cost </a><br>
 		</td>
 		<%end if%>
 		
@@ -663,8 +662,8 @@ function dosubmit()
 				<tr>
 				<td colspan="4" class="plaintext">
 				<input type="hidden" value="modify">&nbsp;
-					<a class="allpage" href="Javascript:dosubmit()" value="modify" onClick="Javascript:dosubmit()">Update Cart</a>
-					&nbsp;|&nbsp;&nbsp;<a href="emptybasket.asp" class="allpage">Empty Cart</a>
+					<a class="allpage btn btn-sm btn-primary" href="Javascript:dosubmit()" value="modify" onClick="Javascript:dosubmit()">Update Cart</a>
+					&nbsp;|&nbsp;&nbsp;<a href="emptybasket.asp" class="allpage btn btn-sm btn-primary">Empty Cart</a>
 				
 				</td>
 				<td ALIGN="RIGHT" class="plaintextbold">Subtotal:&nbsp;<%=formatcurrency(cdbl(basket_total))%>&nbsp;&nbsp;</td>
@@ -808,7 +807,9 @@ function dosubmit()
 					
 					%>
 				   
-					<td align="center"><a href="<%=prodlink%>"><img SRC="<%=imagename%>" alt="<%=SLsellTitle%>" title="<%=SLsellTitle%>" class="prodlistimg" <% if PROD_IMAGE_WIDTH > 0 then  response.write(" width="""& PROD_IMAGE_WIDTH&"""") end if %> <%if PROD_IMAGE_HEIGHT > 0 then response.write(" height="""& PROD_IMAGE_HEIGHT&"""") end if %> border="0"></a></td>		                         
+					<td align="center"><a href="<%=prodlink%>">
+					<img SRC="<%=imagename%>" alt="<%=SLsellTitle%>" title="<%=SLsellTitle%>"
+					   class="prodlistimg" <% if PROD_IMAGE_WIDTH > 0 then  response.write(" width="""& PROD_IMAGE_WIDTH&"""") end if %> <%if PROD_IMAGE_HEIGHT > 0 then response.write(" height="""& PROD_IMAGE_HEIGHT&"""") end if %> border="0"></a></td>
 					</tr>
 					<tr><td align="center">
 					<a class="allpage" href="<%=prodlink%>"><%=SLsellTitle%></a>

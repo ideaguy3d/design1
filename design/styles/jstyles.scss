@@ -1,6 +1,10 @@
 //-- variables:
 $aussie-blue: #0D2A81;
 $aussie-red: #ba0000;
+$poppie-red: #fd351c;
+$j-black: #434343;
+$j-grey: #7d7d7d;
+$poppie-green: #277611;
 
 //-- headers:
 .j-h1 {
@@ -63,6 +67,21 @@ $aussie-red: #ba0000;
     }
 }
 
+.j-anzac-header {
+    text-transform: uppercase;
+    //font-weight: bold;
+    color: $poppie-green;
+    text-shadow: 1px 1px 1px $poppie-red;
+    opacity: 0.7;
+}
+
+.j-anzac-recipe {
+    h4 {
+        color: $j-grey;
+        font-weight: 400;
+    }
+}
+
 //-- jcard rules:
 .jcard {
     text-align: center;
@@ -86,6 +105,11 @@ $aussie-red: #ba0000;
         width: 150px;
         height: 184px;
     }
+
+    img.j-img-w110 {
+        width: 110px;
+        height: 184px;
+    }
 }
 
 .j-img-header {
@@ -93,12 +117,16 @@ $aussie-red: #ba0000;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
 }
 
+.j-shadow {
+    box-shadow: 0 8px 20px 4px rgba(0, 0, 0, 0.7);
+}
+
 .j-div {
     overflow-x: scroll;
 }
 
 .j-contain {
-    padding: 2px 12px;
+    padding: 4px 12px;
 }
 
 .j-cart {
@@ -119,8 +147,14 @@ $aussie-red: #ba0000;
     border: 1px solid $aussie-blue;
 }
 
-.j-stretch {
-    width: 80%;
+.j-stretch-80 {
+    width: 70%;
+}
+
+@media only screen and (max-width: 992px) {
+    .j-stretch-80 {
+        width: 100%;
+    }
 }
 
 #j-top-nav-1st {
@@ -200,7 +234,7 @@ $aussie-red: #ba0000;
         }
 
         .j-header-left {
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             padding-bottom: 12px;
         }
     }
@@ -218,7 +252,7 @@ $aussie-red: #ba0000;
     }
 }
 
-.nav>li>a {
+.nav > li > a {
     text-decoration: none;
 }
 
@@ -246,7 +280,7 @@ $aussie-red: #ba0000;
     }
 }
 
-.btn-group-lg>.btn, .btn-lg {
+.btn-group-lg > .btn, .btn-lg {
     border-radius: 0;
 }
 
@@ -254,7 +288,7 @@ $aussie-red: #ba0000;
     border-radius: 0;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav > li > a {
     color: $aussie-blue;
     font-weight: bold;
 }
