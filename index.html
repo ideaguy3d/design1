@@ -35,6 +35,7 @@
     };
     firebase.initializeApp(config);
 </script>
+<script src="design/js/core.ctrl.js"></script>
 <script src="design/js/product-slider.js"></script>
 
 <!-- START: Bootstrap Navigation -->
@@ -74,90 +75,52 @@
 
 				<button type="submit" class="btn btn-default btn-go">Search</button>
 			</form>
-			<!-- shopping cart nav:
-			<ul class="nav navbar-nav">
-				<li>
-					<a title="Shopping Cart" href="basket.asp">Shopping Cart</a>
-				</li>
-				<li>
-					 <i class="fa fa-shopping-cart fa-2x j-cart"></i>
-				</li>
-				<li>
-					<a href="basket.asp"><%=session("SL_BasketCount")%>&nbsp;Items</a>
-				</li>
-				<li>
-					<a href="basket.asp"><%=formatcurrency(session("SL_BasketSubTotal"))%></a>
-				</li>
-			</ul>
-			-->
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
 </nav>
 <!-- END: Bootstrap Navigation -->
 
-<!-- START: ANZAC Day -->
-<section id="j-anzac">
-	<div class="anzac-header">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-sm-12 j-header-left">
-					<h1>Anzac Day</h1>
-					<p>Let Australian Products Co. help you prepare for your own Anzac Biscuits</p>
-					<a href="#" class="btn btn-lg btn-info">See Products</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- END: ANZAC Day -->
-
-<!-- START: New store hours -->
-<section id="j-store-hours" class="container">
-	<div class="row">
-		<div class="col-sm-6">
-			<h1 class="bg-primary text-center">
-				<strong>New Store Hours</strong>
-			</h1>
-			<h4 class="text-center j-red"><strong>Mon-Fri: 10am-6pm</strong></h4>
-			<h4 class="text-center j-red"><strong>Saturday: 10am-5pm</strong></h4>
-			<h4 class="text-center j-red"><strong>Sunday: Closed</strong></h4>
-		</div>
-	</div>
-</section>
-<!-- END: New store hours -->
-
 <hr>
-<h1>&nbsp;~ AngularJS prototype feature ~ </h1>
+<h1 class="text-center">~ AngularJS prototype feature ~ </h1>
 <hr>
 
 <!-- START: AngularJS app section: -->
-<section id="ng-app1" ng-cloak ng-app="ap-slider" class="container-fluid">
+<!-- apSliderCtrl Controller -->
+<section id="ng-app1" ng-cloak ng-app="ap-slider" class="container-fluid"
+         ng-controller="apCoreCtrl">
 	<br>
-	<!-- apSliderCtrl Controller -->
-	<div ng-controller="apSliderCtrl">
-		<input type="text" ng-model="data.productDescription">
-		<h4>Product Description: {{data.productDescription}}</h4>
-		<h1>{{2+2}} = 2+2</h1>
-		<h2>{{data.key1}}</h2>
-		<hr>
-		<!-- messages test1 -->
-		<ul>
-			<li ng-repeat="message in messages">
-				<!-- edit message -->
-				<label for="ap-message">Edit Message</label>
-				<input id="ap-message" type="text" ng-model="message.text" ng-change="messages.$save(message)">
-				<!-- delete message -->
-				<button ng-click="messages.$remove(message)">Delete Message</button>
-				<br>[ Message: {{ message.text }} ]
-			</li>
-		</ul>
-		<!-- create a new message -->
-		<form ng-submit="addMessage()">
-			<label for="new-message">Add a Message Now.</label>
-			<input id="new-message" type="text" ng-model="newMessageText">
-			<button type="submit">Add Message</button>
-		</form>
+
+	<!-- Primary product slider prototype -->
+	<div id="j-product-slider" ng-controller="apSliderCtrl">
+		<h1>Product Group1: {{ productsGroup1_title }}</h1>
 	</div>
+
+	<hr>
+	<!-------------------------------------------------------------->
+	<!-- random trial&error code to get everything up and running -->
+	<!-------------------------------------------------------------->
+	<input type="text" ng-model="data.productDescription">
+	<h4>Product Description: {{data.productDescription}}</h4>
+	<h1>{{2+2}} = 2+2</h1>
+	<h2>{{data.key1}}</h2>
+
+	<!-- RealTimeDB test1 area -->
+	<ul>
+		<li ng-repeat="message in messages">
+			<!-- edit message -->
+			<label for="ap-message">Edit Message</label>
+			<input id="ap-message" type="text" ng-model="message.text" ng-change="messages.$save(message)">
+			<!-- delete message -->
+			<button ng-click="messages.$remove(message)">Delete Message</button>
+			<br>[ Message: {{ message.text }} ]
+		</li>
+	</ul>
+	<!-- create a new message -->
+	<form ng-submit="addMessage()">
+		<label for="new-message">Add a Message Now.</label>
+		<input id="new-message" type="text" ng-model="newMessageText">
+		<button type="submit">Add Message</button>
+	</form>
 </section>
 <!-- END: AngularJS app section: -->
 
@@ -165,7 +128,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-
 
 </body>
 </html>

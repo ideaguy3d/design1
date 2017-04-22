@@ -85,7 +85,7 @@ session("department")=0
                  </td>
                  <!-- Product Listing Area: -->
                  <td valign="top" class="pagenavbg">
-                     <!-- sl code goes here -->
+                     <!-- site link code goes here -->
                      <div id="page-content" class="plaintext">
                         <!--#INCLUDE FILE = "text/HomePage5.htm" -->
                      <%
