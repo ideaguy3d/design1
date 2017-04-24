@@ -1,0 +1,15 @@
+<div class="j-product-slider-container">
+	<h1>Product Group1: {{ productsGroup1_title }}</h1>
+
+	<div class="j-slider-indicators">
+		<span ng-repeat="p in anzacProducts" ng-click="updateActiveArea($index)"
+			ng-class="{
+				'jslide-active': ($index === activeArea),
+				'jslide-inactive': ($index !== activeArea)
+			}" class="j-circle"></span>
+		<br>
+		<span ng-repeat="p in anzacProducts"> [ {{$index + " | " + activeArea}} ] </span>
+	</div>
+
+	<h4>slider footer</h4>
+</div>

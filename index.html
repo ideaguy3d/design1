@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="design/styles/jstyles.css">
+	<link rel="stylesheet" href="design/styles/jslider.css">
 </head>
 
 
@@ -36,7 +37,7 @@
     firebase.initializeApp(config);
 </script>
 <script src="design/js/core.ctrl.js"></script>
-<script src="design/js/product-slider.js"></script>
+<script src="design/js/product.slider.ctrl.js"></script>
 
 <!-- START: Bootstrap Navigation -->
 <nav id="j-nav1" class="navbar navbar-default">
@@ -86,14 +87,11 @@
 
 <!-- START: AngularJS app section: -->
 <!-- apSliderCtrl Controller -->
-<section id="ng-app1" ng-cloak ng-app="ap-slider" class="container-fluid"
-         ng-controller="apCoreCtrl">
+<section id="ng-app1" ng-cloak ng-app="ap-slider" class="container-fluid" ng-controller="apCoreCtrl">
 	<br>
 
 	<!-- Primary product slider prototype -->
-	<div id="j-product-slider" ng-controller="apSliderCtrl">
-		<h1>Product Group1: {{ productsGroup1_title }}</h1>
-	</div>
+	<div id="j-product-slider" ng-controller="apSliderCtrl" ng-include="'design/views/product-slider.html'"></div>
 
 	<hr>
 	<!-------------------------------------------------------------->

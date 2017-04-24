@@ -1,0 +1,13 @@
+.j-slider-indicators {
+  text-align: center; }
+  .j-slider-indicators .j-circle {
+    border-radius: 50%;
+    min-height: 20px;
+    min-width: 20px;
+    display: inline-block;
+    margin-right: 8px;
+    cursor: pointer; }
+  .j-slider-indicators .jslide-active {
+    background-color: #555555; }
+  .j-slider-indicators .jslide-inactive {
+    background-color: #9a9a9a; }

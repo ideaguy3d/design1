@@ -1,0 +1,22 @@
+$j-dark-grey: #555555;
+$j-light-grey: #9a9a9a;
+
+.j-slider-indicators {
+    text-align: center;
+    .j-circle {
+        border-radius: 50%;
+        min-height: 20px;
+        min-width: 20px;
+        display: inline-block;
+        margin-right: 8px;
+        cursor: pointer;
+    }
+
+    .jslide-active {
+        background-color: $j-dark-grey;
+    }
+
+    .jslide-inactive {
+        background-color: $j-light-grey;
+    }
+}
