@@ -59,13 +59,22 @@ $aussie-red: #ba0000;
         transition: left 0.5s linear;
     }
 
+    //-- slider anims:
+    .initial-product-group.active,
     .product-group.active {
         left: 0 !important;
     }
 
-    .initial-product-group.inactive,
     .product-group.inactive {
+        left: 2000px;
+    }
+
+    .product-group.increment-left.inactive {
         left: -2000px;
+    }
+    //
+    .initial-product-group.inactive {
+        left: -2000px
     }
 }
 

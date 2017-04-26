@@ -36,8 +36,12 @@
     -ms-transition: left 0.5s linear;
     -o-transition: left 0.5s linear;
     transition: left 0.5s linear; }
+  #j-product-slider-container .initial-product-group.active,
   #j-product-slider-container .product-group.active {
     left: 0 !important; }
-  #j-product-slider-container .initial-product-group.inactive,
   #j-product-slider-container .product-group.inactive {
+    left: 2000px; }
+  #j-product-slider-container .product-group.increment-left.inactive {
+    left: -2000px; }
+  #j-product-slider-container .initial-product-group.inactive {
     left: -2000px; }

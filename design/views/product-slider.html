@@ -1,8 +1,14 @@
 <div id="j-product-slider-container" class="container-fluid">
-	<h1 class="text-center">{{ productsGroup1_title }}</h1>
+	<h1 class="text-center">{{ productsGroup1_title }} Products</h1>
 
-	<!-- Initial Product Group Iteration -->
-	<div class="initial-product-group" ng-class="{'inactive': moveInitialGroup}">
+	<!-- Initial Product Group Loop -->
+	<div class="initial-product-group" ng-class="{
+			'inactive': (activeArea !== -1),
+		    'active': (activeArea === -1)
+		    }">
+
+		<h1><small>Product Group</small> <strong>{{ activeArea+2 }}</strong></h1>
+
 		<div class="product" ng-repeat="p in apcCurrentProducts">
 			<div class="jcard">
 				<a href="http://www.aussieproducts.com/prodinfo.asp?number=DDGS85">
@@ -16,20 +22,25 @@
 		</div>
 	</div>
 
-	<!-- AngularJS iterations for incremented product groups > products -->
+	<!-- AngularJS loops for incremented product-groups & products -->
 	<div class="row">
-		<div class="product-group" ng-repeat="e in repetitionAmount"
+		<div class="product-group {{'product-group'+$index}}" ng-repeat="e in repetitionAmount"
 		     ng-class="{
-				'active': ($index === productGroup),
-				'inactive': ($index !== productGroup)
+				'active': ($index === activeArea),
+				'inactive': ($index !== activeArea),
+				'increment-left': incrementLeft
 		     }">
+			<h2>
+				<small>Product Group</small>
+				<strong>{{ activeArea+2 }}</strong>
+			</h2>
 			<!-- inner loop for individual products: -->
 			<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts">
 				<div class="jcard">
 					<a href="http://www.aussieproducts.com/prodinfo.asp?number=DDGS85">
 						<img ng-src="{{p.image}}"
 						     class="j-img-w110" alt="chocolate">
-						<h4>CSR Golden Syrup Tub 850g</h4>
+						<h4>{{p.name}}</h4>
 						<h6>Item #: DDGS85</h6>
 						<h4>$13.95</h4>
 					</a>
@@ -41,17 +52,17 @@
 	<br><br>
 	<!-- Circular Indicators for active Product Groups  -->
 	<div class="j-slider-indicators">
-		<span class="j-circle" ng-repeat="i in [0,1,2]" ng-click="updateActiveArea($index)"
+		<span class="j-circle" ng-repeat="i in [0,1,2,3]" ng-click="updateActiveArea($index)"
 		      ng-class="{
-				'jslide-active': ($index === activeArea),
-				'jslide-inactive': ($index !== activeArea)
+				'jslide-active': ($index === indicatorCheck() ),
+				'jslide-inactive': ($index !== indicatorCheck() )
 			  }">
 		</span>
-
-		<!--<span ng-repeat="p in anzacProducts"> [ {{$index + " | " + activeArea}} ] </span>-->
+		<br>
+		<span ng-repeat="p in anzacProducts"> [ {{ $index + " | " + indicatorCheck() }} ] </span>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	<!-- Product Slider Footer: -->
 	<div class="panel panel-default">
 		<div class="panel-body">
