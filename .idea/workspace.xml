@@ -17,23 +17,24 @@
     <favorites_list name="new-site1" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.79199576">
+    <splitter split-orientation="horizontal" split-proportion="0.81042653">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.407827">
+        <splitter split-orientation="vertical" split-proportion="0.6210093">
           <split-first>
-            <splitter split-orientation="horizontal" split-proportion="0.49552238">
+            <splitter split-orientation="horizontal" split-proportion="0.52860856">
               <split-first>
                 <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
                   <file leaf-file-name="quiz-index.html" pinned="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/jref/quiz-index.html">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="264">
-                          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+                        <state relative-caret-position="-183">
+                          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
                           <folding>
                             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+                            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                            <element signature="n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                             <element signature="n#div#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                             <element signature="n#div#0;n#div#3;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                            <element signature="n#div#4;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                           </folding>
                         </state>
                       </provider>
@@ -42,9 +43,37 @@
                   <file leaf-file-name="product-slider.html" pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/design/views/product-slider.html">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="192">
-                          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-                          <folding />
+                        <state relative-caret-position="432">
+                          <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+                          <folding>
+                            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+                            <element signature="n#div#3;n#div#0;n#!!top" expanded="false" />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/design/index.html">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="177">
+                          <caret line="55" column="12" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="63" selection-end-column="18" />
+                          <folding>
+                            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                            <element signature="n#div#1;n#div#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                            <element signature="n#div#3;n#div#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                            <element signature="n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                            <element signature="n#div#1;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                            <element signature="n#div#2;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                            <element signature="n#div#3;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                            <element signature="n#div#2;n#div#3;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                            <element signature="n#div#4;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                            <element signature="n#div#0;n#div#4;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                            <element signature="n#div#1;n#div#4;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                            <element signature="n#div#2;n#div#4;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                            <element signature="n#section#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                            <element signature="n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                          </folding>
                         </state>
                       </provider>
                     </entry>
@@ -52,15 +81,23 @@
                 </leaf>
               </split-first>
               <split-second>
-                <leaf>
-                  <file leaf-file-name="core.ctrl.js" pinned="false" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/design/js/core.ctrl.js">
+                <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+                  <file leaf-file-name="quiz-app.js" pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/jref/quiz-app.js">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="294">
-                          <caret line="37" column="14" lean-forward="false" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-                          <folding>
-                            <element signature="e#0#40#0" expanded="false" />
-                          </folding>
+                        <state relative-caret-position="200">
+                          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="product.slider.ctrl.js" pinned="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/design/js/product.slider.ctrl.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="408">
+                          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+                          <folding />
                         </state>
                       </provider>
                     </entry>
@@ -70,17 +107,15 @@
             </splitter>
           </split-first>
           <split-second>
-            <splitter split-orientation="horizontal" split-proportion="0.4973262">
+            <splitter split-orientation="horizontal" split-proportion="0.42762724">
               <split-first>
-                <leaf>
-                  <file leaf-file-name="product.slider.ctrl.js" pinned="false" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/design/js/product.slider.ctrl.js">
+                <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+                  <file leaf-file-name="core.ctrl.js" pinned="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/design/js/core.ctrl.js">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="288">
-                          <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-                          <folding>
-                            <element signature="e#0#40#0" expanded="false" />
-                          </folding>
+                        <state relative-caret-position="513">
+                          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+                          <folding />
                         </state>
                       </provider>
                     </entry>
@@ -88,28 +123,18 @@
                 </leaf>
               </split-first>
               <split-second>
-                <leaf>
+                <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
                   <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/index.html">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="192">
-                          <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+                        <state relative-caret-position="24">
+                          <caret line="81" column="34" lean-forward="false" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
                           <folding>
                             <element signature="n#script#3;n#body#0;n#html#0;n#!!top" expanded="false" />
                             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                             <element signature="n#ul#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                             <element signature="n#form#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                           </folding>
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="quiz-app.js" pinned="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/jref/quiz-app.js">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="138">
-                          <caret line="26" column="43" lean-forward="false" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-                          <folding />
                         </state>
                       </provider>
                     </entry>
@@ -122,38 +147,14 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="jstyles.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/design/styles/jstyles.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="936">
-                  <caret line="148" column="1" lean-forward="true" selection-start-line="148" selection-start-column="1" selection-end-line="148" selection-end-column="1" />
-                  <folding>
-                    <element signature="e#373#1079#0" expanded="false" />
-                    <element signature="e#1150#1284#0" expanded="false" />
-                    <element signature="e#1302#1447#0" expanded="false" />
-                    <element signature="e#1465#1533#0" expanded="false" />
-                    <element signature="e#2334#2403#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="jslider.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/design/styles/jslider.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="264">
-                  <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/design/gulpfile.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
+                <state relative-caret-position="768">
+                  <caret line="67" column="16" lean-forward="true" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+                  <folding>
+                    <element signature="e#114#481#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -162,8 +163,35 @@
             <entry file="file://$PROJECT_DIR$/jref/styles/styles.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="298">
-                  <caret line="291" column="19" lean-forward="false" selection-start-line="291" selection-start-column="17" selection-end-line="291" selection-end-column="19" />
-                  <folding />
+                  <caret line="92" column="30" lean-forward="false" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#562#637#0" expanded="false" />
+                    <element signature="e#730#1398#0" expanded="false" />
+                    <element signature="e#1742#2746#0" expanded="false" />
+                    <element signature="e#2077#2270#0" expanded="false" />
+                    <element signature="e#2290#2345#0" expanded="false" />
+                    <element signature="e#2372#2433#0" expanded="false" />
+                    <element signature="e#2452#2506#0" expanded="false" />
+                    <element signature="e#2771#2987#0" expanded="false" />
+                    <element signature="e#3010#3174#0" expanded="false" />
+                    <element signature="e#3261#3766#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="jstyles.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/design/styles/jstyles.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="144">
+                  <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#373#1079#0" expanded="false" />
+                    <element signature="e#1150#1284#0" expanded="false" />
+                    <element signature="e#1302#1447#0" expanded="false" />
+                    <element signature="e#1465#1533#0" expanded="false" />
+                    <element signature="e#2334#2403#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -200,6 +228,10 @@
       <find>Two columns with two nested columns</find>
       <find>j-stre</find>
       <find>on</find>
+      <find>question</find>
+      <find>j-product-slider-container</find>
+      <find>inactive</find>
+      <find>active</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -243,19 +275,19 @@
         <option value="$PROJECT_DIR$/login.asp" />
         <option value="$PROJECT_DIR$/text/storestyle.css" />
         <option value="$PROJECT_DIR$/basket.asp" />
-        <option value="$PROJECT_DIR$/jref/styles/styles.scss" />
-        <option value="$PROJECT_DIR$/jref/quiz-app.js" />
         <option value="$PROJECT_DIR$/default.asp" />
         <option value="$PROJECT_DIR$/text/AboutUs5.htm" />
-        <option value="$PROJECT_DIR$/design/index.html" />
         <option value="$PROJECT_DIR$/design/styles/jstyles.scss" />
         <option value="$PROJECT_DIR$/text/HomePage5.htm" />
         <option value="$PROJECT_DIR$/design/ui-section1.html" />
         <option value="$PROJECT_DIR$/design/js/product-slider.js" />
         <option value="$PROJECT_DIR$/design/email-template1.html" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/jref/quiz-index.html" />
         <option value="$PROJECT_DIR$/design/js/core.ctrl.js" />
+        <option value="$PROJECT_DIR$/jref/quiz-index.html" />
+        <option value="$PROJECT_DIR$/design/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/jref/quiz-app.js" />
+        <option value="$PROJECT_DIR$/jref/styles/styles.scss" />
         <option value="$PROJECT_DIR$/design/styles/jslider.scss" />
         <option value="$PROJECT_DIR$/design/js/product.slider.ctrl.js" />
         <option value="$PROJECT_DIR$/design/views/product-slider.html" />
@@ -292,7 +324,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -351,66 +382,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new-site1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new-site1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new-site1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new-site1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jslider.scss" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new-site1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new-site1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -418,7 +392,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/jref/index.html&#10;C:/Users/user/Desktop/new-site1/jref/styles/styles.scss&#10;C:/Users/user/Desktop/new-site1/jref/quiz-index.html&#10;C:/Users/user/Desktop/new-site1/jref/quiz-app.js" />
@@ -436,7 +410,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.product-slider.html">
+    <configuration default="false" name="product-slider.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/new-site1/design/views/product-slider.html">
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -503,9 +480,20 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.product-slider.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.product-slider.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -534,12 +522,13 @@
       <workItem from="1492708494167" duration="15769000" />
       <workItem from="1492798643983" duration="7052000" />
       <workItem from="1492880888710" duration="11801000" />
-      <workItem from="1493053775906" duration="15159000" />
+      <workItem from="1493053775906" duration="15373000" />
+      <workItem from="1493140839943" duration="14762000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176020000" />
+    <option name="totallyTimeSpent" value="190996000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -557,12 +546,12 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11321748" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15218537" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45345017" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -694,17 +683,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="168">
             <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -827,31 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="279" column="0" lean-forward="true" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
-          <folding>
-            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#3;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#4;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#4;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#4;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/text/HomePage5.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -896,26 +860,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jref/styles/styles.scss">
+    <entry file="file://$PROJECT_DIR$/design/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="291" column="19" lean-forward="false" selection-start-line="291" selection-start-column="17" selection-end-line="291" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jref/quiz-app.js">
+    <entry file="file://$PROJECT_DIR$/design/js/core.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="26" column="43" lean-forward="false" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+        <state relative-caret-position="513">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="55" column="12" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="63" selection-end-column="18" />
+          <folding>
+            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#1;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#2;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#3;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#4;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#4;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#4;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/design/styles/jstyles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="148" column="1" lean-forward="true" selection-start-line="148" selection-start-column="1" selection-end-line="148" selection-end-column="1" />
+        <state relative-caret-position="144">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="21" />
           <folding>
             <element signature="e#373#1079#0" expanded="false" />
             <element signature="e#1150#1284#0" expanded="false" />
@@ -926,18 +913,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+        <state relative-caret-position="24">
+          <caret line="81" column="34" lean-forward="false" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
           <folding>
             <element signature="n#script#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -947,51 +926,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jref/quiz-index.html">
+    <entry file="file://$PROJECT_DIR$/jref/styles/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        <state relative-caret-position="298">
+          <caret line="92" column="30" lean-forward="false" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="30" />
           <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#3;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/js/core.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="37" column="14" lean-forward="false" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#562#637#0" expanded="false" />
+            <element signature="e#730#1398#0" expanded="false" />
+            <element signature="e#1742#2746#0" expanded="false" />
+            <element signature="e#2077#2270#0" expanded="false" />
+            <element signature="e#2290#2345#0" expanded="false" />
+            <element signature="e#2372#2433#0" expanded="false" />
+            <element signature="e#2452#2506#0" expanded="false" />
+            <element signature="e#2771#2987#0" expanded="false" />
+            <element signature="e#3010#3174#0" expanded="false" />
+            <element signature="e#3261#3766#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/design/styles/jslider.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="768">
+          <caret line="67" column="16" lean-forward="true" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+          <folding>
+            <element signature="e#114#481#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jref/quiz-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design/js/product.slider.ctrl.js">
+    <entry file="file://$PROJECT_DIR$/jref/quiz-index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        <state relative-caret-position="-183">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#0#40#0" expanded="false" />
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#3;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/design/views/product-slider.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        <state relative-caret-position="432">
+          <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/js/product.slider.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
           <folding />
         </state>
       </provider>

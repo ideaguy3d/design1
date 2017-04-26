@@ -1,15 +1,76 @@
-<div class="j-product-slider-container">
-	<h1>Product Group1: {{ productsGroup1_title }}</h1>
+<div id="j-product-slider-container" class="container-fluid">
+	<h1 class="text-center">{{ productsGroup1_title }}</h1>
 
-	<div class="j-slider-indicators">
-		<span ng-repeat="p in anzacProducts" ng-click="updateActiveArea($index)"
-			ng-class="{
-				'jslide-active': ($index === activeArea),
-				'jslide-inactive': ($index !== activeArea)
-			}" class="j-circle"></span>
-		<br>
-		<span ng-repeat="p in anzacProducts"> [ {{$index + " | " + activeArea}} ] </span>
+	<!-- Initial Product Group Iteration -->
+	<div class="initial-product-group" ng-class="{'inactive': moveInitialGroup}">
+		<div class="product" ng-repeat="p in apcCurrentProducts">
+			<div class="jcard">
+				<a href="http://www.aussieproducts.com/prodinfo.asp?number=DDGS85">
+					<img src="http://www.aussieproducts.com/images/DDGS85.gif"
+					     class="j-img-w110" alt="chocolate">
+					<h4>CSR Golden Syrup Tub 850g</h4>
+					<h6>Item #: DDGS85</h6>
+					<h4>$13.95</h4>
+				</a>
+			</div>
+		</div>
 	</div>
 
-	<h4>slider footer</h4>
+	<!-- AngularJS iterations for incremented product groups > products -->
+	<div class="row">
+		<div class="product-group" ng-repeat="e in repetitionAmount"
+		     ng-class="{
+				'active': ($index === productGroup),
+				'inactive': ($index !== productGroup)
+		     }">
+			<!-- inner loop for individual products: -->
+			<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts">
+				<div class="jcard">
+					<a href="http://www.aussieproducts.com/prodinfo.asp?number=DDGS85">
+						<img ng-src="{{p.image}}"
+						     class="j-img-w110" alt="chocolate">
+						<h4>CSR Golden Syrup Tub 850g</h4>
+						<h6>Item #: DDGS85</h6>
+						<h4>$13.95</h4>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br><br>
+	<!-- Circular Indicators for active Product Groups  -->
+	<div class="j-slider-indicators">
+		<span class="j-circle" ng-repeat="i in [0,1,2]" ng-click="updateActiveArea($index)"
+		      ng-class="{
+				'jslide-active': ($index === activeArea),
+				'jslide-inactive': ($index !== activeArea)
+			  }">
+		</span>
+
+		<!--<span ng-repeat="p in anzacProducts"> [ {{$index + " | " + activeArea}} ] </span>-->
+	</div>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<!-- Product Slider Footer: -->
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h4 class="text-center">slider footer</h4>
+			<button class="btn btn-primary" type="button">
+				Golden Syrup <span class="badge">4</span>
+			</button>
+			<button class="btn btn-primary" type="button">
+				Coconut <span class="badge">4</span>
+			</button>
+			<button class="btn btn-primary" type="button">
+				Pavlova <span class="badge">4</span>
+			</button>
+			<button class="btn btn-primary" type="button">
+				Sausage Rolls <span class="badge">4</span>
+			</button>
+			<button class="btn btn-primary" type="button">
+				Hand Flags <span class="badge">4</span>
+			</button>
+		</div>
+	</div>
 </div>

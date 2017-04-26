@@ -25,7 +25,6 @@
 
             ga('create', 'UA-45483712-1', 'aussieproducts.com');
             ga('send', 'pageview');
-
         </script>
         <img src="http://www.niftybuttons.com/webicons2/facebook.png" width="41" height="41"/>
     </a>
