@@ -1,18 +1,23 @@
 /**
- * Created by user on 4/14/2017.
+ * Created by user on 4/28/2017.
  */
 
-(function () {
+(function(){
+    "use strict";
     var app = angular.module('ap-slider');
-    //TODO: move all the DOM manipulation in this controller to a directive
-    app.controller('apSliderCtrl', ['$scope', 'jProductGroup1Data', '$timeout',
-        function ($scope, jProductGroup1Data, $timeout) {
+    app.controller('apSliderEditCtrl', [ '$scope', '$timeout', 'jProductGroup1Data',
+        function($scope, $timeout, jProductGroup1Data){
             $scope.productsGroup1_title = "Anzac Day";
-            $scope.anzacProducts = jProductGroup1Data.Row1;
             $scope.apcCurrentProducts = jProductGroup1Data.Row1; // will change to different product group later
             $scope.activeArea = -1;
             $scope.repetitionAmount = [0, 1, 2];
             $scope.incrementLeft = false;
+            $scope.$showImage = true;
+            $scope.showHeader = true;
+            $scope.showProductId = true;
+            $scope.showPrice = true;
+            $scope.ratioPortrait = true; // have a function determine if image is portrait
+            $scope.ratioLandscape = true; //  have a function determine if image is portrait
 
             var pgPositionTracker = [
                 {side: "initialState"},
@@ -70,6 +75,24 @@
                 }
             };
 
+            $scope.editHeader = function(){
+                $scope.showPrice = true;
+                $scope.showProductId = true;
+                $scope.showHeader = !$scope.showHeader;
+            };
+
+            $scope.editProductId = function(){
+                $scope.showHeader = true;
+                $scope.showPrice = true;
+                $scope.showProductId = !$scope.showProductId;
+            };
+
+            $scope.editPrice = function(){
+                $scope.showHeader = true;
+                $scope.showProductId = true;
+                $scope.showPrice = !$scope.showPrice;
+            };
+
             //-- private functions:
             var posCheckLeft = function () {
                 return pgPositionTracker.every(function (elem) {
@@ -125,5 +148,3 @@
         }
     ]);
 })();
-
-//

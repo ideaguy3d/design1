@@ -11,10 +11,10 @@
             var ref_productData = firebase.database().ref().child('productData');
             var ref_messages = firebase.database().ref().child('messages');
             var syncObject = $firebaseObject(ref_productData);
-            var ref_AnzacDayProducts = firebase.database().ref().child('AnzacDayProducts');
+            var ref_row1 = firebase.database().ref().child('Row1');
 
             return {
-                AnzacDayProducts: $firebaseArray(ref_AnzacDayProducts),
+                Row1: $firebaseArray(ref_row1),
                 ProductsMessagesArray: function () {
                     return $firebaseArray(ref_messages);
                 }
@@ -23,11 +23,12 @@
     ]);
 
     // apCoreCtrl
-    app.controller('apCoreCtrl', ['$scope', 'jProductGroup1Data',
+    app.controller('apcCoreCtrl', ['$scope', 'jProductGroup1Data',
         function ($scope, jProductGroup1Data) {
 
             $scope.messages = jProductGroup1Data.ProductsMessagesArray();
             $scope.intro_message = "Ello World ^_^/";
+            $scope.showSlider =  false;
 
             $scope.addMessage = function () {
                 $scope.messages.$add({

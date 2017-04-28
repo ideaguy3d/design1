@@ -62,18 +62,26 @@
 
 <!-- START: AngularJS app section: -->
 <!-- apSliderCtrl Controller -->
-<section id="ng-app1" ng-cloak ng-app="ap-slider" class="container-fluid" ng-controller="apCoreCtrl">
+<section id="ng-app1" ng-cloak ng-app="ap-slider" class="container-fluid" ng-controller="apcCoreCtrl">
 	<br>
 
+	<!-- Edit product slider prototype -->
+	<div id="j-product-slider-edit" ng-controller="apSliderEditCtrl" ng-include="'design/views/product-slider-edit.html'"></div>
+
+	<div class="jumbotron">
+		<h1>should show = {{showSlider}}</h1>
+	</div>
+
 	<!-- Primary product slider prototype -->
-	<div id="j-product-slider" ng-controller="apSliderCtrl" ng-include="'design/views/product-slider.html'"></div>
+	<div id="j-product-slider" ng-controller="apSliderCtrl" ng-if="showSlider"
+	     ng-include="'design/views/product-slider.html'"></div>
 
 	<hr>
 	<!-------------------------------------------------------------->
 	<!-- random trial&error code to get everything up and running -->
 	<!-------------------------------------------------------------->
 	<input type="text" ng-model="data.productDescription">
-	<h4>Product Description: {{data.productDescription}}</h4>
+	<h4>Product Description: {{ data.productDescription }}</h4>
 	<h1>{{2+2}} = 2+2</h1>
 	<h2>{{data.key1}}</h2>
 
@@ -109,7 +117,7 @@
 <!-- AngularFire -->
 <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 <script>
-    // Initialize Firebase
+    // Initialize Firebase... will eventually get this information from a secured php backend
     var config = {
         apiKey: "AIzaSyBq6mpowidyq3CR5CEJgZO7-vWfx7WXE8w",
         authDomain: "product-slider.firebaseapp.com",
@@ -122,6 +130,7 @@
 </script>
 <script src="design/js/core.ctrl.js"></script>
 <script src="design/js/product.slider.ctrl.js"></script>
+<script src="design/js/product.slider.edit.ctrl.js"></script>
 
 </body>
 </html>
