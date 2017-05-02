@@ -48,8 +48,8 @@ www.julius3d.com
 
 .j-anzac-header {
   text-transform: uppercase;
-  color: #277611;
-  text-shadow: 1px 1px 1px #fd351c;
+  color: #0D2A81;
+  text-shadow: 1px 1px 1px #ba0000;
   opacity: 0.7; }
 
 .j-anzac-recipe h4 {
@@ -72,19 +72,19 @@ www.julius3d.com
   .jcard img {
     width: 150px;
     height: 184px; }
-  .jcard img.j-img-w110 {
+  .jcard img.j-img-portrait {
     width: 110px;
     height: 184px; }
   .jcard img.j-img-landscape {
     width: 170px;
     height: 116px; }
-  .jcard img.square {
+  .jcard img.j-img-square {
     width: 180px;
     height: 180px; }
-  .jcard img.j-aus-balloon {
+  .jcard img.j-img-aus-balloon {
     width: 110px;
     height: 154px; }
-  .jcard img.j-parlova-pie {
+  .jcard img.j-img-parlova-pie {
     width: 170px;
     height: 121px; }
 

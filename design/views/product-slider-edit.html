@@ -2,31 +2,32 @@
 	<h1 class="text-center">EDIT PRODUCTS:</h1>
 
 	<!-- Initial Product Group Loop -->
-	<div class="initial-product-group row"
-	     ng-class="{
-			'inactive': (activeArea !== -1),
-		    'active': (activeArea === -1)}">
-		<h1>
-			<small>Product Group</small>
-			<strong>{{ activeArea+2 }}</strong></h1>
+	<div class="row">
+		<div class="initial-product-group"
+		     ng-class="{
+				'inactive': (activeArea !== -1),
+		        'active': (activeArea === -1)}">
+			<h1><small>Product Group</small><strong>{{ activeArea+2 }}</strong></h1>
 
-		<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts">
-			<div class="jcard">
-				<img ng-src="{{p.image}}" class="j-img-w110 j-edit" alt="chocolate"
-				     ng-class="{'j-parlova-pie': (p.productId === 'DDPM12')}">
-				<!-- Product Title Description -->
-				<h4 class="j-edit" ng-show="showHeader" ng-click="editHeader()">{{p.name}}</h4>
-				<div ng-hide="showHeader" class="form-group">
-					<input type="text" class="form-control" placeholder="Product Title Description">
-				</div>
-				<!-- Product Id -->
-				<h6 class="j-edit" ng-show="showProductId" ng-click="editProductId()">Item #: {{p.productId}}</h6>
-				<div ng-hide="showProductId" class="form-group">
-					<input type="text" class="form-control" placeholder="Product Id">
-				</div>
-				<h4 class="j-edit" ng-show="showPrice" ng-click="editPrice()">${{p.price}}</h4>
-				<div ng-hide="showPrice" class="form-group">
-					<input type="text" class="form-control" placeholder="Price">
+			<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts">
+				<div class="jcard">
+					<img ng-src="{{p.image}}" class="j-img-w110 j-edit" alt="chocolate"
+					     ng-class="{'j-img-parlova-pie': (p.productId === 'DDPM12')}">
+					<!-- Product Title Description -->
+					<h4 class="j-edit" ng-show="showHeader" ng-click="editHeader()">{{p.name}}</h4>
+					<div ng-hide="showHeader" class="form-group">
+						<input type="text" class="form-control" placeholder="Product Title Description">
+					</div>
+					<!-- Product id -->
+					<h6 class="j-edit" ng-show="showProductId" ng-click="editProductId()">Item #: {{p.productId}}</h6>
+					<div ng-hide="showProductId" class="form-group">
+						<input type="text" class="form-control" placeholder="Product Id">
+					</div>
+					<!-- Product Price -->
+					<h4 class="j-edit" ng-show="showPrice" ng-click="editPrice()">${{p.price}}</h4>
+					<div ng-hide="showPrice" class="form-group">
+						<input type="text" class="form-control" placeholder="Price">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -60,7 +61,6 @@
 			</div>
 		</div>
 	</div>
-
 
 	<!-- Circular Indicators for active Product Groups  -->
 	<div class="j-slider-indicators">

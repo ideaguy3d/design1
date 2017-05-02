@@ -7,7 +7,7 @@
     //TODO: move all the DOM manipulation in this controller to a directive
     app.controller('apSliderCtrl', ['$scope', 'jProductGroup1Data', '$timeout',
         function ($scope, jProductGroup1Data, $timeout) {
-            $scope.productsGroup1_title = "Anzac Day";
+            $scope.productsGroup1_title = "AussieProducts.com";
             $scope.anzacProducts = jProductGroup1Data.Row1;
             $scope.apcCurrentProducts = jProductGroup1Data.Row1; // will change to different product group later
             $scope.activeArea = -1;

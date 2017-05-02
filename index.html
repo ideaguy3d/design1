@@ -18,59 +18,15 @@
 
 <body>
 
-<!-- START: Bootstrap Navigation -->
-<nav id="j-nav1" class="navbar navbar-default">
-	<div class="container-fluid">
-		<!-- Brand and toggle get grouped for better mobile display
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">
-				<img alt="Brand" src="images/menu-btn.png" height="24px">
-			 </a>
-		</div>
-		-->
-
-		<!-- Bootstrap nav links, forms, and other content for toggling -->
-		<div id="j-top-nav-1st" class="collapse navbar-collapse">
-			<!-- website page links: -->
-			<ul class="nav navbar-nav navbar-left">
-				<li><a href="<%=insecureurl%>" title="<%=ALT_HOME_TXT%>">HOME</a></li>
-				<li><a href="#">ABOUT US</a></li>
-				<li><a href="#">SHIPPING</a></li>
-				<li><a href="#">CONTACT US</a></li>
-				<li><a href="#">VIEW CART</a></li>
-			</ul>
-
-			<!-- search form area: -->
-			<form method="POST" id="searchprodform" action="searchprods.asp" class="navbar-form navbar-right">
-				<input name="ProductSearchBy" value="2" type="hidden">
-				<div class="form-group search">
-					<input type="text" class="form-control" placeholder="Search">
-				</div>
-
-				<button type="submit" class="btn btn-default btn-go">Search</button>
-			</form>
-		</div><!-- /.navbar-collapse -->
-	</div><!-- /.container-fluid -->
-</nav>
-<!-- END: Bootstrap Navigation -->
-
+<br>
 <!-- START: AngularJS app section: -->
 <!-- apSliderCtrl Controller -->
-<section id="ng-app1" ng-cloak ng-app="ap-slider" class="container-fluid" ng-controller="apcCoreCtrl">
+<section id="ng-app1" ng-cloak ng-app="ap-slider" ng-controller="apcCoreCtrl">
 	<br>
 
 	<!-- Edit product slider prototype -->
-	<div id="j-product-slider-edit" ng-controller="apSliderEditCtrl" ng-include="'design/views/product-slider-edit.html'"></div>
-
-	<div class="jumbotron">
-		<h1>should show = {{showSlider}}</h1>
-	</div>
+	<div id="j-product-slider-edit" ng-controller="apSliderEditCtrl" ng-if="!showSlider"
+	     ng-include="'design/views/product-slider-edit.html'"></div>
 
 	<!-- Primary product slider prototype -->
 	<div id="j-product-slider" ng-controller="apSliderCtrl" ng-if="showSlider"

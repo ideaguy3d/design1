@@ -1,68 +1,24 @@
 
-<!--
- <style>
-	[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-		display: none !important;
-	}
-</style>
- -->
-
-<!-- START: Bootstrap Navigation -->
-<nav id="j-nav1" class="navbar navbar-default">
-	<div class="container-fluid">
-		<!-- Brand and toggle get grouped for better mobile display
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">
-				<img alt="Brand" src="images/menu-btn.png" height="24px">
-			 </a>
-		</div>
-		-->
-
-		<!-- Bootstrap nav links, forms, and other content for toggling -->
-		<div id="j-top-nav-1st" class="collapse navbar-collapse">
-			<!-- website page links: -->
-			<ul class="nav navbar-nav navbar-left">
-				<li><a href="<%=insecureurl%>" title="<%=ALT_HOME_TXT%>">HOME</a></li>
-				<li><a href="#">ABOUT US</a></li>
-				<li><a href="#">SHIPPING</a></li>
-				<li><a href="#">CONTACT US</a></li>
-				<li><a href="#">VIEW CART</a></li>
-			</ul>
-
-			<!-- search form area: -->
-			<form method="POST" id="searchprodform" action="searchprods.asp" class="navbar-form navbar-right">
-				<input name="ProductSearchBy" value="2" type="hidden">
-				<div class="form-group search">
-					<input type="text" class="form-control" placeholder="Search">
-				</div>
-
-				<button type="submit" class="btn btn-default btn-go">Search</button>
-			</form>
-		</div><!-- /.navbar-collapse -->
-	</div><!-- /.container-fluid -->
-</nav>
-<!-- END: Bootstrap Navigation -->
-
+<br>
 <!-- START: AngularJS app section: -->
 <!-- apSliderCtrl Controller -->
-<section id="ng-app1" ng-cloak ng-app="ap-slider" class="container-fluid" ng-controller="apCoreCtrl">
+<section id="ng-app1" ng-cloak ng-app="ap-slider" class="container-fluid" ng-controller="apcCoreCtrl">
 	<br>
 
+	<!-- Edit product slider prototype -->
+	<div id="j-product-slider-edit" ng-controller="apSliderEditCtrl" ng-if="!showSlider"
+	     ng-include="'design/views/product-slider-edit.html'"></div>
+
 	<!-- Primary product slider prototype -->
-	<div id="j-product-slider" ng-controller="apSliderCtrl" ng-include="'design/views/product-slider.html'"></div>
+	<div id="j-product-slider" ng-controller="apSliderCtrl" ng-if="showSlider"
+	     ng-include="'design/views/product-slider.html'"></div>
 
 	<hr>
 	<!-------------------------------------------------------------->
 	<!-- random trial&error code to get everything up and running -->
 	<!-------------------------------------------------------------->
 	<input type="text" ng-model="data.productDescription">
-	<h4>Product Description: {{data.productDescription}}</h4>
+	<h4>Product Description: {{ data.productDescription }}</h4>
 	<h1>{{2+2}} = 2+2</h1>
 	<h2>{{data.key1}}</h2>
 
@@ -98,7 +54,7 @@
 <!-- AngularFire -->
 <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 <script>
-    // Initialize Firebase
+    // Initialize Firebase... will eventually get this information from a secured php backend
     var config = {
         apiKey: "AIzaSyBq6mpowidyq3CR5CEJgZO7-vWfx7WXE8w",
         authDomain: "product-slider.firebaseapp.com",
@@ -111,225 +67,4 @@
 </script>
 <script src="design/js/core.ctrl.js"></script>
 <script src="design/js/product.slider.ctrl.js"></script>
-
-<!-- START: video section -->
-<section id="j-video-section1" class="j-contain-vid">
-	<div style="text-align:center">
-		<!-- Buttons above the video:
-		<div class="jbtn-group">
-			<div>
-				<a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=BFE040">
-					Medium Mini Eggs
-				</a>
-				<a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=CCCR20">
-					CherryRipe Casket
-				</a>
-				<a class="jbutton" href="http://www.aussieproducts.com/prodinfo.asp?number=BFX061">
-					Roses Easter Egg
-				</a>
-			</div>
-		</div>
-		-->
-		<!-- The embedded video: -->
-		<video controls loop id="j-video1" width="700">
-			<source src="vids/product-vid1.mp4" type="video/mp4">
-			Your browser does not support HTML5 video.
-			</source>
-		</video>
-	</div>
-	<script>
-        var myVideo = document.getElementById("j-video1");
-        document.getElementsByTagName('video')[0].volume = 0;
-        myVideo.play();
-
-        function playPause() {
-            if (myVideo.paused) myVideo.play();
-            else myVideo.pause();
-        }
-	</script>
-</section>
-<!-- END: video section -->
-
-<!-- START: Top row for Aussie Easter products -->
-<section class="j-contain">
-	<h1 class="text-center">AUSTRALIAN EASTER</h1>
-	<h5 class="text-center">
-		As a special Treat We have flown in Australian easter eggs for our customer. <i>Limited stock</i>.
-	</h5>
-
-	<div class="row">
-		<!-- A Product Card -->
-		<div class="col-sm-4 col-md-4">
-			<div class="jcard">
-				<a href="http://www.aussieproducts.com/prodinfo.asp?number=CCFC19">
-					<img src="http://www.aussieproducts.com/images/CCFC19_t.png" alt="chocolate">
-					<h4>Cadbury Favourites Casket 190g.</h4>
-					<h6>Item #: CCFC19</h6>
-					<h4>$24.95</h4>
-				</a>
-			</div>
-		</div>
-		<!-- A Product Card -->
-		<div class="col-sm-4 col-md-4">
-			<div class="jcard">
-				<a href="http://www.aussieproducts.com/prodinfo.asp?number=CCCR20">
-					<img src="http://www.aussieproducts.com/images/CCCR20_t.png" alt="chocolate">
-					<h4>Cadbury Cherry Ripe Casket 205g.</h4>
-					<h6>Item #: CCCR20</h6>
-					<h4>$24.95</h4>
-				</a>
-			</div>
-		</div>
-		<!-- A Product Card -->
-		<div class="col-sm-4 col-md-4">
-			<div class="jcard">
-				<a href="http://www.aussieproducts.com/prodinfo.asp?number=CCRC19">
-					<img src="http://www.aussieproducts.com/images/CCRC19_t.png" alt="chocolate">
-					<h4>Cadbury Roses Casket 190g.</h4>
-					<h6>Item #: CCFC19</h6>
-					<h4>$24.95</h4>
-				</a>
-			</div>
-		</div>
-	</div>
-	<br>
-	<div class="row">
-		<!-- A Product Card -->
-		<div class="col-sm-4 col-md-4">
-			<div class="jcard">
-				<a href="http://www.aussieproducts.com/prodinfo.asp?number=DDCFAV">
-					<img src="http://www.aussieproducts.com/images/DDCFAV_t.png" alt="chocolate">
-					<h4>Cadbury Favourites Boxed Chocolates 320g</h4>
-					<h6>Item #: DDCFAV</h6>
-					<h4>$25.95</h4>
-				</a>
-			</div>
-		</div>
-		<!-- A Product Card -->
-		<div class="col-sm-4 col-md-4">
-			<div class="jcard">
-				<a href="http://www.aussieproducts.com/prodinfo.asp?number=DDROSE%20%20%20%20ROSES%20150G">
-					<img src="http://www.aussieproducts.com/images/DDROSE_t.png" alt="chocolate">
-					<h4>Cadbury Roses Chocolate Selection Box 150g.</h4>
-					<h6>Item #: DDROSE ROSES 150G</h6>
-					<h4>$13.95</h4>
-				</a>
-			</div>
-		</div>
-		<!-- A Product Card -->
-		<div class="col-sm-4 col-md-4">
-			<div class="jcard">
-				<a href="http://www.aussieproducts.com/prodinfo.asp?number=APSGBS">
-					<img src="http://www.aussieproducts.com/images/APSGBS_t.jpg" alt="chocolate">
-					<h4>Cadbury Favourites Casket 190g.</h4>
-					<h6>Item #: APSGBS</h6>
-					<h4>$79.95</h4>
-				</a>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- END: Top row for Aussie Easter products -->
-
-<!-- START: British Easter Products -->
-<section class="j-contain">
-	<h1 class="text-center">BRITISH EASTER</h1>
-	<h5 class="text-center">
-		Order your British Easter stock now! <i>Limited Stock.</i>
-	</h5>
-
-	<!-- 1st row: -->
-	<div class="row">
-		<!-- 1) A Product Card -->
-		<div class="col-sm-4 col-md-4">
-			<div class="jcard">
-				<a href="http://www.aussieproducts.com/searchprods.asp">
-					<img src="http://www.aussieproducts.com/images/BFCAGE_t.png" alt="chocolate">
-					<h4>Cadbury Dairy Milk Giant Easter Egg 515g.</h4>
-					<h6>Item #: BFCAGE</h6>
-					<h4>$34.95</h4>
-				</a>
-			</div>
-		</div>
-		<!-- 2) A Product Card -->
-		<div class="col-sm-4 col-md-4">
-			<div class="jcard">
-				<a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX037">
-					<img src="http://www.aussieproducts.com/images/BFX037_t.jpg" alt="chocolate">
-					<h4>Cadbury Milk Tray 180g.</h4>
-					<h6>Item #: BFX037</h6>
-					<h4>$19.95</h4>
-				</a>
-			</div>
-		</div>
-		<!-- 3) A Product Card -->
-		<div class="col-sm-4 col-md-4">
-			<div class="jcard">
-				<a href="http://www.aussieproducts.com/prodinfo.asp?number=BFSGBS">
-					<img src="http://www.aussieproducts.com/images/BFSGBSn_t.png" alt="chocolate">
-					<h4>British All-Seasons Gift Box</h4>
-					<h6>Item #: BFSGBS</h6>
-					<h4>$54.95</h4>
-				</a>
-			</div>
-		</div>
-	</div>
-	<br>
-	<!-- 2nd row: -->
-	<div class="row">
-		<!-- 1) A Product Card -->
-		<div class="col-sm-4 col-md-4">
-			<div class="jcard">
-				<a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX2183">
-					<img src="http://www.aussieproducts.com/images/BFX2183_t.gif" alt="chocolate">
-					<h4>Walker's Nonsuch Assorted Toffees and Chocolate Eclairs Jar 450g.</h4>
-					<h6>Item #: BFX21839</h6>
-					<h4>$19.95</h4>
-				</a>
-			</div>
-		</div>
-		<!-- 2) A Product Card -->
-		<div class="col-sm-4 col-md-4">
-			<div class="jcard">
-				<a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX061">
-					<img src="http://www.aussieproducts.com/images/BFX061_t.png" alt="chocolate">
-					<h4>Cadbury Roses Thoughtful Gestures Egg 300g.</h4>
-					<h6>Item #: BFX061</h6>
-					<h4>$24.95</h4>
-				</a>
-			</div>
-		</div>
-		<!-- 3) A Product Card -->
-		<div class="col-sm-4 col-md-4">
-			<div class="jcard">
-				<a href="http://www.aussieproducts.com/prodinfo.asp?number=BFX0370">
-					<img src="http://www.aussieproducts.com/images/BFX0370_t.png" alt="chocolate">
-					<h4>Kinnterton Small Pokemon Egg & Bar 65g.</h4>
-					<h6>Item #: BFX0370</h6>
-					<h4>$9.95</h4>
-				</a>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- END:  British Easter Products-->
-
-<!-- START: New store hours -->
-<section id="j-store-hours" class="container">
-	<div class="row">
-		<div class="col-sm-6">
-			<h1 class="bg-primary text-center">
-				<strong>New Store Hours</strong>
-			</h1>
-			<h4 class="text-center j-red"><strong>Mon-Fri: 10am-6pm</strong></h4>
-			<h4 class="text-center j-red"><strong>Saturday: 10am-5pm</strong></h4>
-			<h4 class="text-center j-red"><strong>Sunday: Closed</strong></h4>
-		</div>
-	</div>
-</section>
-<!-- END: New store hours -->
-
-
-
-
-
+<script src="design/js/product.slider.edit.ctrl.js"></script>

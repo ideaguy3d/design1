@@ -8,14 +8,14 @@
 		    'active': (activeArea === -1)}">
 		<h1><small>Product Group</small> <strong>{{ activeArea+2 }}</strong></h1>
 
-		<div class="product" ng-repeat="p in apcCurrentProducts">
+		<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts">
 			<div class="jcard">
 				<a href="http://www.aussieproducts.com/prodinfo.asp?number=DDGS85">
-					<img src="http://www.aussieproducts.com/images/DDGS85.gif"
-					     class="j-img-w110" alt="chocolate">
-					<h4>CSR Golden Syrup Tub 850g</h4>
-					<h6>Item #: DDGS85</h6>
-					<h4>$13.95</h4>
+					<img ng-src="{{p.image}}" class="j-img-w110" alt="chocolate"
+					     ng-class="{'j-img-parlova-pie': (p.productId === 'DDPM12')}">
+					<h4>{{p.name}}</h4>
+					<h6>Item #: {{p.productId}}</h6>
+					<h4>${{p.price}}</h4>
 				</a>
 			</div>
 		</div>
@@ -57,7 +57,6 @@
 			  }">
 		</span>
 		<br>
-		<span ng-repeat="p in anzacProducts"> [ {{ $index + " | " + indicatorCheck() }} ] </span>
 	</div>
 
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

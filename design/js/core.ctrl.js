@@ -28,7 +28,8 @@
 
             $scope.messages = jProductGroup1Data.ProductsMessagesArray();
             $scope.intro_message = "Ello World ^_^/";
-            $scope.showSlider =  false;
+            $scope.showSlider =  location.host === 'www.aussieproducts.com';
+            console.log($scope.showSlider);
 
             $scope.addMessage = function () {
                 $scope.messages.$add({
