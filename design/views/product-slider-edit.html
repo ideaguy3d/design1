@@ -1,28 +1,43 @@
 <div id="j-product-slider-edit-container" class="container-fluid">
 	<h1 class="text-center">EDIT PRODUCTS:</h1>
 
+	<!-------------------------------->
 	<!-- Initial Product Group Loop -->
+	<!-------------------------------->
 	<div class="row">
 		<div class="initial-product-group"
-		     ng-class="{
-				'inactive': (activeArea !== -1),
+		     ng-class="{'inactive': (activeArea !== -1),
 		        'active': (activeArea === -1)}">
-			<h1><small>Product Group</small><strong>{{ activeArea+2 }}</strong></h1>
+			<h1>
+				<small>Product Group</small>
+				<strong>{{ activeArea+2 }}</strong> | <i ng-bind="row1products.group1product1.image()"></i>
+			</h1>
 
+			<!-- The LOOP begins here: -->
 			<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts">
 				<div class="jcard">
-					<img ng-src="{{p.image}}" class="j-img-w110 j-edit" alt="chocolate"
-					     ng-class="{'j-img-parlova-pie': (p.productId === 'DDPM12')}">
+					<form name="imageUrlForm{{$index}}" ng-hide="showImageUrl" class="form-group">
+						<input name="imageUrlInput{{$index}}" type="text" class="form-control" placeholder="Image URL" value="{{ p.image }}"
+						       ng-model="row1products.group1product1.image($index)"
+						       ng-model-options="{ getterSetter: true }"
+						       ng-change="updateImageUrl(p.$id)">
+					</form>
+
+					<img ng-src="{{p.image}}" class="j-img-w110 j-edit" alt="chocolate" ng-click="editImageUrl()"
+					     ng-class="{ 'j-img-parlova-pie': (p.productId === 'DDPM12') }">
+
 					<!-- Product Title Description -->
-					<h4 class="j-edit" ng-show="showHeader" ng-click="editHeader()">{{p.name}}</h4>
+					<h4 class="j-edit" ng-show="showHeader" ng-click="editHeader()"> {{ p.name }} </h4>
 					<div ng-hide="showHeader" class="form-group">
-						<input type="text" class="form-control" placeholder="Product Title Description">
+						<input type="text" class="form-control" placeholder="Product Title Description" ng-model="products.r1c1">
 					</div>
+
 					<!-- Product id -->
 					<h6 class="j-edit" ng-show="showProductId" ng-click="editProductId()">Item #: {{p.productId}}</h6>
 					<div ng-hide="showProductId" class="form-group">
 						<input type="text" class="form-control" placeholder="Product Id">
 					</div>
+
 					<!-- Product Price -->
 					<h4 class="j-edit" ng-show="showPrice" ng-click="editPrice()">${{p.price}}</h4>
 					<div ng-hide="showPrice" class="form-group">
@@ -33,7 +48,9 @@
 		</div>
 	</div>
 
-	<!-- AngularJS loops for incremented product-groups & products -->
+	<!--------------------------------------------------------------->
+	<!-- AngularJS loops for incremented product-groups / products -->
+	<!--------------------------------------------------------------->
 	<div class="row">
 		<div class="product-group {{'product-group'+$index}}" ng-repeat="e in repetitionAmount"
 		     ng-class="{

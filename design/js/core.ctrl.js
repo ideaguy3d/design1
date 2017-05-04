@@ -24,12 +24,11 @@
 
     // apCoreCtrl
     app.controller('apcCoreCtrl', ['$scope', 'jProductGroup1Data',
-        function ($scope, jProductGroup1Data) {
 
+        function ($scope, jProductGroup1Data) {
             $scope.messages = jProductGroup1Data.ProductsMessagesArray();
             $scope.intro_message = "Ello World ^_^/";
             $scope.showSlider =  location.host === 'www.aussieproducts.com';
-            console.log($scope.showSlider);
 
             $scope.addMessage = function () {
                 $scope.messages.$add({

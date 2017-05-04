@@ -2,29 +2,56 @@
  * Created by user on 4/28/2017.
  */
 
-(function(){
+(function () {
     "use strict";
     var app = angular.module('ap-slider');
-    app.controller('apSliderEditCtrl', [ '$scope', '$timeout', 'jProductGroup1Data',
-        function($scope, $timeout, jProductGroup1Data){
+    app.controller('apSliderEditCtrl', ['$scope', '$timeout', 'jProductGroup1Data',
+        function ($scope, $timeout, jProductGroup1Data) {
             $scope.productsGroup1_title = "Anzac Day";
             $scope.apcCurrentProducts = jProductGroup1Data.Row1; // will change to different product group later
             $scope.activeArea = -1;
             $scope.repetitionAmount = [0, 1, 2];
             $scope.incrementLeft = false;
-            $scope.$showImage = true;
+            $scope.showImageUrl = true;
             $scope.showHeader = true;
             $scope.showProductId = true;
             $scope.showPrice = true;
             $scope.ratioPortrait = true; // have a function determine if image is portrait
-            $scope.ratioLandscape = true; //  have a function determine if image is portrait
+            $scope.ratioLandscape = true; // have a function determine if image is landscape
 
+            var _newImageUrl_p1g1 = 'Paste image url here';
+
+            //-- private functions:
             var pgPositionTracker = [
                 {side: "initialState"},
                 {side: "right"},
                 {side: "right"},
                 {side: "right"}
             ];
+
+            var removeIncrementLeft = function () {
+                angular.element('.product-group.increment-left').each(function (i) {
+                    // console.log(this);
+                    angular.element(this).removeClass('increment-left');
+                    pgPositionTracker[i].side = "right";
+                });
+            };
+
+            var domUpP1 = function (index) {
+                // give the DOM a moment to update
+                $timeout(function () {
+                    // pg = product group
+                    var pgElem = ".product-group" + (index - 1),
+                        pgSelector = angular.element(pgElem),
+                        pgActive = pgSelector.hasClass('active');
+                    if (pgActive) {
+                        if (pgElem !== '.product-group2') {
+                            //'.product-group2' should never increment-left because it's last
+                            pgSelector.addClass('increment-left');
+                        }
+                    }
+                }, 10);
+            };
 
             //-- public functions:
             $scope.updateActiveArea = function (index) {
@@ -75,76 +102,70 @@
                 }
             };
 
-            $scope.editHeader = function(){
+            $scope.editHeader = function () {
                 $scope.showPrice = true;
                 $scope.showProductId = true;
+                $scope.showImageUrl = true;
                 $scope.showHeader = !$scope.showHeader;
             };
 
-            $scope.editProductId = function(){
+            $scope.editProductId = function () {
                 $scope.showHeader = true;
                 $scope.showPrice = true;
+                $scope.showImageUrl = true;
                 $scope.showProductId = !$scope.showProductId;
             };
 
-            $scope.editPrice = function(){
+            $scope.editPrice = function () {
                 $scope.showHeader = true;
                 $scope.showProductId = true;
+                $scope.showImageUrl = true;
                 $scope.showPrice = !$scope.showPrice;
             };
 
-            //-- private functions:
-            var posCheckLeft = function () {
-                return pgPositionTracker.every(function (elem) {
-                    return elem.side === "left";
-                });
+            $scope.editImageUrl = function () {
+                $scope.showHeader = true;
+                $scope.showProductId = true;
+                $scope.showPrice = true;
+                $scope.showImageUrl = !$scope.showImageUrl;
             };
 
-            var removeIncrementLeft = function () {
-                angular.element('.product-group.increment-left').each(function (i) {
-                    // console.log(this);
-                    angular.element(this).removeClass('increment-left');
-                    pgPositionTracker[i].side = "right";
-                });
+            $scope.updateImageUrl = function(productId){
+                $scope.apcCurrentProducts.ref(productId);
+                console.log("productId = "+productId);
             };
 
-            var domUpP1 = function (index) {
-                // give the DOM a moment to update
-                $timeout(function () {
-                    // pg = product group
-                    var pgElem = ".product-group" + (index - 1),
-                        pgSelector = angular.element(pgElem),
-                        pgActive = pgSelector.hasClass('active');
-                    if (pgActive) {
-                        if (pgElem !== '.product-group2') {
-                            //'.product-group2' should never increment-left because it's last
-                            pgSelector.addClass('increment-left');
+            $scope.row1products = {
+                group1product1: {
+                    image: function (newImageUrl) {
+                        if(newImageUrl === 'g1p1') {
+                            return 'group1Product1 imageUrl'
+                        } else if (newImageUrl === 0) {
+                            _newImageUrl_p1g1 = "John West";
+                            return _newImageUrl_p1g1;
                         }
+
+                        // if there isn't an argument this is a getter
+                        return arguments.length ? (_newImageUrl_p1g1 = newImageUrl)
+                            : _newImageUrl_p1g1;
                     }
-                }, 10);
-            };
+                },
+                group1product2: {
+                    image: function (newImageUrl) {
 
-            var domUpP2 = function () {
-                var pg = angular.element('.product-group');
-                pg.each(function () {
-                    var elem = angular.element(this),
-                        isLeft = elem.hasClass('increment-left');
-                    if (!isLeft) {
-                        elem.css({
-                            "display": "none",
-                            "left": "-2000px"
-                        });
                     }
+                },
+                group1product3: {
+                    image: function (newImageUrl) {
 
-                });
+                    }
+                },
+                group1product4: {
+                    image: function (newImageUrl) {
 
-                $timeout(function () {
-                    pg.each(function () {
-                        var elem = angular.element(this);
-                        elem.css("display", "block");
-                    })
-                }, 500);
-            };
+                    }
+                }
+            }
         }
     ]);
 })();
