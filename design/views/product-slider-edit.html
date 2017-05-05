@@ -5,32 +5,28 @@
 	<!-- Initial Product Group Loop -->
 	<!-------------------------------->
 	<div class="row">
-		<div class="initial-product-group"
-		     ng-class="{'inactive': (activeArea !== -1),
-		        'active': (activeArea === -1)}">
+		<div class="initial-product-group" ng-class="{'inactive': (activeArea !== -1), 'active': (activeArea === -1)}">
 			<h1>
 				<small>Product Group</small>
-				<strong>{{ activeArea+2 }}</strong> | <i ng-bind="row1products.group1product1.image()"></i>
+				<strong>{{ activeArea+2 }}</strong> |
+				group1product1.image() = <i ng-bind="row1products.group1product1.image()"></i>
 			</h1>
 
 			<!-- The LOOP begins here: -->
-			<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts">
+			<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts" ng-init="setRow1($index, p)">
 				<div class="jcard">
-					<form name="imageUrlForm{{$index}}" ng-hide="showImageUrl" class="form-group">
-						<input name="imageUrlInput{{$index}}" type="text" class="form-control" placeholder="Image URL" value="{{ p.image }}"
-						       ng-model="row1products.group1product1.image($index)"
-						       ng-model-options="{ getterSetter: true }"
-						       ng-change="updateImageUrl(p.$id)">
+					<!-- Product Image URL -->
+					<form ng-hide="showImageUrl" class="form-group" ng-submit="">
+						<input type="text" class="form-control" placeholder="Image URL">
 					</form>
-
-					<img ng-src="{{p.image}}" class="j-img-w110 j-edit" alt="chocolate" ng-click="editImageUrl()"
+					<img ng-src="{{ p.image }}" class="j-img-w110 j-edit" alt="chocolate" ng-click="editImageUrl()"
 					     ng-class="{ 'j-img-parlova-pie': (p.productId === 'DDPM12') }">
 
 					<!-- Product Title Description -->
 					<h4 class="j-edit" ng-show="showHeader" ng-click="editHeader()"> {{ p.name }} </h4>
-					<div ng-hide="showHeader" class="form-group">
-						<input type="text" class="form-control" placeholder="Product Title Description" ng-model="products.r1c1">
-					</div>
+					<form ng-hide="showHeader" class="form-group">
+						<input type="text" class="form-control" placeholder="Product Title Description">
+					</form>
 
 					<!-- Product id -->
 					<h6 class="j-edit" ng-show="showProductId" ng-click="editProductId()">Item #: {{p.productId}}</h6>
@@ -79,17 +75,21 @@
 		</div>
 	</div>
 
+	<!---------------------------------------------------->
 	<!-- Circular Indicators for active Product Groups  -->
+	<!---------------------------------------------------->
 	<div class="j-slider-indicators">
 		<span class="j-circle" ng-repeat="i in [0,1,2,3]" ng-click="updateActiveArea($index)"
 		      ng-class="{ 'jslide-active': ($index === indicatorCheck() ),
 				'jslide-inactive': ($index !== indicatorCheck() )}">
-		</span>
-		<br>
+		</span><br>
 	</div>
 
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<!---------------------------->
 	<!-- Product Slider Footer: -->
+	<!---------------------------->
 	<div class="panel panel-default">
 		<div class="panel-body">
 			<h4 class="text-center">slider footer</h4>
@@ -110,4 +110,9 @@
 			</button>
 		</div>
 	</div>
+
+	<!----------------------------->
+	<!-- SliderProduct Component -->
+	<!----------------------------->
+	<slider-product></slider-product>
 </div>

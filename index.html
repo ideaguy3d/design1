@@ -63,14 +63,11 @@
 </section>
 <!-- END: AngularJS app section: -->
 
+<!-- Vendor Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<!-- AngularJS -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-<!-- FirebaseDB -->
 <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
-<!-- AngularFire -->
 <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 <script>
     // Initialize Firebase... will eventually get this information from a secured php backend
@@ -84,9 +81,14 @@
     };
     firebase.initializeApp(config);
 </script>
+
+<!-- Custom JavaScript -->
+<script src="design/js/apc.app.js"></script>
+<script src="design/js/product.group.ser.js"></script>
 <script src="design/js/core.ctrl.js"></script>
 <script src="design/js/product.slider.ctrl.js"></script>
 <script src="design/js/product.slider.edit.ctrl.js"></script>
+<script src="design/js/product.comp.js"></script>
 
 </body>
 </html>

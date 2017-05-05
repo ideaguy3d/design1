@@ -19,8 +19,6 @@
             $scope.ratioPortrait = true; // have a function determine if image is portrait
             $scope.ratioLandscape = true; // have a function determine if image is landscape
 
-            var _newImageUrl_p1g1 = 'Paste image url here';
-
             //-- private functions:
             var pgPositionTracker = [
                 {side: "initialState"},
@@ -130,10 +128,12 @@
                 $scope.showImageUrl = !$scope.showImageUrl;
             };
 
-            $scope.updateImageUrl = function(productId){
-                $scope.apcCurrentProducts.ref(productId);
-                console.log("productId = "+productId);
+            $scope.updateImageUrl = function(product){
+                console.log("productId = "+product.image);
+                $scope.apcCurrentProducts.$save(product);
             };
+
+            var _newImageUrl_g1p1 = 'Paste image url';
 
             $scope.row1products = {
                 group1product1: {
@@ -141,13 +141,13 @@
                         if(newImageUrl === 'g1p1') {
                             return 'group1Product1 imageUrl'
                         } else if (newImageUrl === 0) {
-                            _newImageUrl_p1g1 = "John West";
-                            return _newImageUrl_p1g1;
+                            _newImageUrl_g1p1 = "John West";
+                            return _newImageUrl_g1p1;
                         }
 
                         // if there isn't an argument this is a getter
-                        return arguments.length ? (_newImageUrl_p1g1 = newImageUrl)
-                            : _newImageUrl_p1g1;
+                        return arguments.length ? (_newImageUrl_g1p1 = newImageUrl)
+                            : _newImageUrl_g1p1;
                     }
                 },
                 group1product2: {
@@ -165,7 +165,17 @@
 
                     }
                 }
-            }
+            };
+
+            $scope.setRow1 = function(index, product){
+                console.log("index = "+index+", product.image = "+product.image);
+            };
+
+            $scope.bindToProductsModel = function(index){
+              return $scope.g1p1 = "a cool binding";
+            };
+
+            $scope.getCategories = "categories from product.slider.edit.ctrl.js file";
         }
     ]);
 })();
