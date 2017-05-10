@@ -1,26 +1,33 @@
 <div class="jcard">
+	<button class="btn btn-lg" ng-click="$ctrl.editCard()" ng-class="{'btn-warning': ($ctrl.buttonClicked === false),
+			'btn-info': ($ctrl.buttonClicked === true)}">
+		{{ $ctrl.buttonText }}
+	</button>
+	<br><br>
 	<!-- Product Image URL -->
-	<form ng-hide="showImageUrl" class="form-group" ng-submit="">
-		<input type="text" class="form-control" placeholder="Image URL">
+	<form ng-hide="$ctrl.showImageUrl" class="form-group" ng-submit="$ctrl.updateImageUrl()">
+		<input type="text" class="form-control" placeholder="Image URL" ng-model="$ctrl.productImgUrl">
 	</form>
-	<img ng-src="{{ $ctrl.product.image }}" class="j-img-w110 j-edit" alt="chocolate" ng-click="editImageUrl()"
+	<img ng-src="{{ $ctrl.product.image }}" class="j-img-w110 j-edit" alt="chocolate" ng-click="$ctrl.editImageUrl()"
 	     ng-class="{ 'j-img-parlova-pie': ($ctrl.product.productId === 'DDPM12') }">
 
 	<!-- Product Title Description -->
-	<h4 class="j-edit" ng-show="showHeader" ng-click="editHeader()"> {{ $ctrl.product.name }} </h4>
-	<form ng-hide="showHeader" class="form-group">
-		<input type="text" class="form-control" placeholder="Product Title Description">
+	<h4 class="j-edit" ng-show="$ctrl.showHeader" ng-click="$ctrl.editHeader()"> {{ $ctrl.product.name }} </h4>
+	<form ng-hide="$ctrl.showHeader" class="form-group">
+		<input type="text" class="form-control" placeholder="Product Title" ng-model="$ctrl.productTitle">
 	</form>
 
 	<!-- Product id -->
-	<h6 class="j-edit" ng-show="showProductId" ng-click="editProductId()">Item #: {{ $ctrl.product.productId }}</h6>
-	<div ng-hide="showProductId" class="form-group">
-		<input type="text" class="form-control" placeholder="Product Id">
+	<h6 class="j-edit" ng-show="$ctrl.showProductId" ng-click="$ctrl.editProductId()">
+		Item #: {{ $ctrl.product.productId}}
+	</h6>
+	<div ng-hide="$ctrl.showProductId" class="form-group">
+		<input type="text" class="form-control" placeholder="Product Id" ng-model="$ctrl.productId">
 	</div>
 
 	<!-- Product Price -->
-	<h4 class="j-edit" ng-show="showPrice" ng-click="editPrice()">${{$ctrl.product.price}}</h4>
-	<div ng-hide="showPrice" class="form-group">
-		<input type="text" class="form-control" placeholder="Price">
+	<h4 class="j-edit" ng-show="$ctrl.showPrice" ng-click="$ctrl.editPrice()">${{$ctrl.product.price}}</h4>
+	<div ng-hide="$ctrl.showPrice" class="form-group">
+		<input type="text" class="form-control" placeholder="Price" ng-model="$ctrl.productPrice">
 	</div>
 </div>

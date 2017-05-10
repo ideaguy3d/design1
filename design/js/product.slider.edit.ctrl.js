@@ -96,13 +96,6 @@
                 }
             };
 
-
-
-            $scope.updateImageUrl = function(product){
-                console.log("productId = "+product.image);
-                $scope.apcCurrentProducts.$save(product);
-            };
-
             var _newImageUrl_g1p1 = 'Paste image url';
 
             $scope.row1products = {
