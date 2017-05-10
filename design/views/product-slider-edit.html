@@ -14,32 +14,7 @@
 
 			<!-- The LOOP begins here: -->
 			<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts" ng-init="setRow1($index, p)">
-				<div class="jcard">
-					<!-- Product Image URL -->
-					<form ng-hide="showImageUrl" class="form-group" ng-submit="">
-						<input type="text" class="form-control" placeholder="Image URL">
-					</form>
-					<img ng-src="{{ p.image }}" class="j-img-w110 j-edit" alt="chocolate" ng-click="editImageUrl()"
-					     ng-class="{ 'j-img-parlova-pie': (p.productId === 'DDPM12') }">
-
-					<!-- Product Title Description -->
-					<h4 class="j-edit" ng-show="showHeader" ng-click="editHeader()"> {{ p.name }} </h4>
-					<form ng-hide="showHeader" class="form-group">
-						<input type="text" class="form-control" placeholder="Product Title Description">
-					</form>
-
-					<!-- Product id -->
-					<h6 class="j-edit" ng-show="showProductId" ng-click="editProductId()">Item #: {{p.productId}}</h6>
-					<div ng-hide="showProductId" class="form-group">
-						<input type="text" class="form-control" placeholder="Product Id">
-					</div>
-
-					<!-- Product Price -->
-					<h4 class="j-edit" ng-show="showPrice" ng-click="editPrice()">${{p.price}}</h4>
-					<div ng-hide="showPrice" class="form-group">
-						<input type="text" class="form-control" placeholder="Price">
-					</div>
-				</div>
+				<product-card-edit product="p"></product-card-edit>
 			</div>
 		</div>
 	</div>
@@ -54,9 +29,9 @@
 				'inactive': ($index !== activeArea)
 		     }">
 			<h2>
-				<small>Product Group</small>
-				<strong>{{ activeArea+2 }}</strong>
+				<small>Product Group</small><strong>{{ activeArea+2 }}</strong>
 			</h2>
+
 			<!-- inner loop for individual products: -->
 			<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts">
 				<div class="jcard">

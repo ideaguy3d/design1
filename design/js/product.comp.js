@@ -9,7 +9,6 @@
     app.component(componentId, {
         templateUrl: 'design/views/templates/slider.product.tem.html',
         controller: function(jProductGroup1Data) {
-
             var vm = this;
             vm.jcategories = jProductGroup1Data.jcategories;
             vm.categoriesTitle = "AussieProducts.com categories";
@@ -18,7 +17,6 @@
                 vm.jcategories.$add({name: vm.newCategoryName});
                 vm.newCategoryName = '';
             }
-
         }
     });
 })();

@@ -1,0 +1,26 @@
+<div class="jcard">
+	<!-- Product Image URL -->
+	<form ng-hide="showImageUrl" class="form-group" ng-submit="">
+		<input type="text" class="form-control" placeholder="Image URL">
+	</form>
+	<img ng-src="{{ $ctrl.product.image }}" class="j-img-w110 j-edit" alt="chocolate" ng-click="editImageUrl()"
+	     ng-class="{ 'j-img-parlova-pie': ($ctrl.product.productId === 'DDPM12') }">
+
+	<!-- Product Title Description -->
+	<h4 class="j-edit" ng-show="showHeader" ng-click="editHeader()"> {{ $ctrl.product.name }} </h4>
+	<form ng-hide="showHeader" class="form-group">
+		<input type="text" class="form-control" placeholder="Product Title Description">
+	</form>
+
+	<!-- Product id -->
+	<h6 class="j-edit" ng-show="showProductId" ng-click="editProductId()">Item #: {{ $ctrl.product.productId }}</h6>
+	<div ng-hide="showProductId" class="form-group">
+		<input type="text" class="form-control" placeholder="Product Id">
+	</div>
+
+	<!-- Product Price -->
+	<h4 class="j-edit" ng-show="showPrice" ng-click="editPrice()">${{$ctrl.product.price}}</h4>
+	<div ng-hide="showPrice" class="form-group">
+		<input type="text" class="form-control" placeholder="Price">
+	</div>
+</div>

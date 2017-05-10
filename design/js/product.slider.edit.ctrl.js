@@ -12,10 +12,6 @@
             $scope.activeArea = -1;
             $scope.repetitionAmount = [0, 1, 2];
             $scope.incrementLeft = false;
-            $scope.showImageUrl = true;
-            $scope.showHeader = true;
-            $scope.showProductId = true;
-            $scope.showPrice = true;
             $scope.ratioPortrait = true; // have a function determine if image is portrait
             $scope.ratioLandscape = true; // have a function determine if image is landscape
 
@@ -100,33 +96,7 @@
                 }
             };
 
-            $scope.editHeader = function () {
-                $scope.showPrice = true;
-                $scope.showProductId = true;
-                $scope.showImageUrl = true;
-                $scope.showHeader = !$scope.showHeader;
-            };
 
-            $scope.editProductId = function () {
-                $scope.showHeader = true;
-                $scope.showPrice = true;
-                $scope.showImageUrl = true;
-                $scope.showProductId = !$scope.showProductId;
-            };
-
-            $scope.editPrice = function () {
-                $scope.showHeader = true;
-                $scope.showProductId = true;
-                $scope.showImageUrl = true;
-                $scope.showPrice = !$scope.showPrice;
-            };
-
-            $scope.editImageUrl = function () {
-                $scope.showHeader = true;
-                $scope.showProductId = true;
-                $scope.showPrice = true;
-                $scope.showImageUrl = !$scope.showImageUrl;
-            };
 
             $scope.updateImageUrl = function(product){
                 console.log("productId = "+product.image);
