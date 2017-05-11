@@ -1,8 +1,10 @@
 jref
-.idea
+
 .idea/workspace.xml
 **/workspace.xml
-**/**.xml
+**/*.xml
+.idea
+
 design/node_modules
 design/bower_components
 images

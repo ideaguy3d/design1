@@ -7,45 +7,29 @@
 	<div class="row">
 		<div class="initial-product-group" ng-class="{'inactive': (activeArea !== -1), 'active': (activeArea === -1)}">
 			<h1>
-				<small>Product Group</small>
-				<strong>{{ activeArea+2 }}</strong> |
-				group1product1.image() = <i ng-bind="row1products.group1product1.image()"></i>
+				<small>Product Group</small>-<strong>{{ activeArea+2 }}</strong><!--| group1product1.image() = <i ng-bind="row1products.group1product1.image()"></i>-->
 			</h1>
 
 			<!-- The LOOP begins here: -->
-			<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts" ng-init="setRow1($index, p)">
+			<div class="col-sm-3 col-md-3" ng-repeat="p in apcRow1Group1">
 				<product-card-edit product="p"></product-card-edit>
 			</div>
 		</div>
 	</div>
 
 	<!--------------------------------------------------------------->
-	<!-- AngularJS loops for incremented product-groups / products -->
+	<!-- AngularJS loops for incremented product-groups > products -->
 	<!--------------------------------------------------------------->
 	<div class="row">
 		<div class="product-group {{'product-group'+$index}}" ng-repeat="e in repetitionAmount"
-		     ng-class="{
-				'active': ($index === activeArea),
-				'inactive': ($index !== activeArea)
-		     }">
-			<h2>
-				<small>Product Group</small><strong>{{ activeArea+2 }}</strong>
-			</h2>
-
-			<!-- inner loop for individual products: -->
-			<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts">
-				<div class="jcard">
-					<a href="http://www.aussieproducts.com/prodinfo.asp?number=DDGS85">
-						<!-- Will have to eventually add correct class for correct aspect ratio's. -->
-						<img class="j-img-w110" alt="chocolate" ng-src="{{p.image}}"
-						     ng-class="{
-								'j-parlova-pie': (p.productId === 'DDPM12')
-							 }">
-						<h4> {{p.name}} </h4>
-						<h6> Item #: {{p.productId}} </h6>
-						<h4> ${{p.price}} </h4>
-					</a>
-				</div>
+		         ng-class="{ 'active': ($index === activeArea), 'inactive': ($index !== activeArea) }">
+			<h1>
+				<small>Product Group</small>-<strong>{{ activeArea+2 }}</strong><!--| group1product1.image() = <i ng-bind="row1products.group1product1.image()"></i>-->
+			</h1>
+			<!-- INNER LOOP for individual products: -->
+			<div class="col-sm-3 col-md-3" ng-repeat="g in apcRow1" ng-init="setRow1($parent.$index, g)">
+				<product-card-edit product="exposedRow1Model">
+				</product-card-edit>
 			</div>
 		</div>
 	</div>

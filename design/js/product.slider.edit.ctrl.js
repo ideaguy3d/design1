@@ -8,14 +8,22 @@
     app.controller('apSliderEditCtrl', ['$scope', '$timeout', 'jProductGroup1Data',
         function ($scope, $timeout, jProductGroup1Data) {
             $scope.productsGroup1_title = "Anzac Day";
-            $scope.apcCurrentProducts = jProductGroup1Data.Row1; // will change to different product group later
+            $scope.apcRow1Group1 = jProductGroup1Data.Row1Group1; // will change to different product group later
+            $scope.apcRow1 = jProductGroup1Data.Row1;
             $scope.activeArea = -1;
             $scope.repetitionAmount = [0, 1, 2];
             $scope.incrementLeft = false;
             $scope.ratioPortrait = true; // have a function determine if image is portrait
             $scope.ratioLandscape = true; // have a function determine if image is landscape
+            // temporary data model:
+            $scope.exposedRow1Model = {
+                image: 'http://www.aussieproducts.com/images/ARTWORK%20IMAGES/Website%20Images/summerroo.png',
+                name: 'temp placeholder',
+                productId: '12345',
+                price: 19.95
+            };
 
-            //-- private functions:
+            //-- private vars/functions:
             var pgPositionTracker = [
                 {side: "initialState"},
                 {side: "right"},
@@ -101,7 +109,7 @@
             $scope.row1products = {
                 group1product1: {
                     image: function (newImageUrl) {
-                        if(newImageUrl === 'g1p1') {
+                        if (newImageUrl === 'g1p1') {
                             return 'group1Product1 imageUrl'
                         } else if (newImageUrl === 0) {
                             _newImageUrl_g1p1 = "John West";
@@ -130,12 +138,20 @@
                 }
             };
 
-            $scope.setRow1 = function(index, product){
-                console.log("index = "+index+", product.image = "+product.image);
+            $scope.setRow1 = function (index, product) {
+
+                console.log("$parent.$index = " + index + ", product group = ");
+                for (var k in product) console.log(" key = " + k);
+
             };
 
-            $scope.bindToProductsModel = function(index){
-              return $scope.g1p1 = "a cool binding";
+            var exposeRow1Model = function (parentIndex) {
+                console.log("$scope.exposeRow1Model parentIndex = " + parentIndex);
+                // start setting data model records
+            };
+
+            $scope.bindToProductsModel = function (index) {
+                return $scope.g1p1 = "a cool binding";
             };
 
             $scope.getCategories = "categories from product.slider.edit.ctrl.js file";
