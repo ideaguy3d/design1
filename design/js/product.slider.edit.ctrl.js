@@ -139,15 +139,35 @@
             };
 
             $scope.setRow1 = function (index, product) {
-
-                console.log("$parent.$index = " + index + ", product group = ");
-                for (var k in product) console.log(" key = " + k);
-
+                switch (product.$id) {
+                    case "Group1":
+                        exposeRow1Model(product);
+                        break;
+                    case "Group2":
+                        exposeRow1Model(product);
+                        break;
+                    case "Group3":
+                        exposeRow1Model(product);
+                        break;
+                    case "Group4":
+                        exposeRow1Model(product);
+                        break;
+                    default:
+                        console.log("ERROR: parent index out of range!")
+                }
             };
 
-            var exposeRow1Model = function (parentIndex) {
-                console.log("$scope.exposeRow1Model parentIndex = " + parentIndex);
-                // start setting data model records
+            var exposeRow1Model = function (productGroup) {
+                var prodGrp = {}, k;
+                for(k in productGroup) {
+                    // make sure 'k' is NOT being inherited
+                    if(productGroup.hasOwnProperty(k)) {
+                        console.log("k type = "+ typeof k);
+                        prodGrp[k] = productGroup[k];
+                        console.log(prodGrp);
+                    }
+                }
+                console.log("productGroup type = "+ typeof productGroup);
             };
 
             $scope.bindToProductsModel = function (index) {

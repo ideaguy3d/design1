@@ -1,20 +1,22 @@
 /**
- * Created by Julius Alvarado on 5/10/2017.
+ * Created by Julius Alvarado on 5/15/2017.
  */
 
-(function () {
+(function(){
+    "use strict";
+
     var app = angular.module('ap-slider'),
-        componentId = 'productCardEdit';
+        componentId = 'productCardIncrementedEdit';
 
     app.component(componentId, {
+        templateUrl: 'design/js/product.card.incremented.edit.temp.html',
         bindings: {
-            product: '='
+            product: '<'
         },
-        templateUrl: 'design/js/product.card.edit.temp.html',
-        controller: ['jProductGroup1Data', ProductCardEditCtrl]
+        controller: [IncrementedProductGroupCtrl]
     });
 
-    function ProductCardEditCtrl(jProductGroup1Data)  {
+    function IncrementedProductGroupCtrl () {
         var vm = this;
         vm.showImageUrl = true;
         vm.showHeader = true;
@@ -22,6 +24,12 @@
         vm.showPrice = true;
         vm.buttonClicked = false;
         vm.buttonText = vm.buttonClicked ? 'Save/Cancel' : 'Edit';
+        vm.message = "Incremented Product Cards";
+
+        vm.setEachProduct = function(index, product){
+            // console.log("index = "+index);
+            // console.log("product.name = "+product.name);
+        };
 
         vm.editCard = function(){
             vm.buttonClicked = !vm.buttonClicked;
@@ -44,37 +52,8 @@
             }
         };
 
-        vm.editHeader = function () {
-            vm.showPrice = true;
-            vm.showProductId = true;
-            vm.showImageUrl = true;
-            vm.showHeader = !vm.showHeader;
-        };
+        vm.$onInit = function(){
 
-        vm.editProductId = function () {
-            vm.showHeader = true;
-            vm.showPrice = true;
-            vm.showImageUrl = true;
-            vm.showProductId = !vm.showProductId;
         };
-
-        vm.editPrice = function () {
-            vm.showHeader = true;
-            vm.showProductId = true;
-            vm.showImageUrl = true;
-            vm.showPrice = !vm.showPrice;
-        };
-
-        vm.editImageUrl = function () {
-            vm.showHeader = true;
-            vm.showProductId = true;
-            vm.showPrice = true;
-            vm.showImageUrl = !vm.showImageUrl;
-        };
-
-        vm.updateImageUrl = function(){
-            console.log("productId = "+vm.product.image);
-        };
-
     }
 })();

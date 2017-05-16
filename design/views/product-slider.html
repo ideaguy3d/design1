@@ -4,14 +4,17 @@
 	<!-- Initial Product Group Loop -->
 	<div class="initial-product-group"
 	     ng-class="{
-			'inactive': (activeArea !== -1),
-		    'active': (activeArea === -1)}">
-		<h1><small>Product Group</small> <strong>{{ activeArea+2 }}</strong></h1>
+			  'inactive': (activeArea !== -1),
+		      'active': (activeArea === -1)}">
+		<h1>
+			<small>Product Group</small>
+			<strong> {{ activeArea+2 }} </strong>
+		</h1>
 
 		<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts">
 			<div class="jcard">
 				<a href="http://www.aussieproducts.com/prodinfo.asp?number=DDGS85">
-					<img ng-src="{{p.image}}" class="j-img-w110" alt="chocolate"
+					<img ng-src="{{ p.image }}" class="j-img-w110" alt="chocolate"
 					     ng-class="{'j-img-parlova-pie': (p.productId === 'DDPM12')}">
 					<h4>{{p.name}}</h4>
 					<h6>Item #: {{p.productId}}</h6>
@@ -37,7 +40,7 @@
 				<div class="jcard">
 					<a href="http://www.aussieproducts.com/prodinfo.asp?number=DDGS85">
 						<img ng-src="{{p.image}}" class="j-img-w110" alt="chocolate">
-						<h4>{{p.name}}</h4>
+						<h4>{{ p.name }}</h4>
 						<h6>Item #: DDGS85</h6>
 						<h4>$13.95</h4>
 					</a>

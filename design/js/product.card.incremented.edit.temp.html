@@ -1,19 +1,22 @@
-<!-- Initial Product Group Product Card -->
+<!-- Incremented Product Group Product Card  -->
+<!-- Key difference is this template is immediately looping over its' productgroup binding -->
 <div class="jcard">
-	<button class="btn btn-sm" ng-click="$ctrl.editCard()" ng-class="{'btn-warning': ($ctrl.buttonClicked === false),
-			'btn-info': ($ctrl.buttonClicked === true)}">
+	<!-- edit button -->
+	<button class="btn btn-sm" ng-click="$ctrl.editCard()"
+	        ng-class="{'btn-warning': ($ctrl.buttonClicked === false), 'btn-info': ($ctrl.buttonClicked === true)}">
 		{{ $ctrl.buttonText }}
 	</button>
 	<br><br>
+
 	<!-- Product Image URL -->
 	<form ng-hide="$ctrl.showImageUrl" class="form-group" ng-submit="$ctrl.updateImageUrl()">
 		<input type="text" class="form-control" placeholder="Image URL" ng-model="$ctrl.productImgUrl">
 	</form>
 	<img ng-src="{{ $ctrl.product.image }}" class="j-img-w110 j-edit" alt="chocolate" ng-click="$ctrl.editImageUrl()"
-	     ng-class="{ 'j-img-parlova-pie': ($ctrl.product.productId === 'DDPM12') }">
+	     ng-class="{ 'j-img-parlova-pie': (product.productId === 'DDPM12') }">
 
 	<!-- Product Title Description -->
-	<h4 class="j-edit" ng-show="$ctrl.showHeader" ng-click="$ctrl.editHeader()"> {{ $ctrl.product.name }} </h4>
+	<h4 class="j-edit" ng-show="$ctrl.showHeader" ng-click="$ctrl.editHeader()">{{ $ctrl.product.name }}</h4>
 	<form ng-hide="$ctrl.showHeader" class="form-group">
 		<input type="text" class="form-control" placeholder="Product Title" ng-model="$ctrl.productTitle">
 	</form>
@@ -32,3 +35,4 @@
 		<input type="text" class="form-control" placeholder="Price" ng-model="$ctrl.productPrice">
 	</div>
 </div>
+
