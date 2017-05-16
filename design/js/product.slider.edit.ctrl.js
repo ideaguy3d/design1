@@ -15,6 +15,7 @@
             $scope.incrementLeft = false;
             $scope.ratioPortrait = true; // have a function determine if image is portrait
             $scope.ratioLandscape = true; // have a function determine if image is landscape
+            $scope.apcProducts = [];
             // temporary data model:
             $scope.exposedRow1Model = {
                 image: 'http://www.aussieproducts.com/images/ARTWORK%20IMAGES/Website%20Images/summerroo.png',
@@ -30,6 +31,8 @@
                 {side: "right"},
                 {side: "right"}
             ];
+
+            var indexer = 0, prodGrpArr = [], counter = 0, k;
 
             var removeIncrementLeft = function () {
                 angular.element('.product-group.increment-left').each(function (i) {
@@ -138,7 +141,36 @@
                 }
             };
 
-            $scope.setRow1 = function (index, product) {
+            $scope.setRow1 = function (index, productGroup) {
+                // ensure for in loop happens only once
+                if (indexer < 1) {
+                    // fill the private prodGrpArr
+                    for (k in $scope.apcRow1) {
+                        // make sure 'k' is NOT being inherited
+                        if ($scope.apcRow1.hasOwnProperty(k)) {
+                            prodGrpArr[counter] = $scope.apcRow1[k];
+                            counter++;
+                        }
+                    }
+
+                    // copy into $scope.apcProducts only what is needed from prodGrpArr
+                    for (var i = 0; i < 4; i++) {
+                        $scope.apcProducts[i] = prodGrpArr[i];
+                        // get rid of keys that have a '$'
+                        var keys = Object.keys($scope.apcProducts[i]);
+                        keys = keys.filter(function (e) {
+                            return e.includes('$');
+                        });
+                        // $scope.apcProducts should be cleaned up after this loop
+                        keys.forEach(function (e) {
+                            delete $scope.apcProducts[i][e];
+                        });
+                    }
+                }
+                indexer++;
+            };
+
+            $scope.oldSetRow1 = function (index, product) {
                 switch (product.$id) {
                     case "Group1":
                         exposeRow1Model(product);
@@ -158,16 +190,15 @@
             };
 
             var exposeRow1Model = function (productGroup) {
-                var prodGrp = {}, k;
-                for(k in productGroup) {
+                var prodGrpArr = [], counter = 0, k;
+                for (k in productGroup) {
                     // make sure 'k' is NOT being inherited
-                    if(productGroup.hasOwnProperty(k)) {
-                        console.log("k type = "+ typeof k);
-                        prodGrp[k] = productGroup[k];
-                        console.log(prodGrp);
+                    if (productGroup.hasOwnProperty(k)) {
+                        prodGrpArr[counter] = productGroup[k];
+                        counter++;
                     }
                 }
-                console.log("productGroup type = "+ typeof productGroup);
+                console.log(prodGrpArr);
             };
 
             $scope.bindToProductsModel = function (index) {

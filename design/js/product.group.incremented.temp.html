@@ -1,5 +1,4 @@
 <div class="col-sm-3 col-md-3" ng-repeat="groupItem in $ctrl.groupItems" ng-init="$ctrl.setGroupItem($index, groupItem)">
 	<p><small>{{groupItem.name}}</small></p>
-	<!--<product-items items="groupItem"></product-items>-->
 	<product-card-incremented-edit product="groupItem"></product-card-incremented-edit>
 </div>

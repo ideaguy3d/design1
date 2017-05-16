@@ -9,7 +9,7 @@
     app.component(componentId, {
         templateUrl: 'design/js/product.group.incremented.temp.html',
         bindings: {
-           groupItems: '='
+           groupItems: '<'
         },
         controller: [ProductGroupIncrementedCtrl]
     });
