@@ -1,0 +1,15 @@
+<div class="jcard">
+	<img ng-src="{{ $ctrl.product.image }}" class="j-img-w110 j-edit" alt="aussie product"
+	     ng-class="{ 'j-img-parlova-pie': ($ctrl.product.productId === 'DDPM12') }">
+
+	<!-- Product Title Description -->
+	<h4> {{ $ctrl.product.name }} </h4>
+
+	<!-- Product id -->
+	<h6>
+		Item #: {{ $ctrl.product.productId}}
+	</h6>
+
+	<!-- Product Price -->
+	<h4>${{$ctrl.product.price}}</h4>
+</div>

@@ -1,16 +1,15 @@
+<!-- This view is being ng-included for the customer to see -->
 <div id="j-product-slider-container" class="container-fluid">
 	<h1 class="text-center">{{ productsGroup1_title }} Products</h1>
 
 	<!-- Initial Product Group Loop -->
-	<div class="initial-product-group"
-	     ng-class="{
-			  'inactive': (activeArea !== -1),
-		      'active': (activeArea === -1)}">
+	<div class="initial-product-group" ng-class="{'inactive': (activeArea !== -1), 'active': (activeArea === -1)}">
 		<h1>
-			<small>Product Group</small>
+			<small> Product Group</small>
 			<strong> {{ activeArea+2 }} </strong>
 		</h1>
 
+		<!-- initial ng LOOPING begins here: -->
 		<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts">
 			<div class="jcard">
 				<a href="http://www.aussieproducts.com/prodinfo.asp?number=DDGS85">
@@ -27,25 +26,38 @@
 	<!-- AngularJS loops for incremented product-groups & products -->
 	<div class="row">
 		<div class="product-group {{'product-group'+$index}}" ng-repeat="e in repetitionAmount"
-		     ng-class="{
-				'active': ($index === activeArea),
-				'inactive': ($index !== activeArea)
-		     }">
+		     ng-class="{'active': ($index === activeArea),
+					'inactive': ($index !== activeArea)}">
 			<h2>
 				<small>Product Group</small>
 				<strong>{{ activeArea+2 }}</strong>
 			</h2>
-			<!-- inner loop for individual products: -->
-			<div class="col-sm-3 col-md-3" ng-repeat="p in apcCurrentProducts">
-				<div class="jcard">
-					<a href="http://www.aussieproducts.com/prodinfo.asp?number=DDGS85">
-						<img ng-src="{{p.image}}" class="j-img-w110" alt="chocolate">
-						<h4>{{ p.name }}</h4>
-						<h6>Item #: DDGS85</h6>
-						<h4>$13.95</h4>
-					</a>
+			<!-- ng LOOPING for Incremented individual products: -->
+
+			<!-- ngSwitch directive section begins: -->
+			<section ng-switch="activeArea">
+				<!-- Row 1 Group 2 Products -->
+				<div ng-switch-when="0">
+					<div class="col-sm-3 col-md-3" ng-repeat="p in apcRow1Group2">
+						<product-card product="p"></product-card>
+					</div>
 				</div>
-			</div>
+
+				<!-- Row 1 Group 3 Products -->
+				<div ng-switch-when="1">
+					<div class="col-sm-3 col-md-3" ng-repeat="p in apcRow1Group3">
+						<product-card product="p"></product-card>
+					</div>
+				</div>
+
+				<!-- Row 1 Group 4 Products -->
+				<div ng-switch-when="2">
+					<div class="col-sm-3 col-md-3" ng-repeat="p in apcRow1Group4">
+						<product-card product="p"></product-card>
+					</div>
+				</div>
+			</section>
+
 		</div>
 	</div>
 

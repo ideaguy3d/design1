@@ -7,9 +7,11 @@
     //TODO: move all the DOM manipulation in this controller to a directive
     app.controller('apSliderCtrl', ['$scope', 'jProductGroup1Data', '$timeout',
         function ($scope, jProductGroup1Data, $timeout) {
-            $scope.productsGroup1_title = "AussieProducts.com";
-            $scope.anzacProducts = jProductGroup1Data.Row1;
-            $scope.apcCurrentProducts = jProductGroup1Data.Row1; // will change to different product group later
+            $scope.productsGroup1_title = "Customer View for AussieProducts.com";
+            $scope.apcCurrentProducts = jProductGroup1Data.Row1Group1; // will change to different product group later
+            $scope.apcRow1Group2 = jProductGroup1Data.Row1Group2;
+            $scope.apcRow1Group3 = jProductGroup1Data.Row1Group3;
+            $scope.apcRow1Group4 = jProductGroup1Data.Row1Group4;
             $scope.activeArea = -1;
             $scope.repetitionAmount = [0, 1, 2];
             $scope.incrementLeft = false;
