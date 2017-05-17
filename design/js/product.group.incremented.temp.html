@@ -1,4 +1,22 @@
-<div class="col-sm-3 col-md-3" ng-repeat="groupItem in $ctrl.groupItems" ng-init="$ctrl.setGroupItem($index, groupItem)">
-	<p><small>{{groupItem.name}}</small></p>
-	<product-card-incremented-edit product="groupItem"></product-card-incremented-edit>
-</div>
+<section ng-switch="$ctrl.activeArea">
+	<!-- Row 1 Group 2 Products -->
+	<div ng-switch-when="0" >
+		<div class="col-sm-3 col-md-3" ng-repeat="groupItem in $ctrl.apcRow1Group2" ng-init="$ctrl.setGroupItem($index, groupItem)">
+			<product-card-incremented-edit product="groupItem"></product-card-incremented-edit>
+		</div>
+	</div>
+
+	<!-- Row 1 Group 3 Products -->
+	<div ng-switch-when="1">
+		<div class="col-sm-3 col-md-3" ng-repeat="groupItem in $ctrl.apcRow1Group3">
+			<product-card-incremented-edit product="groupItem"></product-card-incremented-edit>
+		</div>
+	</div>
+
+	<!-- Row 1 Group 4 Products -->
+	<div ng-switch-when="2">
+		<div class="col-sm-3 col-md-3" ng-repeat="groupItem in $ctrl.apcRow1Group4">
+			<product-card-incremented-edit product="groupItem"></product-card-incremented-edit>
+		</div>
+	</div>
+</section>

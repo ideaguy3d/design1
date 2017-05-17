@@ -1,0 +1,10 @@
+jref
+
+.idea/workspace.xml
+**/workspace.xml
+**/*.xml
+.idea
+
+node_modules
+design/bower_components
+images

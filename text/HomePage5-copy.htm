@@ -1,14 +1,15 @@
-
 <br>
-<!-- START: AngularJS app section: -->
-<!-- apSliderCtrl Controller -->
-<section id="ng-app1" ng-cloak ng-app="ap-slider" class="container-fluid" ng-controller="apcCoreCtrl">
+<!-- START: AngularJS app section -->
+<section id="ng-app1" ng-cloak ng-app="ap-slider" ng-controller="apcCoreCtrl">
 	<br>
 
+	<!-----------ADMIN SIDE-------------->
 	<!-- Edit product slider prototype -->
 	<div id="j-product-slider-edit" ng-controller="apSliderEditCtrl" ng-if="!showSlider"
-	     ng-include="'design/views/product-slider-edit.html'"></div>
+	     ng-include="'design/views/product.slider.edit.view.html'"></div>
 
+
+	<!-------------CLIENT SIDE-------------->
 	<!-- Primary product slider prototype -->
 	<div id="j-product-slider" ng-controller="apSliderCtrl" ng-if="showSlider"
 	     ng-include="'design/views/product-slider.html'"></div>
@@ -28,11 +29,13 @@
 			<!-- edit message -->
 			<label for="ap-message">Edit Message</label>
 			<input id="ap-message" type="text" ng-model="message.text" ng-change="messages.$save(message)">
+			<p>{{message}}</p>
 			<!-- delete message -->
 			<button ng-click="messages.$remove(message)">Delete Message</button>
 			<br>[ Message: {{ message.text }} ]
 		</li>
 	</ul>
+
 	<!-- create a new message -->
 	<form ng-submit="addMessage()">
 		<label for="new-message">Add a Message Now.</label>
@@ -42,18 +45,13 @@
 </section>
 <!-- END: AngularJS app section: -->
 
+<!-- Vendor Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-
-<!-- AngularJS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-<!-- FirebaseDB -->
 <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
-<!-- AngularFire -->
 <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
-<script>
+<script type="text/javascript">
     // Initialize Firebase... will eventually get this information from a secured php backend
     var config = {
         apiKey: "AIzaSyBq6mpowidyq3CR5CEJgZO7-vWfx7WXE8w",
@@ -65,6 +63,15 @@
     };
     firebase.initializeApp(config);
 </script>
+
+<!-- Custom JavaScript -->
+<script src="design/js/apc.app.js"></script>
+<script src="design/js/product.group.ser.js"></script>
 <script src="design/js/core.ctrl.js"></script>
 <script src="design/js/product.slider.ctrl.js"></script>
 <script src="design/js/product.slider.edit.ctrl.js"></script>
+<script src="design/js/product.comp.js"></script>
+<script src="design/js/product.card.edit.comp.js"></script>
+<script src="design/js/product.group.incremented.edit.comp.js"></script>
+<script src="design/js/product.items.comp.js"></script>
+<script src="design/js/product.card.incremented.edit.comp.js"></script>

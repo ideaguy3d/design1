@@ -14,7 +14,7 @@
         controller: ['jProductGroup1Data', ProductCardEditCtrl]
     });
 
-    function ProductCardEditCtrl(jProductGroup1Data)  {
+    function ProductCardEditCtrl(jProductGroup1Data) {
         var vm = this;
         vm.showImageUrl = true;
         vm.showHeader = true;
@@ -23,7 +23,7 @@
         vm.buttonClicked = false;
         vm.buttonText = vm.buttonClicked ? 'Save/Cancel' : 'Edit';
 
-        vm.editCard = function(){
+        vm.editCard = function () {
             vm.buttonClicked = !vm.buttonClicked;
             vm.buttonText = vm.buttonClicked ? 'Save/Cancel' : 'Edit';
             vm.showImageUrl = !vm.showImageUrl;
@@ -37,13 +37,13 @@
             vm.product.price = vm.productPrice ? vm.productPrice : vm.product.price;
             //TODO: Add validation to this setter.
             vm.product.$id = vm.productId ? vm.productId : vm.product.productId;
-            // vm.product.name = vm.productTitle;
 
-            if( vm.productImgUrl || vm.productTitle || vm.productId || vm.productPrice ) {
+            if (vm.productImgUrl || vm.productTitle || vm.productId || vm.productPrice) {
                 jProductGroup1Data.Row1Group1.$save(vm.product);
             }
         };
 
+        // The following methods enable each individual record to be clicked and editable.
         vm.editHeader = function () {
             vm.showPrice = true;
             vm.showProductId = true;
@@ -72,9 +72,9 @@
             vm.showImageUrl = !vm.showImageUrl;
         };
 
-        vm.updateImageUrl = function(){
-            console.log("productId = "+vm.product.image);
+        vm.updateImageUrl = function () {
+            console.log("productId = " + vm.product.image);
         };
 
-    }
+    } // END OF:  function ProductCardEditCtrl(); ^_^/
 })();

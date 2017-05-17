@@ -7,9 +7,10 @@
     var app = angular.module('ap-slider');
     app.controller('apSliderEditCtrl', ['$scope', '$timeout', 'jProductGroup1Data',
         function ($scope, $timeout, jProductGroup1Data) {
-            $scope.productsGroup1_title = "Anzac Day";
-            $scope.apcRow1Group1 = jProductGroup1Data.Row1Group1; // will change to different product group later
-            $scope.apcRow1 = jProductGroup1Data.Row1;
+            $scope.apcRow1Group1 = jProductGroup1Data.Row1Group1;
+            $scope.apcRow1Group2 = jProductGroup1Data.Row1Group2;
+            $scope.apcRow1Group3 = jProductGroup1Data.Row1Group3;
+            $scope.apcRow1Group4 = jProductGroup1Data.Row1Group4;
             $scope.activeArea = -1;
             $scope.repetitionAmount = [0, 1, 2];
             $scope.incrementLeft = false;

@@ -74,7 +74,7 @@ session("department")=0
 		[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
 			display: none !important;
 		}
-	</style>
+</style>
 
 </head>
 <!--#INCLUDE FILE = "text/Background5.asp" -->

@@ -7,7 +7,9 @@
 	<div class="row">
 		<div class="initial-product-group" ng-class="{'inactive': (activeArea !== -1), 'active': (activeArea === -1)}">
 			<h1>
-				<small>Product Group</small>-<strong>{{ activeArea+2 }}</strong><!--| group1product1.image() = <i ng-bind="row1products.group1product1.image()"></i>-->
+				<small>Product Group</small>
+				-<strong>{{ activeArea+2 }}</strong>
+				<!--| group1product1.image() = <i ng-bind="row1products.group1product1.image()"></i>-->
 			</h1>
 
 			<!-- The LOOP begins here: -->
@@ -22,14 +24,36 @@
 	<!--------------------------------------------------------------->
 	<div class="row">
 		<div class="product-group {{'product-group'+$index}}" ng-repeat="e in repetitionAmount"
-		         ng-class="{ 'active': ($index === activeArea), 'inactive': ($index !== activeArea) }">
+		        ng-class="{ 'active': ($index === activeArea), 'inactive': ($index !== activeArea) }">
 			<h1>
-				<small>Product Group</small>-<strong>{{ activeArea+2 }}</strong><!--| group1product1.image() = <i ng-bind="row1products.group1product1.image()"></i>-->
+				<small>Product Group</small>-
+				<strong>{{ activeArea+2 }}</strong>
 			</h1>
-			<!-- INNER LOOP for Incremented product cards: -->
-			<div ng-repeat="group in apcRow1" ng-init="setRow1($parent.$index, group)">
-				<product-group-incremented-edit group-items="group"></product-group-incremented-edit>
-			</div>
+
+			<!-- ngSwitch directive begins: -->
+			<section ng-switch="activeArea">
+				<!-- Row 1 Group 2 Products -->
+				<div ng-switch-when="0">
+					<div class="col-sm-3 col-md-3" ng-repeat="p in apcRow1Group2">
+						<product-card-incremented-edit product="p" active-area="activeArea"></product-card-incremented-edit>
+					</div>
+				</div>
+
+				<!-- Row 1 Group 3 Products -->
+				<div ng-switch-when="1">
+					<div class="col-sm-3 col-md-3" ng-repeat="p in apcRow1Group3">
+						<product-card-incremented-edit product="p" active-area="activeArea"></product-card-incremented-edit>
+					</div>
+				</div>
+
+				<!-- Row 1 Group 4 Products -->
+				<div ng-switch-when="2">
+					<div class="col-sm-3 col-md-3" ng-repeat="p in apcRow1Group4">
+						<product-card-incremented-edit product="p" active-area="activeArea"></product-card-incremented-edit>
+					</div>
+				</div>
+			</section>
+
 		</div>
 	</div>
 

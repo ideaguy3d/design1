@@ -1,0 +1,122 @@
+{
+  "Group1" : {
+    "CBPP17" : {
+      "image" : "http://www.aussieproducts.com/images/APCAPS_AUS_VISOR2.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=CBPP17",
+      "name" : "Aussie Visor",
+      "price" : "29.95",
+      "productId" : "CBPP17"
+    },
+    "DDGS85" : {
+      "image" : "http://www.aussieproducts.com/images/APSGBX2_t.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=DDGS85",
+      "name" : "tastey syrup",
+      "price" : 13.95,
+      "productId" : "DDGS85"
+    },
+    "DDMC50" : {
+      "image" : "http://www.aussieproducts.com/images/DDMC25.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=DDMC50",
+      "name" : "Tastey Dessert",
+      "price" : 9.95,
+      "productId" : "DDMC50"
+    },
+    "DDPM12" : {
+      "image" : "http://www.aussieproducts.com/images/Pavlova.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=DDPM12",
+      "name" : "White Wings Pavlova Magic",
+      "price" : "9.99",
+      "productId" : "DDPM12"
+    }
+  },
+  "Group2" : {
+    "CBPP17" : {
+      "image" : "http://www.aussieproducts.com/images/APCAPS_AUS_VISOR2.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=CBPP17",
+      "name" : "Aussie Visor2",
+      "price" : "29.95",
+      "productId" : "CBPP17"
+    },
+    "DDGS85" : {
+      "image" : "http://www.aussieproducts.com/images/APSGBX2_t.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=DDGS85",
+      "name" : "tastey syrup2",
+      "price" : 13.95,
+      "productId" : "DDGS85"
+    },
+    "DDMC50" : {
+      "image" : "http://www.aussieproducts.com/images/DDMC25.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=DDMC50",
+      "name" : "Tastey Dessert2",
+      "price" : 9.95,
+      "productId" : "DDMC50"
+    },
+    "DDPM12" : {
+      "image" : "http://www.aussieproducts.com/images/Pavlova.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=DDPM12",
+      "name" : "White Wings Pavlova Magic2",
+      "price" : "9.99",
+      "productId" : "DDPM12"
+    }
+  },
+  "Group3" : {
+    "CBPP17" : {
+      "image" : "http://www.aussieproducts.com/images/APCAPS_AUS_VISOR2.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=CBPP17",
+      "name" : "Aussie Visor3",
+      "price" : "29.95",
+      "productId" : "CBPP17"
+    },
+    "DDGS85" : {
+      "image" : "http://www.aussieproducts.com/images/APSGBX2_t.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=DDGS85",
+      "name" : "tastey syrup3",
+      "price" : 13.95,
+      "productId" : "DDGS85"
+    },
+    "DDMC50" : {
+      "image" : "http://www.aussieproducts.com/images/DDMC25.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=DDMC50",
+      "name" : "Tastey Dessert3",
+      "price" : 9.95,
+      "productId" : "DDMC50"
+    },
+    "DDPM12" : {
+      "image" : "http://www.aussieproducts.com/images/Pavlova.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=DDPM12",
+      "name" : "White Wings Pavlova Magic3",
+      "price" : "9.99",
+      "productId" : "DDPM12"
+    }
+  },
+  "Group4" : {
+    "CBPP17" : {
+      "image" : "http://www.aussieproducts.com/images/APCAPS_AUS_VISOR2.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=CBPP17",
+      "name" : "Aussie Visor4",
+      "price" : "29.95",
+      "productId" : "CBPP17"
+    },
+    "DDGS85" : {
+      "image" : "http://www.aussieproducts.com/images/APSGBX2_t.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=DDGS85",
+      "name" : "tastey syrup4",
+      "price" : 13.95,
+      "productId" : "DDGS85"
+    },
+    "DDMC50" : {
+      "image" : "http://www.aussieproducts.com/images/DDMC25.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=DDMC50",
+      "name" : "Tastey Dessert4",
+      "price" : 9.95,
+      "productId" : "DDMC50"
+    },
+    "DDPM12" : {
+      "image" : "http://www.aussieproducts.com/images/Pavlova.gif",
+      "link" : "http://www.aussieproducts.com/prodinfo.asp?number=DDPM12",
+      "name" : "White Wings Pavlova Magic4",
+      "price" : "9.99",
+      "productId" : "DDPM12"
+    }
+  }
+}
