@@ -1,7 +1,7 @@
 /**
  * Created by Julius Alvarado on 5/17/2017.
  */
-(function(){
+(function () {
     var app = angular.module('ap-slider'),
         componentId = 'productCard';
 

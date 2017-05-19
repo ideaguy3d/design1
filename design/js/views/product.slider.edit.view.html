@@ -1,0 +1,77 @@
+<!-- This view is being ng-included for admins -->
+<div id="j-product-slider-edit-container" class="container-fluid">
+	<h1 class="text-center">EDIT PRODUCTS:</h1>
+
+	<!-------------------------------->
+	<!-- Initial Product Group Loop -->
+	<!-------------------------------->
+	<div class="row">
+		<div class="initial-product-group" ng-class="{'inactive': (activeArea !== -1), 'active': (activeArea === -1)}">
+			<h1>
+				<small>Product Group</small>
+				-<strong>{{ activeArea+2 }}</strong>
+				<!--| group1product1.image() = <i ng-bind="row1products.group1product1.image()"></i>-->
+			</h1>
+
+			<!-- The LOOP begins here: -->
+			<div class="col-sm-3 col-md-3" ng-repeat="p in apcRow1Group1">
+				<product-card-edit product="p"></product-card-edit>
+			</div>
+		</div>
+	</div>
+
+	<!--------------------------------------------------------------->
+	<!-- AngularJS loops for INCREMENTED product-groups > products -->
+	<!--------------------------------------------------------------->
+	<div class="row">
+		<div class="product-group {{'product-group'+$index}}" ng-repeat="e in repetitionAmount"
+		        ng-class="{ 'active': ($index === activeArea), 'inactive': ($index !== activeArea) }">
+			<h1>
+				<small>Product Group</small>-
+				<strong>{{ activeArea+2 }}</strong>
+			</h1>
+
+			<!-- ngSwitch directive section begins: -->
+			<section ng-switch="activeArea">
+				<!-- Row 1 Group 2 Products -->
+				<div ng-switch-when="0">
+					<div class="col-sm-3 col-md-3" ng-repeat="p in apcRow1Group2">
+						<product-card-incremented-edit product="p" active-area="activeArea"></product-card-incremented-edit>
+					</div>
+				</div>
+
+				<!-- Row 1 Group 3 Products -->
+				<div ng-switch-when="1">
+					<div class="col-sm-3 col-md-3" ng-repeat="p in apcRow1Group3">
+						<product-card-incremented-edit product="p" active-area="activeArea"></product-card-incremented-edit>
+					</div>
+				</div>
+
+				<!-- Row 1 Group 4 Products -->
+				<div ng-switch-when="2">
+					<div class="col-sm-3 col-md-3" ng-repeat="p in apcRow1Group4">
+						<product-card-incremented-edit product="p" active-area="activeArea"></product-card-incremented-edit>
+					</div>
+				</div>
+			</section>
+
+		</div>
+	</div>
+
+	<!---------------------------------------------------->
+	<!-- Circular Indicators for active Product Groups  -->
+	<!---------------------------------------------------->
+	<div class="j-slider-indicators">
+		<span class="j-circle" ng-repeat="i in [0,1,2,3]" ng-click="updateActiveArea($index)"
+		      ng-class="{ 'jslide-active': ($index === indicatorCheck() ),
+				'jslide-inactive': ($index !== indicatorCheck() )}">
+		</span><br>
+	</div>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<!----------------------------->
+	<!-- SliderProduct Component -->
+	<!----------------------------->
+	<!--<slider-product></slider-product>-->
+</div>

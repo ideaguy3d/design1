@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LOCALHOST:127.0.0.1</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="design/styles/jstyles.css">
+	<link rel="stylesheet" href="design/styles/jslider.css">
+
+	<style>
+		[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+			display: none !important;
+		}
+	</style>
+</head>
+
+
+<body>
+
+
+<!-- START: AngularJS app section -->
+<section id="ng-app1" ng-cloak ng-app="ap-slider" ng-controller="apcCoreCtrl">
+
+	<br>
+	<h4>4+4 = {{4+4}}</h4>
+	<ng-view></ng-view>
+
+</section>
+<!-- END: AngularJS app section: -->
+
+<!-- Vendor Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<script type="text/javascript">
+    // Initialize Firebase... will eventually get this information from a secured php backend
+    var config = {
+        apiKey: "AIzaSyBq6mpowidyq3CR5CEJgZO7-vWfx7WXE8w",
+        authDomain: "product-slider.firebaseapp.com",
+        databaseURL: "https://product-slider.firebaseio.com",
+        projectId: "product-slider",
+        storageBucket: "product-slider.appspot.com",
+        messagingSenderId: "707544519915"
+    };
+    firebase.initializeApp(config);
+</script>
+
+<!-- Custom JavaScript -->
+<script src="design/js/apc.app.js"></script>
+<script src="design/js/product.group.ser.js"></script>
+<script src="design/js/core.ctrl.js"></script>
+<script src="design/js/product.slider.ctrl.js"></script>
+<script src="design/js/product.slider.edit.ctrl.js"></script>
+<script src="design/js/product.comp.js"></script>
+<script src="design/js/product.card.edit.comp.js"></script>
+<script src="design/js/product.group.incremented.edit.comp.js"></script>
+<script src="design/js/product.items.comp.js"></script>
+<script src="design/js/product.card.incremented.edit.comp.js"></script>
+<script src="design/js/comp.product.card.js"></script>
+
+</body>
+</html>
